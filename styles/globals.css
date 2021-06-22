@@ -10,6 +10,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -17,4 +18,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.page-container {
+  @apply m-auto w-full md:w-9/12 md:px-0
 }

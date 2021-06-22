@@ -1,0 +1,30 @@
+.companyTendency {
+    background-image: url("/public/companyTendencyBg.png");
+    height: auto;
+}
+
+.companyOverviewButtonSeeMore {
+    background:
+            linear-gradient(#fafafa, #fafafa) padding-box,
+            linear-gradient(to right, #FFC838 0%, #E05529 100%) border-box;
+    padding:10px;
+    border: 1px solid transparent;
+    border-radius:15px;
+    display:inline-block;
+    @apply flex items-center space-x-2 py-3 px-6 rounded-full mt-6
+
+}
+
+.companyOverviewButtonSeeMoreText {
+    background: linear-gradient(to right, #FFC838 0%, #E05529 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply text-sm
+}
+.overViewContent {
+    @apply bg-gray-200 rounded-full py-6
+}
+
+.companyOverviewImage {
+    @apply mt-12 h-sm w-sm xl:h-md  xl:w-md
+}

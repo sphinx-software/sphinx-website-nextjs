@@ -6,6 +6,14 @@ module.exports = {
       fontFamily: {
         ABeeZee: ['"ABeeZee"', 'cursive']
       },
+      height: {
+        sm: '320px',
+        md: '400px'
+      },
+      width: {
+        sm: '320px',
+        md: '400px'
+      },
       colors: {
         yellow: {
           250: '#FFC838'
