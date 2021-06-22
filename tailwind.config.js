@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        ABeeZee: ['"ABeeZee"', 'cursive']
+      },
       colors: {
         gray: {
           150: '#BDC7CD',
