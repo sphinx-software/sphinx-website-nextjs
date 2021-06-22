@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import CompanyOverview from '../layout/Home/CompanyOverview'
-import CompanyTendency from '../layout/Home/CompanyTendency'
+import { CompanyOverview } from '../components'
 
 export default function Home() {
   return (
@@ -12,8 +11,6 @@ export default function Home() {
       </Head>
       <main>
         <CompanyOverview />
-        <CompanyOverview />
-        <CompanyTendency />
       </main>
     </div>
   )

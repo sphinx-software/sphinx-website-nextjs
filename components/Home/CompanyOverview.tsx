@@ -1,11 +1,11 @@
-import { FC } from 'react'
+import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import imageCompanyOverview from '../../public/imageCompanyOverview.svg'
 import { ArrowForward } from '../../ui/icons'
 import styles from './Home.module.css'
 import classes from 'classnames'
 
-const CompanyOverview: FC = () => {
+const CompanyOverview: FunctionComponent = () => {
   return (
     <div className='mt-20'>
       <div className='flex items-center flex-col md:flex-row-reverse md:justify-around'>
@@ -37,7 +37,7 @@ const CompanyOverview: FC = () => {
             'h-sm w-sm lg:h-md lg:w-md'
           ])}
         >
-          <Image src={imageCompanyOverview} />
+          <Image src={imageCompanyOverview} alt={'img company'} />
         </div>
       </div>
     </div>
