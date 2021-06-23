@@ -1,18 +1,23 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import WorkingProcess from "../components/WorkingProcess";
+import { CompanyOverview } from '../components'
+import { Layout } from '../layout'
+import { CommunicationSection, ServiceSection } from '../ui'
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Sphinx Software</title>
-        <meta name="description" content="Sphinx Software" />
-        <link rel="icon" href="/symbolSphinx.svg" />
+        <meta name='description' content='Sphinx Software' />
+        <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
       <main>
-          <WorkingProcess/>
+        <Layout>
+          <CompanyOverview />
+          <ServiceSection />
+          <CommunicationSection />
+        </Layout>
       </main>
-    </>
+    </div>
   )
 }
