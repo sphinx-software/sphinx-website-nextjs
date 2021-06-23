@@ -25,11 +25,11 @@ module.exports = {
       },
       height: {
         sm: '320px',
-        md: '400px'
+        md: '420px'
       },
       width: {
         sm: '320px',
-        md: '400px'
+        md: '420px'
       },
       lineHeight: {
         11: '3.2rem',
