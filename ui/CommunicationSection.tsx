@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
+import SphinxMap from './SphinxMap'
 
 const CommunicationSection: FunctionComponent = () => {
   return (
@@ -77,7 +78,7 @@ const CommunicationSection: FunctionComponent = () => {
           <div
             className={'flex md:flex-1 items-center justify-end md:mt-0 mt-5'}
           >
-            <Image src={'/Map.png'} alt={'map'} width={400} height={250} />
+            <SphinxMap />
           </div>
         </div>
       </div>
