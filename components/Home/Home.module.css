@@ -19,7 +19,6 @@
     background: linear-gradient(to right, #FFC838 0%, #E05529 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @apply text-sm
 }
 .overViewContent {
     @apply bg-gray-150 rounded-full py-6

@@ -4,6 +4,7 @@ import imageCompanyOverview from '../../public/imageCompanyOverview.svg'
 import { ArrowForward } from '../../ui/icons'
 import styles from './Home.module.css'
 import classes from 'classnames'
+import classNames from 'classnames'
 
 const CompanyOverview: FunctionComponent = () => {
   return (
@@ -16,15 +17,20 @@ const CompanyOverview: FunctionComponent = () => {
           ])}
         >
           <div className='pl-4 lg:px-4'>
-            <h2 className='py-4 text-2xl'>Company Overview</h2>
-            <p className='text-sm leading-7'>
+            <h2 className='py-4 text-24 text-black-50'>Company Overview</h2>
+            <p className='text-16 text-black-50 leading-32'>
               Founded in 2015 and headquartered in Hanoi, Sphinx is not only a
               team of guys who young, enthusiastic, and passionate about
               computer science but also home to many young architectures since
               they were in 1st year of the university until they become experts.
             </p>
             <button className={styles.companyOverviewButtonSeeMore}>
-              <span className={styles.companyOverviewButtonSeeMoreText}>
+              <span
+                className={classNames([
+                  styles.companyOverviewButtonSeeMoreText,
+                  'text-16'
+                ])}
+              >
                 See more
               </span>
               <ArrowForward />

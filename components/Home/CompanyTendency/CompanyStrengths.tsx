@@ -57,7 +57,7 @@ const CompanyStrength: FC<CompanyStrengthProps> = ({ icon, text }) => {
       <div className='mb-2'>
         <Image src={icon} alt='Sphinx Software' />
       </div>
-      <span className='p-1 text-sm font-normal'>{text}</span>
+      <span className='p-1 text-16 text-gray-250'>{text}</span>
     </div>
   )
 }

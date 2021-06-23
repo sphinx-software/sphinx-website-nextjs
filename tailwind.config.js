@@ -32,7 +32,11 @@ module.exports = {
         md: '400px'
       },
       lineHeight: {
-        11: '3.2rem'
+        11: '3.2rem',
+        32: '32px',
+        36: '36px',
+        48: '48px',
+        56: '56px'
       },
       colors: {
         yellow: {
@@ -53,6 +57,7 @@ module.exports = {
           550: '#3C2649'
         },
         black: {
+          50: '#393C41',
           300: '#323439'
         }
       }
