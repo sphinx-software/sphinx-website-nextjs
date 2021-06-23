@@ -25,9 +25,9 @@ const services: ServiceType[] = [
 
 const CompanyService: FC = () => {
   return (
-    <div className='bg-gray-250 py-20'>
+    <div className='bg-gray-250 py-20 px-0 lg:px-44 xl:px-56'>
       <div className='px-3 text-center'>
-        <h2 className='text-7xl text-gray-450 py-2'>Service</h2>
+        <h2 className='text-7xl text-gray-450 py-2'>Services</h2>
         <div className='mt-2'>
           <p className='text-gray-450 leading-7 text-sm'>
             Sphinx provides services to companies based on modern technology
