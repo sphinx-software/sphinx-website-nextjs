@@ -1,10 +1,11 @@
 import { FunctionComponent } from 'react'
+import CompanyStrength from './CompanyStrengths'
 
 const CompanyTendency: FunctionComponent = () => {
   return (
     <div
       style={{ backgroundImage: "url('/companyTendencyBg.png')" }}
-      className='h-64 w-full bg-cover px-3 py-20 md:px-24'
+      className='w-full bg-cover px-3 py-20 md:px-24'
     >
       <h2 className='text-white font-normal text-2xl text-center leading-8'>
         The trend of technology-based development is the future trend of the
@@ -14,6 +15,10 @@ const CompanyTendency: FunctionComponent = () => {
         Technology to become the competitive advantage of businesses increases
         dramatically.
       </h3>
+
+      <div>
+        <CompanyStrength />
+      </div>
     </div>
   )
 }
