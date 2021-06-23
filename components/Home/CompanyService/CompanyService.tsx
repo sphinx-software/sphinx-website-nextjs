@@ -36,7 +36,7 @@ const CompanyService: FC = () => {
             </p>
           </div>
         </div>
-        <div className='px-3 my-12 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
+        <div className='px-3 my-16 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
           {services.map((s, index) => (
             <Service key={index} service={s} />
           ))}
@@ -54,7 +54,7 @@ declare type ServiceProps = {
 
 const Service: FC<ServiceProps> = ({ service }) => {
   return (
-    <div className='flex items-center space-x-6 md:space-x-0 text-xl py-4 md:py-8 pl-10 md:px-12 bg-white rounded-3xl md:flex-col'>
+    <div className='flex items-center shadow-lg space-x-6 md:space-x-0 text-xl py-4 md:py-8 pl-10 md:px-12 bg-white rounded-3xl md:flex-col'>
       <div className='block md:hidden'>
         <Image
           width={64}
