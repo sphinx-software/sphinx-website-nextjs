@@ -2,6 +2,23 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontSize: {
+      xs: '.75rem',
+      sm: '.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+      16: '16px',
+      36: '36px',
+      18: '18px',
+      24: '24px'
+    },
     extend: {
       fontFamily: {
         ABeeZee: ['"ABeeZee"', 'cursive']
@@ -34,6 +51,9 @@ module.exports = {
         },
         violet: {
           550: '#3C2649'
+        },
+        black: {
+          300: '#323439'
         }
       }
     }

@@ -9,11 +9,11 @@ const CompanyTendency: FunctionComponent = () => {
     >
       <div className='mx-auto max-w-6xl'>
         <div className='text-center mx-auto w-full md:w-2/3'>
-          <h2 className='text-white font-normal text-3xl text-center leading-11'>
+          <h2 className='text-white font-normal text-36 text-center leading-11'>
             The trend of technology-based development is the future trend of the
             world
           </h2>
-          <h3 className='text-center text-gray-350 text-sm py-2 leading-7'>
+          <h3 className='text-center text-gray-350 text-16 py-2 leading-7'>
             Technology to become the competitive advantage of businesses
             increases dramatically.
           </h3>
