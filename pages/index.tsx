@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { CompanyOverview, CompanyTendency } from '../components'
+import { CompanyService } from '../components/Home'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <CompanyOverview />
         <CompanyTendency />
+        <CompanyService />
       </main>
     </div>
   )
