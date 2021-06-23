@@ -15,7 +15,7 @@ declare type Strength = {
   icon: any
   text: string
 }
-const configScreenSm = [
+const configs = [
   [
     { icon: iconsCost, text: 'Cost' },
     { icon: iconTime, text: 'Time' }
@@ -88,15 +88,26 @@ const settings = {
 const CompanyStrengths: FC = () => {
   return (
     <>
-      <Slider {...settings}>
-        {configScreenSm.map((strengths, index) => (
-          <DoubleStrength
+      <div className='block md:hidden'>
+        <Slider {...settings}>
+          {configs.map((strengths, index) => (
+            <DoubleStrength
+              key={index}
+              strength1={strengths[0]}
+              strength2={strengths[1]}
+            />
+          ))}
+        </Slider>
+      </div>
+      <div className='hidden md:grid grid-cols-3 gap-y-16 mt-14 grid-flow-row place-items-center'>
+        {configs.flat().map((strength, index) => (
+          <CompanyStrength
+            icon={strength.icon}
+            text={strength.text}
             key={index}
-            strength1={strengths[0]}
-            strength2={strengths[1]}
           />
         ))}
-      </Slider>
+      </div>
     </>
   )
 }
