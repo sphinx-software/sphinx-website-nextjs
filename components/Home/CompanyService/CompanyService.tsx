@@ -30,7 +30,7 @@ const CompanyService: FC = () => {
         <div className='px-3 text-center'>
           <h2 className='text-3xl text-gray-450 py-2'>Services</h2>
           <div className='mt-2'>
-            <p className='text-gray-450 leading-7 text-sm'>
+            <p className='text-gray-450 leading-7'>
               Sphinx provides services to companies based on modern technology
               platforms
             </p>
@@ -54,12 +54,22 @@ declare type ServiceProps = {
 
 const Service: FC<ServiceProps> = ({ service }) => {
   return (
-    <div className='flex items-center space-x-6 md:space-x-0 text-xl py-4 pl-10 md:px-12 bg-white rounded-3xl md:flex-col'>
+    <div className='flex items-center space-x-6 md:space-x-0 text-xl py-4 md:py-8 pl-10 md:px-12 bg-white rounded-3xl md:flex-col'>
       <div className='block md:hidden'>
-        <Image width={64} height={64} src={service.icon} />
+        <Image
+          width={64}
+          height={64}
+          src={service.icon}
+          alt='Sphinx Software'
+        />
       </div>
       <div className='hidden md:block'>
-        <Image width={120} height={120} src={service.icon} />
+        <Image
+          width={120}
+          height={120}
+          src={service.icon}
+          alt='Sphinx Software'
+        />
       </div>
       <div className='mt-0 md:mt-4 md:text-sm'>
         <span>{service.text}</span>

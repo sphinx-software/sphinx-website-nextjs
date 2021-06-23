@@ -11,7 +11,7 @@
     border: 1px solid transparent;
     border-radius:15px;
     display:inline-block;
-    @apply flex items-center space-x-2 py-3 px-6 rounded-full mt-6
+    @apply flex items-center space-x-2 py-3 px-6 rounded-full mt-6 focus:outline-none
 
 }
 
