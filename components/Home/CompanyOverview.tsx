@@ -37,7 +37,7 @@ const CompanyOverview: FunctionComponent = () => {
             'h-sm w-sm lg:h-md lg:w-md'
           ])}
         >
-          <Image src={imageCompanyOverview} alt={'img company'} />
+          <Image src={imageCompanyOverview} alt={'Sphinx Software'} />
         </div>
       </div>
     </div>
