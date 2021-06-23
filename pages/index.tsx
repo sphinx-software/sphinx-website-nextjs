@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { CompanyOverview } from '../components'
+import { CompanyOverview, CompanyTendency, CompanyService } from '../components'
 import { Layout } from '../layout'
-import { CommunicationSection, ServiceSection,  } from '../ui'
+import { CommunicationSection, ServiceSection } from '../ui'
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         <Layout>
           <CompanyOverview />
           <CompanyTendency />
+          <CompanyService />
           <ServiceSection />
           <CommunicationSection />
         </Layout>
