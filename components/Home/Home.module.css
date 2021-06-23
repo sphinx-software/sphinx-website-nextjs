@@ -5,7 +5,7 @@
 
 .companyOverviewButtonSeeMore {
     background:
-            linear-gradient(#fafafa, #fafafa) padding-box,
+            linear-gradient(#E5E5E5, #E5E5E5) padding-box,
             linear-gradient(to right, #FFC838 0%, #E05529 100%) border-box;
     padding:10px;
     border: 1px solid transparent;
@@ -22,7 +22,7 @@
     @apply text-sm
 }
 .overViewContent {
-    @apply bg-gray-200 rounded-full py-6
+    @apply bg-gray-150 rounded-full py-6
 }
 
 .companyOverviewImage {

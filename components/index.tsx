@@ -1,3 +1,1 @@
-import { CompanyTendency, CompanyOverview } from './Home'
-
-export { CompanyTendency, CompanyOverview }
+export * from './Home'
