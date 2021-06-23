@@ -14,9 +14,13 @@ module.exports = {
         sm: '320px',
         md: '400px'
       },
+      lineHeight: {
+        11: '3.2rem'
+      },
       colors: {
         yellow: {
-          250: '#FFC838'
+          250: '#FFC838',
+          850: '#583023'
         },
         orange: {
           450: '#e05529'

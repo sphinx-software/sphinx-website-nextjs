@@ -6,7 +6,7 @@ const Layout: FunctionComponent = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className='font-ABeeZee'>{children}</main>
       <Footer />
     </>
   )

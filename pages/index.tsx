@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { CompanyOverview, CompanyTendency } from '../components'
-import { CompanyService } from '../components/Home'
+import { CompanyOverview } from '../components'
+import { Layout } from '../layout'
+import { CommunicationSection, ServiceSection,  } from '../ui'
 
 export default function Home() {
   return (
@@ -11,9 +12,12 @@ export default function Home() {
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
       <main>
-        <CompanyOverview />
-        <CompanyTendency />
-        <CompanyService />
+        <Layout>
+          <CompanyOverview />
+          <CompanyTendency />
+          <ServiceSection />
+          <CommunicationSection />
+        </Layout>
       </main>
     </div>
   )
