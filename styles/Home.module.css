@@ -12,15 +12,15 @@
 }
 
 .workingMain {
-  @apply bg-black-0E1C1C pt-sxl pb-sxl h-auto
+  @apply bg-black-0E1C1C pt-sxl pb-sxl h-auto mx-auto sm:px-6 px-6
 }
 
 .workingIntroduction {
-  @apply block text-center mx-72 mb-44
+  @apply block text-center mx-0 mb-10 md:mx-32 md:mb-16 xl:mx-72 xl:mb-44 max-w-6xl
 }
 
 .workingContent {
-  @apply px-44
+  @apply px-0 md:px-16 xl:px-44
 }
 
 .workingContentTitle {
@@ -37,11 +37,11 @@
   background-repeat: no-repeat;
   padding-left: 5%;
   background-size: 100% 100%;
-  @apply flex justify-center w-full flex-col items-center
+  @apply flex justify-center w-full flex-col items-center md:w-1/2
 }
 
 .workingContentLine {
-  @apply w-1/2 block
+  @apply w-0 md:w-1/2 block
 }
 
 .workingContentImage {
@@ -51,7 +51,7 @@
 .workingContentImageDescription {
   font-size: 16px;
   line-height: 32px;
-  margin-left: 20%;
-  margin-right: 20%;
-  @apply font-ABeeZee text-gray-350 pt-xl
+  padding-left: 25%;
+  padding-right: 25%;
+  @apply font-ABeeZee text-gray-350 -m-16
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { CompanyOverview, CompanyTendency, CompanyService } from '../components'
 import { Layout } from '../layout'
 import { CommunicationSection, ServiceSection } from '../ui'
+import WorkingProcess from "../components/Home/WorkingProcess";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <CompanyOverview />
           <CompanyTendency />
           <CompanyService />
+          <WorkingProcess />
           <ServiceSection />
           <CommunicationSection />
         </Layout>
