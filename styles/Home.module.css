@@ -20,7 +20,7 @@
 }
 
 .workingContent {
-  @apply px-0 md:px-16 xl:px-44
+  @apply px-0 lg:px-16 xl:px-44
 }
 
 .workingContentTitle {
@@ -51,7 +51,20 @@
 .workingContentImageDescription {
   font-size: 16px;
   line-height: 32px;
-  padding-left: 25%;
-  padding-right: 25%;
-  @apply font-ABeeZee text-gray-350 -m-16
+  @apply font-ABeeZee text-gray-350 mt-120 pl-6 pr-0 w-full sm:w-4/6 md:w-full lg:pl-12 2xl:w-4/5 2xl:pl-24 3xl:pl-36
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+.imageContainer > div {
+  position: unset !important;
+}
+
+.imageContainer > div > img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
