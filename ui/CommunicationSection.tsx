@@ -1,6 +1,9 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
-import SphinxMap from './SphinxMap'
+import dynamic from 'next/dynamic'
+const SphinxMap = dynamic(() => import('./SphinxMap'), {
+  ssr: false
+})
 
 const CommunicationSection: FunctionComponent = () => {
   return (
@@ -20,7 +23,7 @@ const CommunicationSection: FunctionComponent = () => {
         <div className='md:flex max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-72 md:pt-36 sm:pt-20 leading-11'>
           <div className='md:flex-1 text-white items-center md:mb-0 sm:mb-5'>
             <div className='flex'>
-              <div className='pr-3'>
+              <div className='pr-3 flex-shrink-0'>
                 <span>
                   <Image
                     src={'/iconLocation.svg'}
@@ -36,7 +39,7 @@ const CommunicationSection: FunctionComponent = () => {
               </div>
             </div>
             <div className='flex'>
-              <div className='pr-3'>
+              <div className='pr-3 flex-shrink-0'>
                 <span>
                   <Image
                     src={'/iconMail.svg'}
@@ -49,7 +52,7 @@ const CommunicationSection: FunctionComponent = () => {
               <div>contact@sphinx-software.com</div>
             </div>
             <div className='flex'>
-              <div className='pr-3'>
+              <div className='pr-3 flex-shrink-0'>
                 <span>
                   <Image
                     src={'/iconCall.svg'}
@@ -62,7 +65,7 @@ const CommunicationSection: FunctionComponent = () => {
               <div>(+84)24 2266 3888</div>
             </div>
             <div className='flex'>
-              <div className='pr-3'>
+              <div className='pr-3 flex-shrink-0'>
                 <span>
                   <Image
                     src={'/iconLink.svg'}
