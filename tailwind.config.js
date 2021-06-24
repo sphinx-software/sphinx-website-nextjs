@@ -14,6 +14,7 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
       '7xl': '5rem',
+      14: '14px',
       16: '16px',
       18: '18px',
       24: '24px',
