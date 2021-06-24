@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main
         style={{ backgroundImage: "url('/bannerBg.svg')" }}
-        className='bg-no-repeat bg-top bg-auto'
+        className='bg-cover bg-top bg-white'
       >
         <Layout>
           <BannerSection />

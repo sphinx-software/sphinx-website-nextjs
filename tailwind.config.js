@@ -18,7 +18,8 @@ module.exports = {
       18: '18px',
       24: '24px',
       36: '36px',
-      40: '40px'
+      40: '40px',
+      64: '64px'
     },
     spacing: {
       px: '1px',
@@ -87,7 +88,8 @@ module.exports = {
         36: '36px',
         48: '48px',
         56: '56px',
-        64: '64px'
+        64: '64px',
+        80: '80px'
       },
       colors: {
         yellow: {

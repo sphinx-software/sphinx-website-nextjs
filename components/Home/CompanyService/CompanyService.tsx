@@ -36,7 +36,7 @@ const CompanyService: FC = () => {
             </p>
           </div>
         </div>
-        <div className='px-3 mt-16 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
+        <div className='px-3 mt-16 md:mt-28 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
           {services.map((s, index) => (
             <Service key={index} service={s} />
           ))}
@@ -73,7 +73,7 @@ const Service: FC<ServiceProps> = ({ service }) => {
           />
         </div>
       </div>
-      <div className='mt-0 pb-0 md:mt-4 text-24 leading-32 md:pb-8 md:px-4 xl:px-8 xl:pb-16 text-black-300'>
+      <div className='mt-0 pb-0 md:mt-4 text-24 leading-32 md:pb-8 md:px-4 xl:px-8 xl:pb-12 text-black-300'>
         <span>{service.text}</span>
       </div>
     </div>

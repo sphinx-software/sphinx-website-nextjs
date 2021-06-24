@@ -8,8 +8,8 @@ import classNames from 'classnames'
 
 const CompanyOverview: FunctionComponent = () => {
   return (
-    <section className='bg-white mt-12 md:mt-0'>
-      <div className='mx-auto max-w-6xl flex items-center flex-col md:flex-row-reverse md:justify-around pt-12'>
+    <section className='bg-white'>
+      <div className='mx-auto max-w-6xl px-2 md:px-0 flex items-center flex-col md:flex-row-reverse md:justify-around pt-12 py-12 md:py-28'>
         <div
           className={classes([
             styles.overViewContent,
