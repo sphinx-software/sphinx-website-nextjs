@@ -42,8 +42,8 @@ const ServiceSection: FunctionComponent = () => {
             <div className='absolute z-10 rounded-full mr-4'>
               <Image
                 src={'/Planet.svg'}
-                height={300}
-                width={300}
+                height={320}
+                width={320}
                 alt={'planet'}
               />
             </div>
@@ -54,7 +54,7 @@ const ServiceSection: FunctionComponent = () => {
               className='absolute z-20 mt-16 cursor-pointer'
               style={{ width: 50, height: 50 }}
             />
-            <div className='absolute z-0 mt-16'>
+            <div className='absolute z-0 mt-16 mr-1'>
               <Image
                 src={'/iconFacebook.svg'}
                 width={65}
@@ -74,19 +74,13 @@ const ServiceSection: FunctionComponent = () => {
                 </a>
               </Link>
             </div>
-            <div className='absolute z-20 mr-16'>
-              <a
-                target='_blank'
-                href='https://github.com/sphinx-software'
-                rel='noopener noreferrer'
-              >
-                <Image
-                  src={'/iconGithub.svg'}
-                  width={450}
-                  height={200}
-                  alt={'github'}
-                />
-              </a>
+            <div className='absolute z-20 mr-56 md:mr-48 mt-6'>
+              <Image
+                src={'/iconGithub.svg'}
+                width={180}
+                height={180}
+                alt={'github'}
+              />
             </div>
           </div>
         </div>

@@ -26,15 +26,20 @@ const SphinxMap: FunctionComponent = () => {
       style={{ width: 442, height: 286, overflow: 'hidden', borderRadius: 48 }}
     >
       <ReactMapGL
-        width={500}
-        height={300}
+        width={'100%'}
+        height={'100%'}
         mapStyle='mapbox://styles/mapbox/streets-v9'
         mapboxApiAccessToken='pk.eyJ1IjoidmlldHBkIiwiYSI6ImNrcWFjeTJzZTA1bGwyb210cXFvd2pna2oifQ.by9oXlSwaXtVh8FPkQimnQ'
         onViewportChange={setViewport}
         {...viewport}
       >
-        <Marker longitude={viewport.longitude} latitude={viewport.latitude}>
-          <Location width={20} height={20} color={'#e05529'} />
+        <Marker
+          longitude={105.802819}
+          latitude={21.044425}
+          offsetLeft={-20}
+          offsetTop={-10}
+        >
+          <Location width={30} height={30} color={'#e05529'} />
         </Marker>
         <FullscreenControl style={fullscreenControlStyle} />
       </ReactMapGL>
