@@ -14,25 +14,25 @@ const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
       <div className='flex flex-col justify-center px-2 pt-2 pb-2 space-y-1 sm:px-3 leading-11'>
         <a
           href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
+          className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
         >
           About SPHINX
         </a>
         <a
           href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
+          className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
         >
           Services
         </a>
         <a
           href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
+          className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
         >
           Blogs
         </a>
         <a
           href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
+          className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
         >
           Contact
         </a>

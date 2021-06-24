@@ -7,7 +7,7 @@ type HeaderProps = {
 }
 const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
   return (
-    <nav className={`'bg-white'`}>
+    <nav className='bg-white z-10'>
       <div className='flex justify-between items-center max-w-7xl mx-auto px-6 sm:px-6 lg:px-8'>
         <div className='flex items-center h-16'>
           <div className='flex-shrink-0'>
@@ -21,18 +21,23 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
         </div>
         <div className='flex items-center hidden md:block'>
           <div className='ml-4 flex items-center md:ml-6 h-16'>
-            <div className='ml-10 flex space-x-4'>
-              <div className='text-gray-300 hover:text-white px-3 py-2 text-sm'>
+            <div className='ml-10 flex space-x-4 items-center'>
+              <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
                 About SPHINX
               </div>
-              <div className='text-gray-300 hover:text-white px-3 py-2 text-sm'>
+              <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
                 Services
               </div>
-              <div className='text-gray-300 hover:text-white px-3 py-2 text-sm'>
+              <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
                 Blogs
               </div>
-              <div className='text-gray-300 hover:text-white px-3 py-2 text-sm'>
+              <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
                 Contact
+              </div>
+              <div>
+                <button className='border rounded-3xl px-6 py-2 border-yellow-450 text-yellow-450'>
+                  <p className='text-16 leading-19'>Join us</p>
+                </button>
               </div>
             </div>
           </div>

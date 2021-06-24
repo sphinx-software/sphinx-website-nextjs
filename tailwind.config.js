@@ -15,9 +15,10 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5rem',
       16: '16px',
-      36: '36px',
       18: '18px',
-      24: '24px'
+      24: '24px',
+      36: '36px',
+      40: '40px'
     },
     spacing: {
       px: '1px',
@@ -81,14 +82,17 @@ module.exports = {
       },
       lineHeight: {
         11: '3.2rem',
+        19: '19px',
         32: '32px',
         36: '36px',
         48: '48px',
-        56: '56px'
+        56: '56px',
+        64: '64px'
       },
       colors: {
         yellow: {
           250: '#FFC838',
+          450: '#F89721',
           850: '#583023'
         },
         orange: {
