@@ -24,12 +24,16 @@ module.exports = {
         ABeeZee: ['"ABeeZee"', 'cursive']
       },
       height: {
-        sm: '320px',
-        md: '420px'
+        320: '320px',
+        350: '350px',
+        420: '420px',
+        450: '450px'
       },
       width: {
-        sm: '320px',
-        md: '420px'
+        320: '320px',
+        350: '350px',
+        420: '420px',
+        450: '450px'
       },
       lineHeight: {
         11: '3.2rem',

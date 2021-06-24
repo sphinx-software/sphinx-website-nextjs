@@ -13,10 +13,10 @@ const CompanyOverview: FunctionComponent = () => {
         <div
           className={classes([
             styles.overViewContent,
-            'h-sm w-sm lg:h-md lg:w-md'
+            'h-320 w-320 lg:h-420 lg:w-420'
           ])}
         >
-          <div className='pl-4 lg:px-4'>
+          <div className='pl-4 lg:pl-10 lg:pr-4'>
             <h2 className='py-4 text-24 text-black-50'>Company Overview</h2>
             <p className='text-16 text-black-50 leading-32'>
               Founded in 2015 and headquartered in Hanoi, Sphinx is not only a
@@ -40,7 +40,7 @@ const CompanyOverview: FunctionComponent = () => {
         <div
           className={classes([
             styles.companyOverviewImage,
-            'h-sm w-sm lg:h-md lg:w-md'
+            'h-320 w-320 lg:h-450 lg:w-450'
           ])}
         >
           <Image src={imageCompanyOverview} alt={'Sphinx Software'} />
