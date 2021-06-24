@@ -8,7 +8,7 @@ import classes from 'classnames'
 const CompanyOverview: FunctionComponent = () => {
   return (
     <div className='mt-20'>
-      <div className='flex items-center flex-col md:flex-row-reverse md:justify-around'>
+      <div className='mx-auto max-w-6xl flex items-center flex-col md:flex-row-reverse md:justify-around'>
         <div
           className={classes([
             styles.overViewContent,
@@ -37,7 +37,7 @@ const CompanyOverview: FunctionComponent = () => {
             'h-sm w-sm lg:h-md lg:w-md'
           ])}
         >
-          <Image src={imageCompanyOverview} alt={'img company'} />
+          <Image src={imageCompanyOverview} alt={'Sphinx Software'} />
         </div>
       </div>
     </div>

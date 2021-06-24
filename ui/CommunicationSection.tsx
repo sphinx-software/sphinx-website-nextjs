@@ -1,6 +1,9 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
-import SphinxMap from './SphinxMap'
+import dynamic from 'next/dynamic'
+const SphinxMap = dynamic(() => import('./SphinxMap'), {
+  ssr: false
+})
 
 const CommunicationSection: FunctionComponent = () => {
   return (
