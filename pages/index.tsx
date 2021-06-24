@@ -12,7 +12,10 @@ export default function Home() {
         <meta name='description' content='Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
-      <main>
+      <main
+        style={{ backgroundImage: "url('/bannerBg.svg')" }}
+        className='bg-no-repeat bg-top bg-auto'
+      >
         <Layout>
           <BannerSection />
           <CompanyOverview />

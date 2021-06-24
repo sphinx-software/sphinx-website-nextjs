@@ -7,7 +7,7 @@ type HeaderProps = {
 }
 const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
   return (
-    <nav className='bg-white z-10'>
+    <nav className={`${isShow ? 'bg-white' : ''}`}>
       <div className='flex justify-between items-center max-w-7xl mx-auto px-6 sm:px-6 lg:px-8'>
         <div className='flex items-center h-16'>
           <div className='flex-shrink-0'>

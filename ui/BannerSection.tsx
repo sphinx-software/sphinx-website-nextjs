@@ -4,11 +4,8 @@ import styles from './../styles/Banner.module.css'
 
 const BannerSection = () => {
   return (
-    <section
-      style={{ backgroundImage: "url('/bannerBg.svg')" }}
-      className='bg-cover bg-bottom -mt-40'
-    >
-      <div className='mx-auto max-w-6xl pt-48 md:pt-40 pb-24 px-2 xl:pb-32'>
+    <section style={{ height: 680 }}>
+      <div className='mx-auto max-w-6xl mt-4 md:mt-16 pb-20 px-2 xl:pb-32'>
         <div className='flex flex-col items-center md:flex-row md:px-6'>
           <div>
             <h1 className='text-40 leading-64 text-white'>
@@ -22,7 +19,7 @@ const BannerSection = () => {
               <p>Contact Us</p>
             </button>
           </div>
-          <div className='mt-20'>
+          <div className='mt-12'>
             <Image src={imageBanner} alt='Sphinx Software' />
           </div>
         </div>
