@@ -56,9 +56,12 @@ module.exports = {
         '50%': '50%',
       },
       margin: {
-        '120': '30rem'
+        '25rem': '25rem',
+        '28rem': '28rem',
+        '30rem': '30rem'
       },
       screens: {
+        'ssm': '384px',
         '3xl': '1792px',
         '4xl': '2048px'
       }
