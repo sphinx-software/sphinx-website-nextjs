@@ -9,7 +9,7 @@ const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
   const navBarStyles = isShow ? 'max-h-450' : 'max-h-0'
   return (
     <div
-      className={`${navBarStyles} md:hidden pt-11 overflow-hidden transition-all duration-1000 ease-in-out`}
+      className={`${navBarStyles} md:hidden pt-11 overflow-hidden transition-all duration-1000 ease-in-out z-10 bg-white`}
     >
       <div className='flex flex-col justify-center px-2 pt-2 pb-2 space-y-1 sm:px-3 leading-11'>
         <a

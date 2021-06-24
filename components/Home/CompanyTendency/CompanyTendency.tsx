@@ -3,7 +3,7 @@ import CompanyStrength from './CompanyStrengths'
 
 const CompanyTendency: FunctionComponent = () => {
   return (
-    <div
+    <section
       style={{ backgroundImage: "url('/companyTendencyBg.svg')" }}
       className='bg-cover bg-top mt-20 py-24 md:py-36'
     >
@@ -22,7 +22,7 @@ const CompanyTendency: FunctionComponent = () => {
           <CompanyStrength />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

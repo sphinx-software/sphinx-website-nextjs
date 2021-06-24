@@ -4,7 +4,7 @@ import styles from './../styles/Banner.module.css'
 
 const BannerSection = () => {
   return (
-    <div
+    <section
       style={{ backgroundImage: "url('/bannerBg.svg')" }}
       className='bg-cover bg-bottom -mt-40'
     >
@@ -27,7 +27,7 @@ const BannerSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

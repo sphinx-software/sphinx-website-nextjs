@@ -4,7 +4,7 @@ import SphinxMap from './SphinxMap'
 
 const CommunicationSection: FunctionComponent = () => {
   return (
-    <div
+    <section
       className={
         'bg-gradient-to-t from-yellow-250 via-orange-450 to-yellow-850'
       }
@@ -82,7 +82,7 @@ const CommunicationSection: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 export default CommunicationSection

@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 
 const ServiceSection: FunctionComponent = () => {
   return (
-    <div
+    <section
       className={'bg-gradient-to-t from-yellow-850 via-gray-850 to-gray-850'}
     >
       <div className='md:flex max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pt-10 pb-20'>
@@ -91,7 +91,7 @@ const ServiceSection: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
