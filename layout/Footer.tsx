@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react'
-import Image from 'next/image'
 
 const Footer: FunctionComponent = () => {
   return (
