@@ -13,23 +13,17 @@
 }
 
 .ButtonJoinUs {
-    width: 120px;
-    background:
-            linear-gradient(#FFF, #FFF) padding-box,
-            linear-gradient(to right, #FFC838 0%, #E05529 100%) border-box;
     padding:10px;
-    border: 1px solid transparent;
+    border: 1px solid #F89721;
     border-radius:15px;
     display:inline-block;
-    @apply flex items-center justify-center space-x-2 py-3 px-6 rounded-full mt-6 focus:outline-none
+    @apply flex items-center space-x-2 py-0.5 px-8 rounded-full mt-6 focus:outline-none
 
 }
 
 .ButtonJoinUsText {
-    background: linear-gradient(to right, #FFC838 0%, #E05529 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @apply text-base text-center
+    color: #F89721;
+    @apply text-16
 }
 
 .companyOverviewButtonSeeMoreText {
