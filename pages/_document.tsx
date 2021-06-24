@@ -24,10 +24,6 @@ class MyDocument extends Document {
             href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css'
             rel='stylesheet'
           />
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1, minimum-scale=1'
-          />
         </Head>
         <body>
           <Main />
