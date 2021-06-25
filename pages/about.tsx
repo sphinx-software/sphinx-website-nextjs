@@ -11,7 +11,7 @@ export default function About() {
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
       <main
-        style={{ backgroundImage: "url('/bannerBg.svg')" }}
+        style={{ backgroundImage: "url('/aboutBg.png')" }}
         className='bg-top'
       >
         <Layout>

@@ -1,9 +1,9 @@
-import BannerSection from '../../ui/BannerSection'
+import AboutBanner from '../../ui/AboutBanner'
 
 const About = () => {
   return (
     <>
-      <BannerSection />
+      <AboutBanner />
     </>
   )
 }
