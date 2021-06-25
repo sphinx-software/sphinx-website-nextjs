@@ -12,7 +12,7 @@ const AboutBanner = () => {
         backgroundImage: "url('/bgWConnerUp.svg')"
       }}
     >
-      <div className='mx-auto max-w-6xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
+      <div className='mx-auto max-w-6xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
         <div className='w-full lg:w-2/3 mx-auto'>
           <p className='text-center text-16 leading-32 text-gray-250'>
             Founded in 2015 and headquartered in Hanoi, Sphinx is not only a
