@@ -1,7 +1,11 @@
-import AboutBanner from '../../ui/AboutBanner'
-import DevelopingHistory from '../../ui/DevelopingHistory'
-import InnovationFeature from '../../ui/InnovationFeature'
-import BoardOfDirector from '../../ui/BoardOfDirector'
+import {
+  AboutBanner,
+  BoardOfDirector,
+  CommunicationSection,
+  DevelopingHistory,
+  InnovationFeature,
+  ServiceSection
+} from '../../ui'
 
 const About = () => {
   return (
@@ -10,6 +14,8 @@ const About = () => {
       <DevelopingHistory />
       <InnovationFeature />
       <BoardOfDirector />
+      <ServiceSection />
+      <CommunicationSection />
     </>
   )
 }
