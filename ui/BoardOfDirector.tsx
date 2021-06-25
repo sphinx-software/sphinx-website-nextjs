@@ -81,14 +81,14 @@ const BoardOfDirector: FC = () => {
         <p className='text-36 leading-48 text-black-50 text-center'>
           Keyholder
         </p>
-        <div className='mt-12'>
+        <div className='mt-12 mb-12'>
           <div className='block md:hidden'>
             <Slider {...settings}>
               {holders.map((h, index) => (
-                <>
+                <div key={index}>
                   <Holder holder={h[0]} />
                   <Holder holder={h[1]} />
-                </>
+                </div>
               ))}
             </Slider>
           </div>
