@@ -1,12 +1,16 @@
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
 import MenuMobile from './MenuMobile'
+import Link from 'next/link'
+import { useConfig } from '../ui/ConfigProvider'
+import { NavConfig } from '../config'
 
 type HeaderProps = {
   isShow: boolean
   onClick(): void
 }
 const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
+  const { NAVS } = useConfig()
   return (
     <div
       className={`md:relative w-full ${
@@ -28,18 +32,15 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
           <div className='flex items-center hidden md:block'>
             <div className='ml-4 flex items-center md:ml-6 h-16'>
               <div className='ml-10 flex space-x-4 items-center'>
-                <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
-                  About SPHINX
-                </div>
-                <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
-                  Services
-                </div>
-                <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
-                  Blogs
-                </div>
-                <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
-                  Contact
-                </div>
+                {NAVS.map((nav: NavConfig) => (
+                  <Link key={nav.href} href={nav.href}>
+                    <a>
+                      <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
+                        {nav.name}
+                      </div>
+                    </a>
+                  </Link>
+                ))}
                 <div>
                   <button className='border rounded-3xl px-6 py-2 border-yellow-450 text-yellow-450'>
                     <p className='text-16 leading-19'>Join us</p>
