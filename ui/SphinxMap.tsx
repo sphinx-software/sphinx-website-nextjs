@@ -1,12 +1,6 @@
 import { FunctionComponent, useState } from 'react'
-import ReactMapGL, { FullscreenControl, Marker } from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 import { Location } from './icons'
-
-const fullscreenControlStyle = {
-  top: 20,
-  left: 20,
-  padding: '10px'
-}
 
 const SphinxMap: FunctionComponent = () => {
   const [viewport, setViewport] = useState({
@@ -34,7 +28,6 @@ const SphinxMap: FunctionComponent = () => {
         >
           <Location width={30} height={30} color={'#e05529'} />
         </Marker>
-        <FullscreenControl style={fullscreenControlStyle} />
       </ReactMapGL>
     </div>
   )

@@ -78,9 +78,7 @@ const CommunicationSection: FunctionComponent = () => {
               <div>https://sphinx.vn</div>
             </div>
           </div>
-          <div
-            className={'flex md:flex-1 items-center justify-end md:mt-0 mt-5'}
-          >
+          <div className='flex md:flex-1 items-center justify-center md:justify-end md:mt-0 mt-5'>
             <SphinxMap />
           </div>
         </div>
