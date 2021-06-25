@@ -22,15 +22,15 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
         <div className='flex justify-between items-center max-w-6xl mx-auto px-2 lg:px-0'>
-          <div className='flex items-center h-20'>
+          <div className='flex items-center h-5.25rem'>
             <div className='flex-shrink-0'>
               <Link href={'/'}>
                 <a>
                   <Image
                     src='/symbolSphinx.svg'
                     alt='Sphinx Software Logo'
-                    width={80}
-                    height={50}
+                    width={37}
+                    height={37}
                   />
                 </a>
               </Link>
