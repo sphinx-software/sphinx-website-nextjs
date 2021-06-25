@@ -12,15 +12,15 @@
 }
 
 .workingMain {
-  @apply bg-black-0E1C1C pt-sxl pb-sxl h-auto mx-auto sm:px-6 px-6
+  @apply bg-black-0E1C1C
 }
 
 .workingIntroduction {
-  @apply block text-center mx-0 mb-10 md:mx-32 md:mb-16 xl:mx-72 xl:mb-44 max-w-6xl
+  @apply text-center pb-10 px-0 md:px-20 md:pb-28
 }
 
 .workingContent {
-  @apply px-0 lg:px-16 xl:px-44
+  @apply px-0
 }
 
 .workingContentTitle {
@@ -51,7 +51,7 @@
 .workingContentImageDescription {
   font-size: 16px;
   line-height: 32px;
-  @apply font-ABeeZee text-gray-350 mt-25rem ssm:mt-28rem md:mt-30rem pl-0 sm:pl-6 pr-0 w-full sm:w-4/6 md:w-full lg:pl-12 2xl:w-4/5 2xl:pl-24 3xl:pl-36
+  @apply font-ABeeZee text-gray-350
 }
 
 .imageContainer {
