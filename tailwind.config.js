@@ -99,12 +99,12 @@ module.exports = {
         yellow: {
           250: '#FFC838',
           850: '#583023',
-          'FFC838': '#FFC838',
-          450: '#F89721',
+          FFC838: '#FFC838',
+          450: '#F89721'
         },
         orange: {
           450: '#e05529',
-          'E05529': '#E05529'
+          E05529: '#E05529'
         },
         gray: {
           50: '#BDC7CD',
@@ -142,10 +142,11 @@ module.exports = {
       margin: {
         '25rem': '25rem',
         '28rem': '28rem',
-        '30rem': '30rem'
+        '30rem': '30rem',
+        '17rem': '17rem'
       },
       screens: {
-        'ssm': '384px',
+        ssm: '384px',
         '3xl': '1792px',
         '4xl': '2048px'
       }

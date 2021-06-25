@@ -4,6 +4,7 @@ import MenuMobile from './MenuMobile'
 import Link from 'next/link'
 import { useConfig } from '../ui/ConfigProvider'
 import { NavConfig } from '../config'
+import { useRouter } from 'next/router'
 
 type HeaderProps = {
   isShow: boolean
@@ -11,6 +12,8 @@ type HeaderProps = {
 }
 const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
   const { NAVS } = useConfig()
+  const router = useRouter()
+
   return (
     <div
       className={`md:relative w-full ${
@@ -21,12 +24,16 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
         <div className='flex justify-between items-center max-w-6xl mx-auto px-2 lg:px-0'>
           <div className='flex items-center h-20'>
             <div className='flex-shrink-0'>
-              <Image
-                src='/symbolSphinx.svg'
-                alt='Sphinx Software Logo'
-                width={80}
-                height={50}
-              />
+              <Link href={'/'}>
+                <a>
+                  <Image
+                    src='/symbolSphinx.svg'
+                    alt='Sphinx Software Logo'
+                    width={80}
+                    height={50}
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className='flex items-center hidden md:block'>
@@ -35,7 +42,12 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 {NAVS.map((nav: NavConfig) => (
                   <Link key={nav.href} href={nav.href}>
                     <a>
-                      <div className='text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer'>
+                      <div
+                        className={`text-gray-250 hover:text-white px-3 py-2 text-sm cursor-pointer ${
+                          router.asPath === nav.href &&
+                          'border-b-4 border-orange-450'
+                        }`}
+                      >
                         {nav.name}
                       </div>
                     </a>
