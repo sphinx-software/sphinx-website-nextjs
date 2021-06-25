@@ -1,39 +1,10 @@
-import iconCalendar from './../public/iconCalendar.svg'
-import iconClient from './../public/iconClient.svg'
-import iconEngineer from './../public/iconEngineer.svg'
-import iconRocket from './../public/iconRocket.svg'
 import Image from 'next/image'
 import { FC } from 'react'
-
-declare type Information = {
-  icon: any
-  title: string
-  subTitle: string
-}
-const informations: Information[] = [
-  {
-    icon: iconCalendar,
-    title: '7+ Years',
-    subTitle: 'Experiences since 2015'
-  },
-  {
-    icon: iconEngineer,
-    title: '50+ Engineers',
-    subTitle: 'Young and enthusiastic'
-  },
-  {
-    icon: iconRocket,
-    title: '80+ Projects',
-    subTitle: 'Unique and professional'
-  },
-  {
-    icon: iconClient,
-    title: '200+ Clients',
-    subTitle: 'Long-term relationship'
-  }
-]
+import { Information } from '../config'
+import { useConfig } from './ConfigProvider'
 
 const AboutBanner = () => {
+  const { aboutInformations } = useConfig()
   return (
     <section
       className='bg-cover bg-bottom'
@@ -51,7 +22,7 @@ const AboutBanner = () => {
           </p>
         </div>
         <div className='py-16 flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-          {informations.map((information, index) => (
+          {aboutInformations.map((information: Information, index: number) => (
             <InformationBox key={index} information={information} />
           ))}
         </div>
