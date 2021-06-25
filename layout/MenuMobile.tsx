@@ -19,7 +19,7 @@ const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
         {NAVS.map((nav: NavConfig) => (
           <Link key={nav.href} href={nav.href}>
             <a>
-              <div className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'>
+              <div className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-16 text-center font-ABeeZee'>
                 {nav.name}
               </div>
             </a>
