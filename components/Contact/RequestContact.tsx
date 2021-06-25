@@ -1,17 +1,11 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import style from './Contact.module.css'
 import Image from 'next/image'
-import classes from 'classnames'
 
 const RequestContact: FunctionComponent = () => {
+  const [disable, setDisable] = useState(true)
   const sendContact = (event: any) => {
     event.preventDefault() // don't redirect the page
-    const reason = event.target.reason.value
-    if (reason === 'otherReason') {
-      console.log('reason', event.target.otherReasonDescription.value)
-    } else {
-      console.log('reason', reason)
-    }
   }
 
   return (
@@ -33,7 +27,7 @@ const RequestContact: FunctionComponent = () => {
                   type='text'
                   required
                   onInvalid={(event: any) => {
-                    event.target.setCustomValidity('AAAAAAAAAAAAAA')
+                    event.target.setCustomValidity('Name must be required!')
                   }}
                   onInput={(event: any) => {
                     event.target.setCustomValidity('')
@@ -47,6 +41,14 @@ const RequestContact: FunctionComponent = () => {
                   id='companyName'
                   type='text'
                   required
+                  onInvalid={(event: any) => {
+                    event.target.setCustomValidity(
+                      'Company Name must be required!'
+                    )
+                  }}
+                  onInput={(event: any) => {
+                    event.target.setCustomValidity('')
+                  }}
                 />
               </div>
               <div className={'flex flex-col md:flex-row w-full'}>
@@ -61,6 +63,14 @@ const RequestContact: FunctionComponent = () => {
                     id='workEmail'
                     type='text'
                     required
+                    onInvalid={(event: any) => {
+                      event.target.setCustomValidity(
+                        'WorkEmail must be required!'
+                      )
+                    }}
+                    onInput={(event: any) => {
+                      event.target.setCustomValidity('')
+                    }}
                   />
                 </div>
                 <div
@@ -88,11 +98,8 @@ const RequestContact: FunctionComponent = () => {
                       name='reason'
                       value='reasonA'
                       required
-                      onClick={(event: any) => {
-                        // @ts-ignore
-                        document.getElementById('otherReasonTextInput')[
-                          'disabled'
-                        ] = true
+                      onClick={() => {
+                        setDisable(true)
                       }}
                     />
                     <label
@@ -109,11 +116,8 @@ const RequestContact: FunctionComponent = () => {
                       name='reason'
                       value='reasonB'
                       required
-                      onClick={(event: any) => {
-                        // @ts-ignore
-                        document.getElementById('otherReasonTextInput')[
-                          'disabled'
-                        ] = true
+                      onClick={() => {
+                        setDisable(true)
                       }}
                     />
                     <label
@@ -130,11 +134,8 @@ const RequestContact: FunctionComponent = () => {
                       name='reason'
                       value='reasonC'
                       required
-                      onClick={(event: any) => {
-                        // @ts-ignore
-                        document.getElementById('otherReasonTextInput')[
-                          'disabled'
-                        ] = true
+                      onClick={() => {
+                        setDisable(true)
                       }}
                     />
                     <label
@@ -151,11 +152,8 @@ const RequestContact: FunctionComponent = () => {
                       name='reason'
                       value='otherReason'
                       required
-                      onClick={(event: any) => {
-                        // @ts-ignore
-                        document.getElementById('otherReasonTextInput')[
-                          'disabled'
-                        ] = false
+                      onClick={() => {
+                        setDisable(false)
                       }}
                     />
                     <label
@@ -170,7 +168,7 @@ const RequestContact: FunctionComponent = () => {
                     id='otherReasonTextInput'
                     name='otherReasonDescription'
                     type='text'
-                    disabled
+                    disabled={disable}
                   />
                 </div>
               </div>
