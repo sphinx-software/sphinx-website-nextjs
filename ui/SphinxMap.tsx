@@ -1,14 +1,10 @@
 import { FunctionComponent, useState } from 'react'
-import ReactMapGL, {
-  FullscreenControl,
-  GeolocateControl,
-  Marker
-} from 'react-map-gl'
+import ReactMapGL, { FullscreenControl, Marker } from 'react-map-gl'
 import { Location } from './icons'
 
 const fullscreenControlStyle = {
-  top: 15,
-  left: 0,
+  top: 20,
+  left: 20,
   padding: '10px'
 }
 
@@ -21,10 +17,7 @@ const SphinxMap: FunctionComponent = () => {
     pitch: 0
   })
   return (
-    <div
-      className='border-8 border-white border-opacity-20'
-      style={{ width: 442, height: 286, overflow: 'hidden', borderRadius: 48 }}
-    >
+    <div style={{ width: 442, height: 286 }}>
       <ReactMapGL
         width={'100%'}
         height={'100%'}

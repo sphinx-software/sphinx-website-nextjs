@@ -57,7 +57,7 @@ const CompanyStrength: FC<CompanyStrengthProps> = ({ icon, text }) => {
       <div className='mb-2'>
         <Image src={icon} alt='Sphinx Software' />
       </div>
-      <span className='p-1 text-sm font-normal'>{text}</span>
+      <span className='p-1 text-16 text-gray-250'>{text}</span>
     </div>
   )
 }
@@ -71,7 +71,9 @@ const settings = {
   nextArrow: <></>,
   prevArrow: <></>,
   customPaging: function f() {
-    return <div className='mt-8 w-6 mx-1 h-1 bg-orange-450 rounded' />
+    return (
+      <div className='mt-8 w-4 mx-1.5 h-1 rounded bg-gray-250 sphinx-slick' />
+    )
   },
   responsive: [
     {
@@ -88,7 +90,7 @@ const settings = {
 const CompanyStrengths: FC = () => {
   return (
     <>
-      <div className='block md:hidden'>
+      <div className='block md:hidden bg-gray-850'>
         <Slider {...settings}>
           {configs.map((strengths, index) => (
             <DoubleStrength

@@ -1,0 +1,4 @@
+.buttonContactUs {
+    background: linear-gradient(102.37deg, #FFC838 15.42%, #E05529 82.12%);
+    @apply px-6 py-3 rounded-3xl text-white text-16 leading-19 text-center mt-6
+}

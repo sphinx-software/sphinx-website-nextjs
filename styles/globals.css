@@ -41,6 +41,16 @@ a {
   @apply m-auto w-full md:w-9/12 md:px-0
 }
 
+.slick-active > .sphinx-slick {
+  @apply bg-orange-450 w-6
+}
+
+.mapboxgl-map {
+  border-radius: 48px;
+  overflow: hidden;
+  @apply border-8 border-white border-opacity-20
+}
+
 .contactRadio > label {
   @apply inline-flex items-center
 }

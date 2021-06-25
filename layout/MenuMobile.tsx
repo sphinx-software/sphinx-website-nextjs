@@ -1,42 +1,34 @@
 import { FunctionComponent } from 'react'
 import styles from '../components/Home/Home.module.css'
+import Link from 'next/link'
+import { useConfig } from '../ui/ConfigProvider'
+import { NavConfig } from '../config'
 
 type MenuMobileProps = {
   isShow: boolean
 }
 const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
+  const { NAVS } = useConfig()
+
+  const navBarStyles = isShow ? 'h-screen' : 'h-0'
   return (
     <div
-      className={`${isShow ? 'md:hidden h-screen pt-11 bg-white' : 'hidden'}`}
+      className={`${navBarStyles} md:hidden overflow-hidden bg-white bg-bottom`}
     >
-      <div className='flex flex-col justify-center px-2 pt-2 pb-3 space-y-1 sm:px-3 leading-11'>
-        <a
-          href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
-        >
-          About SPHINX
-        </a>
-        <a
-          href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
-        >
-          Services
-        </a>
-        <a
-          href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
-        >
-          Blogs
-        </a>
-        <a
-          href='#'
-          className='hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'
-        >
-          Contact
-        </a>
+      <div className='flex flex-col justify-center px-2 pt-2 pb-2 space-y-1 sm:px-3 leading-11'>
+        {NAVS.map((nav: NavConfig) => (
+          <Link key={nav.href} href={nav.href}>
+            <a>
+              <div className='text-gray-250 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-ABeeZee'>
+                {nav.name}
+              </div>
+            </a>
+          </Link>
+        ))}
+
         <div className='flex items-center justify-center font-ABeeZee'>
           <button className={styles.ButtonJoinUs}>
-            <span className={styles.ButtonJoinUsText}>Join Us</span>
+            <p className={styles.ButtonJoinUsText}>Join Us</p>
           </button>
         </div>
       </div>
