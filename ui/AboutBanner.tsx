@@ -1,10 +1,40 @@
 import Image from 'next/image'
 import { FC } from 'react'
-import { Information } from '../config'
-import { useConfig } from './ConfigProvider'
+import iconCalendar from '../public/iconCalendar.svg'
+import iconEngineer from '../public/iconEngineer.svg'
+import iconRocket from '../public/iconRocket.svg'
+import iconClient from '../public/iconClient.svg'
+
+export declare type Information = {
+  icon: any
+  title: string
+  subTitle: string
+}
+
+export const aboutInformations: Information[] = [
+  {
+    icon: iconCalendar,
+    title: '7+ Years',
+    subTitle: 'Experiences since 2015'
+  },
+  {
+    icon: iconEngineer,
+    title: '50+ Engineers',
+    subTitle: 'Young and enthusiastic'
+  },
+  {
+    icon: iconRocket,
+    title: '80+ Projects',
+    subTitle: 'Unique and professional'
+  },
+  {
+    icon: iconClient,
+    title: '200+ Clients',
+    subTitle: 'Long-term relationship'
+  }
+]
 
 const AboutBanner = () => {
-  const { aboutInformations } = useConfig()
   return (
     <section
       className='bg-cover bg-bottom'

@@ -1,11 +1,42 @@
 import { FC } from 'react'
-import { History as HistoryType } from '../config'
-import { useConfig } from './ConfigProvider'
 import iconHistory from './../public/iconHistory.svg'
 import Image from 'next/image'
 
+export declare type HistoryType = {
+  year: number
+  content: string
+}
+
+export const histories: HistoryType[] = [
+  {
+    year: 2020,
+    content: 'Penetrated the Australian market.'
+  },
+  {
+    year: 2019,
+    content:
+      'Provided the technology solutions for ASEAN, Europe, and US market'
+  },
+  {
+    year: 2018,
+    content: 'Begin mobile application development.'
+  },
+  {
+    year: 2017,
+    content: 'Become the Silver member of Node.JS Foundation.'
+  },
+  {
+    year: 2016,
+    content: 'Established the loT and Robotics Development Laboratory'
+  },
+  {
+    year: 2015,
+    content:
+      'Established Sphinx Technology Company Software development and consultants.'
+  }
+]
+
 const DevelopingHistory: FC = () => {
-  const { histories } = useConfig()
   return (
     <div className='bg-white py-16'>
       <div className='mx-auto max-w-6xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>

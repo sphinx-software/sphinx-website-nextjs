@@ -1,6 +1,7 @@
 import AboutBanner from '../../ui/AboutBanner'
 import DevelopingHistory from '../../ui/DevelopingHistory'
 import InnovationFeature from '../../ui/InnovationFeature'
+import BoardOfDirector from '../../ui/BoardOfDirector'
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
       <AboutBanner />
       <DevelopingHistory />
       <InnovationFeature />
+      <BoardOfDirector />
     </>
   )
 }
