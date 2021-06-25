@@ -2,13 +2,13 @@
   font-size: 36px;
   line-height: 56px;
   color: #FFFFFF;
-  @apply text-center font-ABeeZee text-white
+  @apply text-center text-white
 }
 
 .workingDescription {
   font-size: 16px;
   line-height: 32px;
-  @apply text-center font-ABeeZee text-gray-350
+  @apply text-center text-gray-350
 }
 
 .workingMain {
@@ -29,7 +29,7 @@
   padding-bottom: 64px;
   width: fit-content;
   block-size: fit-content;
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 font-ABeeZee bg-yellow-FFC838 bg-cover
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover
 }
 
 .workingContentImageContainer {
@@ -51,7 +51,7 @@
 .workingContentImageDescription {
   font-size: 16px;
   line-height: 32px;
-  @apply font-ABeeZee text-gray-350
+  @apply text-gray-350
 }
 
 .imageContainer {

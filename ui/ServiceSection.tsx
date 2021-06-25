@@ -21,15 +21,15 @@ const ServiceSection: FunctionComponent = () => {
               alt={'Sphinx Software'}
             />
             <h3 className={'text-gray-350 mt-4'}>SERVICES</h3>
-            <div className='text-white font-ABeeZee'>
+            <div className='text-white'>
               <div>Cloud</div>
               <div>Web Application</div>
               <div>Cross-platform</div>
             </div>
           </div>
           <div className={'flex-1 leading-11'}>
-            <h3 className={'text-gray-350 font-ABeeZee'}>ABOUT SPHINX</h3>
-            <div className={'text-white font-ABeeZee'}>
+            <h3 className={'text-gray-350'}>ABOUT SPHINX</h3>
+            <div className={'text-white'}>
               <div>Developing history</div>
               <div>Vision and Mission</div>
               <div>Key holders</div>

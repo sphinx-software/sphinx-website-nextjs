@@ -1,5 +1,5 @@
 .formContactLabel {
-    @apply font-ABeeZee text-gray-50
+    @apply text-gray-50
 }
 
 .formContactLabel:after
@@ -11,7 +11,8 @@
 .mainLabel {
     font-size: 36px;
     line-height: 32px;
-    @apply font-ABeeZee text-white
+    font-weight: 700;
+    @apply text-white
 }
 
 .contactMain {
@@ -32,5 +33,5 @@
 }
 
 .formContactRadioLabel {
-    @apply font-ABeeZee text-gray-50 pr-4
+    @apply text-gray-50 pr-4
 }

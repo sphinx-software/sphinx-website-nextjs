@@ -74,9 +74,7 @@ const RequestContact: FunctionComponent = () => {
                 <div
                   className={'flex flex-col pt-6 w-auto md:w-2/5 flex-shrink'}
                 >
-                  <label className={'font-ABeeZee text-gray-50'}>
-                    Phone number
-                  </label>
+                  <label className={'text-gray-50'}>Phone number</label>
                   <input
                     className={style.formContactInput}
                     id='phoneNumber'

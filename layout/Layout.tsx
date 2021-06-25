@@ -14,7 +14,7 @@ const Layout: FunctionComponent = ({ children }) => {
         }}
       />
       <MenuMobile isShow={isShow} />
-      <main className='font-ABeeZee'>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )
