@@ -1,25 +1,23 @@
 import React, { FunctionComponent, useState } from 'react'
 import style from './Contact.module.css'
 import Image from 'next/image'
+import CircleBackground from '../../public/circle.svg'
+import IconContact from '../../public/contact.svg'
 
 const RequestContact: FunctionComponent = () => {
   const [disable, setDisable] = useState(true)
   const sendContact = (event: any) => {
-    event.preventDefault() // don't redirect the page
+    event.preventDefault()
   }
 
   return (
     <div className={style.contactMain}>
-      <div
-        className={
-          'max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-6 md:pb-72 md:pt-36 sm:pt-20 leading-11 pt-20 md:pt-28'
-        }
-      >
+      <div className='max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-6 md:pb-10 leading-11 pt-20 md:pt-10'>
         <label className={style.mainLabel}>Contact Us</label>
-        <div className={'w-full flex flex-col md:flex-row'}>
-          <div className='w-full md:w-1/2 flex flex-col flex-shrink'>
+        <div className='md:flex'>
+          <div className='flex-1 flex flex-col flex-shrink'>
             <form onSubmit={sendContact}>
-              <div className={'flex flex-col'}>
+              <div className='flex flex-col focus:outline-none'>
                 <label className={style.formContactLabel}>Name</label>
                 <input
                   className={style.formContactInput}
@@ -76,9 +74,7 @@ const RequestContact: FunctionComponent = () => {
                 <div
                   className={'flex flex-col pt-6 w-auto md:w-2/5 flex-shrink'}
                 >
-                  <label className={'font-ABeeZee text-gray-50'}>
-                    Phone number
-                  </label>
+                  <label className={'text-gray-50'}>Phone number</label>
                   <input
                     className={style.formContactInput}
                     id='phoneNumber'
@@ -182,33 +178,17 @@ const RequestContact: FunctionComponent = () => {
               </div>
             </form>
           </div>
-          <div
-            className={
-              'w-full md:w-1/2 flex flex-col justify-start items-end pt-20 md:pt-0'
-            }
-          >
+          <div className='flex-1 flex flex-col justify-start items-end md:pt-0'>
             <div className={'w-full sticky top-0'}>
               <div
-                className={
-                  'flex justify-start items-center md:items-end w-full flex-col relative'
-                }
+                className='flex justify-start items-center md:items-end w-full flex-col relative'
                 style={{ height: 360 }}
               >
-                <div className={'absolute z-10 rounded-full mr-4'}>
-                  <Image
-                    src={'/circle.svg'}
-                    height={536}
-                    width={536}
-                    alt={'circle'}
-                  />
+                <div className='absolute z-10 rounded-full mr-4'>
+                  <Image src={CircleBackground} alt={'circle'} />
                 </div>
                 <div className='absolute z-0 mt-10 pr-0 md:pr-8'>
-                  <Image
-                    src={'/contact.svg'}
-                    width={428}
-                    height={360}
-                    alt={'contact'}
-                  />
+                  <Image src={IconContact} alt={'contact'} />
                 </div>
               </div>
             </div>

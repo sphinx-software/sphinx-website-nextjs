@@ -62,7 +62,7 @@ const CommunicationSection: FunctionComponent = () => {
                   />
                 </span>
               </div>
-              <div>(+84)24 2266 3888</div>
+              <div className='overflow-auto'>(+84)24 2266 3888</div>
             </div>
             <div className='flex'>
               <div className='pr-3 flex-shrink-0'>

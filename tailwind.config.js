@@ -84,7 +84,8 @@ module.exports = {
         420: '420px',
         430: '430px',
         450: '450px',
-        490: '490px'
+        490: '490px',
+        '5.25rem': '5.25rem'
       },
       width: {
         320: '320px',
@@ -163,7 +164,8 @@ module.exports = {
       margin: {
         '25rem': '25rem',
         '28rem': '28rem',
-        '30rem': '30rem'
+        '30rem': '30rem',
+        '17rem': '17rem'
       },
       screens: {
         ssm: '384px',
