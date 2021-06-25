@@ -12,7 +12,8 @@ module.exports = {
       },
       width: {
         sm: '320px',
-        md: '400px'
+        md: '400px',
+        22: '5.5rem'
       },
       lineHeight: {
         11: '3.2rem'
@@ -26,6 +27,7 @@ module.exports = {
           450: '#e05529'
         },
         gray: {
+          50: '#BDC7CD',
           150: '#E5E5E5',
           250: '#BDC7CD',
           350: '#8F969E',
@@ -35,6 +37,10 @@ module.exports = {
         violet: {
           550: '#3C2649'
         }
+      },
+      padding: {
+        '8px': '8px',
+        '14px': '14px'
       }
     }
   },

@@ -1,0 +1,36 @@
+.formContactLabel {
+    @apply font-ABeeZee text-gray-50
+}
+
+.formContactLabel:after
+{
+    color: red;
+    content: " *";
+}
+
+.mainLabel {
+    font-size: 36px;
+    line-height: 32px;
+    @apply font-ABeeZee text-white
+}
+
+.contactMain {
+    background-image: linear-gradient(0deg, #583023 0%, #0E1C1C 30%, #0E1C1C 70%);
+    @apply w-full
+}
+
+.formContactInput {
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 14px;
+    @apply bg-gray-450 px-14px py-8px text-white
+}
+
+.formContactButton {
+    background-image: linear-gradient(102.37deg, #FFC838 15.42%, #E05529 82.12%);
+    @apply h-12 w-22 rounded-3xl text-white
+}
+
+.formContactRadioLabel {
+    @apply font-ABeeZee text-gray-50 pr-4
+}
