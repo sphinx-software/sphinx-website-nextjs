@@ -12,7 +12,7 @@ const RequestContact: FunctionComponent = () => {
 
   return (
     <div className={style.contactMain}>
-      <div className='max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-6 md:pb-72 leading-11 pt-20 md:pt-10'>
+      <div className='max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-6 md:pb-10 leading-11 pt-20 md:pt-10'>
         <label className={style.mainLabel}>Contact Us</label>
         <div className='md:flex'>
           <div className='flex-1 flex flex-col flex-shrink'>
