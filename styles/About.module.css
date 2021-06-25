@@ -1,0 +1,7 @@
+.visionText {
+    background: -webkit-linear-gradient(#FFC838, #E05529);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @apply text-36 leading-48
+}
