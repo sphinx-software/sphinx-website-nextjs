@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Layout } from '../layout'
-import BannerSection from '../ui/BannerSection'
+import AboutComponent from '../components/About'
 
 export default function About() {
   return (
@@ -15,7 +15,7 @@ export default function About() {
         className='bg-top'
       >
         <Layout>
-          <BannerSection />
+          <AboutComponent />
         </Layout>
       </main>
     </div>
