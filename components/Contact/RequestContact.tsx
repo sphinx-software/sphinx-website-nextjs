@@ -17,7 +17,7 @@ const RequestContact: FunctionComponent = () => {
         <div className='md:flex'>
           <div className='flex-1 flex flex-col flex-shrink'>
             <form onSubmit={sendContact}>
-              <div className={'flex flex-col'}>
+              <div className='flex flex-col focus:outline-none'>
                 <label className={style.formContactLabel}>Name</label>
                 <input
                   className={style.formContactInput}
