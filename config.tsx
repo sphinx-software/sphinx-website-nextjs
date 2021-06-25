@@ -16,6 +16,11 @@ export declare type Information = {
   subTitle: string
 }
 
+export declare type History = {
+  year: number
+  content: string
+}
+
 export const NAVS: NavConfig[] = [
   {
     name: 'About SPHINX',
@@ -55,5 +60,34 @@ export const aboutInformations: Information[] = [
     icon: iconClient,
     title: '200+ Clients',
     subTitle: 'Long-term relationship'
+  }
+]
+
+export const histories: History[] = [
+  {
+    year: 2020,
+    content: 'Penetrated the Australian market.'
+  },
+  {
+    year: 2019,
+    content:
+      'Provided the technology solutions for ASEAN, Europe, and US market'
+  },
+  {
+    year: 2018,
+    content: 'Begin mobile application development.'
+  },
+  {
+    year: 2017,
+    content: 'Become the Silver member of Node.JS Foundation.'
+  },
+  {
+    year: 2016,
+    content: 'Established the loT and Robotics Development Laboratory'
+  },
+  {
+    year: 2015,
+    content:
+      'Established Sphinx Technology Company Software development and consultants.'
   }
 ]

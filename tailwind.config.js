@@ -18,6 +18,7 @@ module.exports = {
       16: '16px',
       18: '18px',
       24: '24px',
+      32: '32px',
       36: '36px',
       40: '40px',
       64: '64px'
@@ -85,6 +86,7 @@ module.exports = {
       lineHeight: {
         11: '3.2rem',
         19: '19px',
+        24: '24px',
         32: '32px',
         36: '36px',
         48: '48px',
