@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Layout } from '../layout'
-import BannerSection from '../ui/BannerSection'
+import AboutComponent from '../components/About'
 
 export default function About() {
   return (
@@ -11,11 +11,11 @@ export default function About() {
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
       <main
-        style={{ backgroundImage: "url('/bannerBg.svg')" }}
+        style={{ backgroundImage: "url('/aboutBg.png')" }}
         className='bg-top'
       >
         <Layout>
-          <BannerSection />
+          <AboutComponent />
         </Layout>
       </main>
     </div>

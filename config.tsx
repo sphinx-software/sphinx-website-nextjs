@@ -1,8 +1,12 @@
-export declare type A = {}
-
 export type NavConfig = {
   name: string
   href: string
+}
+
+export declare type Information = {
+  icon: any
+  title: string
+  subTitle: string
 }
 
 export const NAVS: NavConfig[] = [
