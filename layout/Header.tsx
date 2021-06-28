@@ -30,6 +30,8 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                     src='/symbolSphinx.svg'
                     alt='Sphinx Software Logo'
                     width={37}
+                    loading={'eager'}
+                    priority
                     height={37}
                   />
                 </a>
