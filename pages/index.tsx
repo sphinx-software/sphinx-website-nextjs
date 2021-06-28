@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { CompanyOverview, CompanyTendency, CompanyService } from '../components'
 import { Layout } from '../layout'
 import { CommunicationSection, ServiceSection } from '../ui'
-import WorkingProcess from "../components/Home/WorkingProcess";
-import BannerSection from '../ui/BannerSection'
+import WorkingProcess from '../components/Home/WorkingProcess'
+import HomeBanner from '../ui/HomeBanner'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         className='bg-top'
       >
         <Layout>
-          <BannerSection />
+          <HomeBanner />
           <CompanyOverview />
           <CompanyTendency />
           <CompanyService />

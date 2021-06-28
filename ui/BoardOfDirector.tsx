@@ -82,7 +82,7 @@ const settings = {
 const BoardOfDirector: FC = () => {
   return (
     <div className='bg-white'>
-      <div className='mx-auto max-w-6xl pt-12 md:pt-24 pb-10 px-2 xl:pb-24 md:px-0'>
+      <div className='mx-auto max-w-7xl pt-12 md:pt-24 pb-10 px-2 xl:pb-24 md:px-0'>
         <p className='text-36 leading-48 text-black-50 text-center'>
           Keyholder
         </p>

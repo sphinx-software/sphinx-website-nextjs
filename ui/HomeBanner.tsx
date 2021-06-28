@@ -2,7 +2,7 @@ import Image from 'next/image'
 import imageBanner from '../public/imageBanner.svg'
 import styles from './../styles/Banner.module.css'
 
-const BannerSection = () => {
+const HomeBanner = () => {
   return (
     <section
       className='bg-cover bg-bottom'
@@ -10,9 +10,9 @@ const BannerSection = () => {
         backgroundImage: "url('/bgWConnerUp.svg')"
       }}
     >
-      <div className='mx-auto max-w-6xl mt-4 md:mt-10 pb-20 px-2 xl:pb-32 md:px-0'>
-        <div className='flex flex-col items-center md:flex-row md:px-6'>
-          <div>
+      <div className='mx-auto max-w-7xl mt-4 md:mt-10 pb-20 px-2 xl:pb-32 md:px-0'>
+        <div className='flex flex-col items-center md:flex-row'>
+          <div className='md:w-1/2'>
             <h1 className='text-40 leading-64 md:text-64 md:leading-80 text-white'>
               CREATING THE INNOVATIVE FUTURE
             </h1>
@@ -33,4 +33,4 @@ const BannerSection = () => {
   )
 }
 
-export default BannerSection
+export default HomeBanner

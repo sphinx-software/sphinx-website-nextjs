@@ -39,7 +39,7 @@ export const histories: HistoryType[] = [
 const DevelopingHistory: FC = () => {
   return (
     <div className='bg-white py-16'>
-      <div className='mx-auto max-w-6xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
+      <div className='mx-auto max-w-7xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
         <div className='text-center'>
           <p className='text-32 md:text-36 leading-48 text-black-50'>
             Developing history

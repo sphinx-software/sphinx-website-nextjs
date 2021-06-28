@@ -47,8 +47,8 @@ const ResearchDevelopment: FC = () => {
       className='bg-cover bg-white bg-top'
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
-      <div className='mx-auto max-w-6xl pt-12 md:pt-20 pb-10  xl:pb-20 md:px-0'>
-        <div className=''>
+      <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10  xl:pb-20 md:px-0'>
+        <div className='md:flex md:flex-col md:items-center'>
           <div className='text-center px-2'>
             <p className='text-36 leading-48 text-white'>R&D</p>
             <p className='text-16 leading-32 text-gray-350 mt-6'>

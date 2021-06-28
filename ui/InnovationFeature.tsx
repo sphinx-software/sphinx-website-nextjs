@@ -8,7 +8,7 @@ import { Check } from './icons'
 const InnovationFeature = () => {
   return (
     <div className='bg-gray-250'>
-      <div className='mx-auto max-w-6xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
+      <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
         <p className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'>
           CREATING THE INNOVATIVE FUTURE
         </p>
