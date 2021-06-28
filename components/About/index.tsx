@@ -6,6 +6,7 @@ import {
   InnovationFeature,
   ServiceSection
 } from '../../ui'
+import ResearchDevelopment from '../../ui/ResearchDevelopment'
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
       <DevelopingHistory />
       <InnovationFeature />
       <BoardOfDirector />
+      <ResearchDevelopment />
       <ServiceSection />
       <CommunicationSection />
     </>

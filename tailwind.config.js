@@ -68,6 +68,13 @@ module.exports = {
       full: '100%',
       screen: '100vh'
     }),
+    minWidth: {
+      0: '0px',
+      95: '95%',
+      full: '100%',
+      min: 'min-content',
+      max: 'max-content'
+    },
     extend: {
       fontFamily: {
         ABeeZee: ['"ABeeZee"', 'cursive']
@@ -88,6 +95,7 @@ module.exports = {
         '5.25rem': '5.25rem'
       },
       width: {
+        240: '240px',
         320: '320px',
         350: '350px',
         380: '380px',
@@ -175,7 +183,8 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {},
+    scrollbar: ['rounded']
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar')]
 }

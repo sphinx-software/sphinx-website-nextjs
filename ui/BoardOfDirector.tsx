@@ -1,9 +1,14 @@
 import { FC } from 'react'
-import avatar from './../public/avatar.svg'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import avatarRikky from './../public/avatarRikky.png'
+import avatarDoanh from './../public/avatarDoanh.png'
+import avatarOlivia from './../public/avatarOlivia.png'
+import avatarPhong from './../public/avatarPhong.png'
+import avatarTony from './../public/avatarTony.png'
+import avatarTota from './../public/avatarTota.png'
 
 type HolderType = {
   name: string
@@ -16,36 +21,36 @@ const holders: HolderType[][] = [
     {
       name: 'Mr. Rikky',
       position: 'CEO',
-      avatar
+      avatar: avatarRikky
     },
     {
       name: 'Mr. Tota',
       position: 'Project Manager',
-      avatar
+      avatar: avatarTota
     }
   ],
   [
     {
       name: 'Mr. Phong',
       position: 'CTO',
-      avatar
+      avatar: avatarPhong
     },
     {
       name: 'Ms. Tonny',
       position: 'System Architect',
-      avatar
+      avatar: avatarTony
     }
   ],
   [
     {
       name: 'Ms. Olivia',
       position: 'Sale Executive',
-      avatar
+      avatar: avatarOlivia
     },
     {
       name: 'Mr. Doanh',
       position: 'Designer',
-      avatar
+      avatar: avatarDoanh
     }
   ]
 ]
@@ -81,7 +86,7 @@ const BoardOfDirector: FC = () => {
         <p className='text-36 leading-48 text-black-50 text-center'>
           Keyholder
         </p>
-        <div className='mt-12 mb-12'>
+        <div className='mt-12 mb-12 md:mb-0'>
           <div className='block md:hidden'>
             <Slider {...settings}>
               {holders.map((h, index) => (
@@ -107,9 +112,9 @@ const Holder: FC<{ holder: HolderType }> = ({
   holder: { avatar, position, name }
 }) => {
   return (
-    <div className='flex flex-col items-center space-y-4 py-6'>
-      <Image src={avatar} />
-      <p className='text-16 leading-32'>{name}</p>
+    <div className='flex flex-col items-center py-6'>
+      <Image width={144} height={144} src={avatar} />
+      <p className='text-16 leading-32 mt-4'>{name}</p>
       <p className='text-16 leading-32 text-gray-350'>{position}</p>
     </div>
   )
