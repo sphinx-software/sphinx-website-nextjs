@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import { Layout } from '../layout'
-import JoinUsBanner from '../ui/JoinUsBanner'
-import JoinUsTable from '../ui/JoinUsTable'
-import { CommunicationSection } from '../ui'
+import JoinUsComponent from '../components/JoinUs'
 
-export default function Joinus() {
+export default function JoinUs() {
   return (
     <div>
       <Head>
@@ -14,12 +12,10 @@ export default function Joinus() {
       </Head>
       <main
         style={{ backgroundImage: "url('/bgImage-JoinUs.png')" }}
-        className='w-full h-full bg-top bg-contain	'
+        className='w-full bg-top bg-no-repeat'
       >
         <Layout>
-          <JoinUsBanner />
-          <JoinUsTable />
-          <CommunicationSection />
+          <JoinUsComponent />
         </Layout>
       </main>
     </div>

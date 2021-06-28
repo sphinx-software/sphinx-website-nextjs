@@ -3,11 +3,6 @@ import style from '../styles/JoinUs.module.css'
 import Image from 'next/image'
 
 const tableConfig = {
-  column: [
-    { key: 'position', name: 'Position' },
-    { key: 'time', name: 'Time' },
-    { key: 'salary', name: 'Salary' }
-  ],
   resource: [
     { position: 'Reception', time: 'Fulltime', salary: '800$' },
     { position: 'QA/Tester Mobile', time: 'Fulltime', salary: '1200$' },
@@ -48,36 +43,39 @@ const JoinUsTable: FunctionComponent = () => {
             </div>
           </button>
         </div>
-        <JoinTable columns={tableConfig.column} data={tableConfig.resource} />
+        <JoinTable data={tableConfig.resource} />
       </div>
     </section>
   )
 }
 
 declare type JoinTableProps = {
-  columns: column[]
   data: data[]
 }
 
-const JoinTable: FunctionComponent<JoinTableProps> = ({ columns, data }) => {
+const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
   return (
     <div className={'joinTable pb-44 w-full flex justify-center'}>
       <table className={'overflow-hidden border-collapse rounded-3xl w-4/5'}>
         <tr style={{ backgroundColor: 'rgba(189, 199, 205, 0.3)' }}>
-          {columns.map((column) => {
-            return (
-              <th key={column.key} className={'p-6 text-left'}>
-                <span className={'text-gray-50'}>{column.name}</span>
-              </th>
-            )
-          })}
+          <th className={'p-6 text-left'}>
+            <span className={'text-gray-50'}>Position</span>
+          </th>
+          <th className={'p-6 text-left'}>
+            <span className={'text-gray-50'}>Time</span>
+          </th>
+          <th className={'p-6 text-left hidden md:flex'}>
+            <span className={'text-gray-50'}>Salary</span>
+          </th>
         </tr>
         {data.map((row, index) => {
           return (
             <tr key={index}>
               <td className={'text-white bg-gray-450 p-6'}>{row.position}</td>
               <td className={'text-white bg-gray-450 p-6'}>{row.time}</td>
-              <td className={'text-white bg-gray-450 p-6'}>{row.salary}</td>
+              <td className={'text-white bg-gray-450 p-6 hidden md:table-cell'}>
+                {row.salary}
+              </td>
             </tr>
           )
         })}
