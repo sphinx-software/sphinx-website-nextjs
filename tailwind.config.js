@@ -78,6 +78,7 @@ module.exports = {
         ABeeZee: ['"ABeeZee"', 'cursive']
       },
       height: {
+        25: '25px',
         320: '320px',
         350: '350px',
         360: '360px',
@@ -90,9 +91,11 @@ module.exports = {
         430: '430px',
         450: '450px',
         490: '490px',
+        800: '800px',
         '5.25rem': '5.25rem'
       },
       width: {
+        25: '25px',
         320: '320px',
         350: '350px',
         380: '380px',
@@ -107,9 +110,13 @@ module.exports = {
         520: '520px',
         530: '530px',
         540: '540px',
+        560: '560px',
         sm: '320px',
         md: '400px',
         22: '5.5rem'
+      },
+      maxWidth: {
+        26.5: '26.5rem'
       },
       lineHeight: {
         11: '3.2rem',

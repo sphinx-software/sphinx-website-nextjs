@@ -1,218 +1,55 @@
-import styles from '../../styles/Home.module.css'
 import Image from 'next/image'
 import React from 'react'
+import RequirementImg from '../../public/lineStep1.svg'
+import Circle from '../../public/circle.svg'
+import Analysis from '../../public/analysis.svg'
 
 export default function WorkingProcess(): JSX.Element {
   return (
-    <div className={styles.workingMain}>
-      <div
-        className={
-          'md:flex max-w-6xl px-6 sm:px-6 pt-sxl pb-sxl h-auto mx-auto sm:px-6 flex-col'
-        }
-      >
-        <div className={styles.workingIntroduction}>
-          <text className={styles.workingTitle}>Working process</text>
-          <br />
-          <text className={styles.workingDescription}>
+    <div className='bg-gray-850'>
+      <div className='max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 md:pt-36 sm:pt-20 leading-11'>
+        <div className='text-white w-full'>
+          <div className='text-32 text-center'>Working process</div>
+          <div className='max-w-3xl text-center mx-auto pt-8'>
             Sphinx workflow based on agile scrum methodology has agility and
             adaptability, creativity and innovation with lower costs, quality
             improvement, and maximization of company synergy.
-          </text>
+          </div>
         </div>
-        <div className={styles.workingContent}>
-          <div>
-            <div className={'flex justify-center md:justify-start'}>
-              <p className={styles.workingContentTitle}>
-                Requirement&apos;s analysis
-              </p>
-            </div>
-            <div className='flex w-full h-auto'>
-              <div className={styles.workingContentLine} />
+        <div className='text-white pt-24'>
+          <div className='flex'>
+            <div className='md:flex-1 flex flex-col items-end relative border-r-2 border-solid border-gray-350 border-opacity-20'>
               <div
-                className={
-                  'flex flex-col justify-start items-center md:items-end w-full md:w-1/2'
-                }
-              >
-                <div
-                  className={
-                    'flex justify-start items-end w-full flex-col relative'
-                  }
-                  style={{ height: 536 }}
-                >
-                  <div className={'absolute z-10 rounded-full mr-4'}>
-                    <Image
-                      src={'/circle.svg'}
-                      height={536}
-                      width={536}
-                      alt={'circle'}
-                    />
-                  </div>
-                  <div className='absolute z-0 mt-0 pr-0 ml-10 md:ml-20'>
-                    <Image
-                      src={'/analysis.svg'}
-                      width={424}
-                      height={424}
-                      alt={'deployment'}
-                    />
-                    <div className={'relative top-full'}>
-                      <p className={styles.workingContentImageDescription}>
-                        After receiving inquiries from customer, the Sphinx team
-                        will indicate the project scope and create a plan to
-                        gain engagement with customers by using tools
-                      </p>
-                    </div>
+                className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350 absolute top-3 z-20'
+                style={{
+                  right: -13
+                }}
+              />
+              <div className='hidden md:flex relative pt-10 right-0 w-560 h-800'>
+                <div className='absolute top-0 '>
+                  <div className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36'>
+                    Requirement&apos;s analysis
                   </div>
                 </div>
+                <Image src={RequirementImg} alt={'RequirementImg'} />
               </div>
             </div>
-          </div>
-          <div>
-            <div className={'w-full justify-center md:justify-end flex'}>
+            <div className='flex-1 flex justify-center items-center flex-col'>
               <div
-                className={
-                  'w-1/2 flex justify-center md:justify-start pt-28 md:pt-60'
-                }
+                className='relative flex-shrink-0'
+                style={{ height: 424, width: 424 }}
               >
-                <p className={styles.workingContentTitle}>Design</p>
-              </div>
-            </div>
-            <div className='flex w-full h-auto md:flex-row-reverse'>
-              <div className={styles.workingContentLine} />
-              <div
-                className={
-                  'flex flex-col justify-star items-end  w-full md:w-1/2'
-                }
-              >
-                <div
-                  className={
-                    'flex justify-start items-center md:items-end w-full relative'
-                  }
-                  style={{ height: 536 }}
-                >
-                  <div className='absolute z-10 rounded-full mr-4'>
-                    <Image
-                      src={'/circle.svg'}
-                      height={536}
-                      width={536}
-                      alt={'circle'}
-                    />
-                  </div>
-                  <div className='absolute z-0 mt-0 pr-0 ml-10 md:ml-20'>
-                    <Image
-                      src={'/design.svg'}
-                      width={424}
-                      height={424}
-                      alt={'deployment'}
-                    />
-                    <div className={'relative top-full'}>
-                      <p className={styles.workingContentImageDescription}>
-                        The process divides into two-stage: Internal Design and
-                        External Design. These stages help determine that the
-                        software meets thespecifications&apos; goals and
-                        improves the product in the future.
-                      </p>
-                    </div>
-                  </div>
+                <div className='absolute z-20'>
+                  <Image src={Circle} alt={'circle'} />
+                </div>
+                <div className='absolute z-20'>
+                  <Image src={Analysis} alt={'analysis'} />
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <div
-              className={'flex justify-center md:justify-start pt-28 md:pt-60'}
-            >
-              <p className={styles.workingContentTitle}>
-                Development and Testing
-              </p>
-            </div>
-            <div className='flex w-full h-auto'>
-              <div className={styles.workingContentLine} />
-              <div
-                className={
-                  'flex flex-col justify-star items-end w-full md:w-1/2'
-                }
-              >
-                <div
-                  className={
-                    'flex justify-start items-center md:items-end w-full flex-col relative'
-                  }
-                  style={{ height: 536 }}
-                >
-                  <div className='absolute z-10 rounded-full mr-4'>
-                    <Image
-                      src={'/circle.svg'}
-                      height={536}
-                      width={536}
-                      alt={'circle'}
-                    />
-                  </div>
-                  <div className='absolute z-0 mt-0 pr-0 ml-10 md:ml-20'>
-                    <Image
-                      src={'/development.svg'}
-                      width={424}
-                      height={424}
-                      alt={'deployment'}
-                    />
-                    <div className={'relative top-full'}>
-                      <p className={styles.workingContentImageDescription}>
-                        Sphinx engineer team write code and convert the design
-                        documentation into the existing software within the
-                        software development process.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className={'w-full justify-center md:justify-end flex'}>
-              <div
-                className={
-                  'w-1/2 flex justify-center md:justify-start pt-28 md:pt-60'
-                }
-              >
-                <p className={styles.workingContentTitle}>Deployment</p>
-              </div>
-            </div>
-            <div className={'flex w-full h-auto md:flex-row-reverse'}>
-              <div className={styles.workingContentLine} />
-              <div
-                className={
-                  'flex flex-col justify-star items-end w-full md:w-1/2'
-                }
-              >
-                <div
-                  className={
-                    'flex justify-start items-center md:items-end w-full flex-col relative'
-                  }
-                  style={{ height: 536 }}
-                >
-                  <div className='absolute z-10 rounded-full mr-4'>
-                    <Image
-                      src={'/circle.svg'}
-                      height={536}
-                      width={536}
-                      alt={'circle'}
-                    />
-                  </div>
-                  <div className='absolute z-0 mt-0 pr-0 ml-10 md:ml-20'>
-                    <Image
-                      src={'/deployment.svg'}
-                      width={424}
-                      height={424}
-                      alt={'deployment'}
-                    />
-                    <div className={'relative top-full'}>
-                      <p className={styles.workingContentImageDescription}>
-                        The final stage to making sure all code is merged in one
-                        place and continuously ready to be shipped. Seamlessly
-                        taking the product from continuous delivery and
-                        deploying to servers through.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className='mt-12 max-w-26.5'>
+                After receiving inquiries from customer, the Sphinx team will
+                indicate the project scope and create a plan to gain engagement
+                with customers by using tools
               </div>
             </div>
           </div>
