@@ -7,7 +7,7 @@ import iconReward from './../public/iconReward.svg'
 const Achievement: FC = () => {
   return (
     <div className='bg-gray-850'>
-      <div className='mx-auto max-w-7xl py-16 md:py-24 px-2 md:px-0 xl:py-40 -mt-0.5'>
+      <div className='mx-auto max-w-7xl py-16 md:py-24 px-2 md:px-0 xl:py-28 -mt-0.5'>
         <div>
           <p className='text-36 leading-48 text-white text-center'>
             Achievements
