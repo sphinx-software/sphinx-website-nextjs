@@ -14,7 +14,7 @@ const JoinUsBanner = () => {
           <p className='text-center text-36 leading-32 text-white pb-6'>
             Leading technology company in Vietnam
           </p>
-          <p className='text-center text-16 leading-32 text-white pb-6'>
+          <p className='text-center text-gray-350 text-16 leading-32 text-white pb-6'>
             Providing the most professional technology services for clients
             worldwide with.
           </p>

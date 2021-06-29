@@ -62,7 +62,7 @@ const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
         }
         style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
       >
-        <tr style={{ backgroundColor: 'rgba(189, 199, 205, 0.6)' }}>
+        <tr className={'bg-gray-380'}>
           <th
             className={
               'p-6 text-left border-b border-gray-250 border-opacity-10'
