@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useRef } from 'react'
 import Image from 'next/image'
 import dotActive from './../public/dotActive.svg'
 import dot from './../public/dot.svg'
@@ -8,6 +8,7 @@ import timeLine3 from './../public/timeLine3.svg'
 import timeLine4 from './../public/timeLine4.svg'
 import timeLine5 from './../public/timeLine5.svg'
 import classNames from 'classnames'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 declare type TimeLineType = {
   content: string
@@ -66,6 +67,7 @@ const ResearchDevelopment: FC = () => {
 
 const TimeLine: FC = () => {
   const [indexTimeLineActive, setIndexTimeLineActive] = useState(0)
+  const ref = useRef<any>(null)
   return (
     <>
       <div className='overflow-x-auto flex flex-nowrap md:hidden scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full'>
@@ -93,10 +95,22 @@ const TimeLine: FC = () => {
           ))}
         </div>
         <div>
-          <Image
-            src={timeLines[indexTimeLineActive].image}
-            alt='Sphinx Software'
-          />
+          <SwitchTransition mode='out-in'>
+            <CSSTransition
+              nodeRef={ref}
+              timeout={300}
+              in
+              key={indexTimeLineActive}
+              classNames='fade'
+            >
+              <div ref={ref}>
+                <Image
+                  src={timeLines[indexTimeLineActive].image}
+                  alt='Sphinx Software'
+                />
+              </div>
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
     </>
