@@ -55,10 +55,10 @@ declare type JoinTableProps = {
 
 const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
   return (
-    <div className={'joinTable pb-44 w-full flex justify-center'}>
+    <div className={'joinTable pb-44 w-full flex justify-center px-6 md:px-0 '}>
       <table
         className={
-          'overflow-hidden rounded-3xl w-2/3 bg-gray-850 bg-opacity-10'
+          'overflow-hidden rounded-3xl w-full md:w-2/3 bg-gray-850 bg-opacity-10'
         }
         style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
       >
