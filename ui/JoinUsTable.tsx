@@ -56,24 +56,55 @@ declare type JoinTableProps = {
 const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
   return (
     <div className={'joinTable pb-44 w-full flex justify-center'}>
-      <table className={'overflow-hidden border-collapse rounded-3xl w-4/5'}>
-        <tr style={{ backgroundColor: 'rgba(189, 199, 205, 0.3)' }}>
-          <th className={'p-6 text-left'}>
+      <table
+        className={
+          'overflow-hidden rounded-3xl w-2/3 bg-gray-850 bg-opacity-10'
+        }
+        style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
+      >
+        <tr style={{ backgroundColor: 'rgba(189, 199, 205, 0.6)' }}>
+          <th
+            className={
+              'p-6 text-left border-b border-gray-250 border-opacity-10'
+            }
+          >
             <span className={'text-gray-50'}>Position</span>
           </th>
-          <th className={'p-6 text-left'}>
+          <th
+            className={
+              'p-6 text-left border-b border-gray-250 border-opacity-10'
+            }
+          >
             <span className={'text-gray-50'}>Time</span>
           </th>
-          <th className={'p-6 text-left hidden md:flex'}>
+          <th
+            className={`p-6 text-left hidden border-b border-gray-250 border-opacity-10 md:table-cell`}
+          >
             <span className={'text-gray-50'}>Salary</span>
           </th>
         </tr>
         {data.map((row, index) => {
           return (
             <tr key={index}>
-              <td className={'text-white bg-gray-450 p-6'}>{row.position}</td>
-              <td className={'text-white bg-gray-450 p-6'}>{row.time}</td>
-              <td className={'text-white bg-gray-450 p-6 hidden md:table-cell'}>
+              <td
+                className={
+                  'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                }
+              >
+                {row.position}
+              </td>
+              <td
+                className={
+                  'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                }
+              >
+                {row.time}
+              </td>
+              <td
+                className={
+                  'text-white bg-gray-450 p-6 hidden border-b border-gray-250 border-opacity-10 md:table-cell'
+                }
+              >
                 {row.salary}
               </td>
             </tr>

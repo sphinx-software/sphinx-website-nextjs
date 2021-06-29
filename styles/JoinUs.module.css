@@ -3,10 +3,6 @@
     @apply px-6 py-3.5 rounded-3xl text-white text-16 leading-19 text-center mt-6
 }
 
-.joinTable {
-
-}
-
 .joinUsMain {
     background-image: linear-gradient(0deg, #583023 0%, #0E1C1C 45%, #0E1C1C 55%);
     @apply w-full -mt-1

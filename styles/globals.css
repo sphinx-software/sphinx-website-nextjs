@@ -55,6 +55,6 @@ a {
   @apply inline-flex items-center
 }
 
-.joinTable > table > tr:hover {
-  background: #0E1C1C;
+.joinTable > table > tr:hover > td {
+  box-shadow: inset 0 0 0 99999px rgba(0,0,0,0.2);
 }
