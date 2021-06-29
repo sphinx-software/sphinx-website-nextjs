@@ -1,4 +1,4 @@
-import { FC, useState, useRef } from 'react'
+import { FC, useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import dotActive from './../public/dotActive.svg'
 import dot from './../public/dot.svg'
@@ -67,6 +67,18 @@ const ResearchDevelopment: FC = () => {
 
 const TimeLine: FC = () => {
   const [indexTimeLineActive, setIndexTimeLineActive] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (indexTimeLineActive === timeLines.length - 1) {
+        setIndexTimeLineActive(0)
+      } else {
+        setIndexTimeLineActive(indexTimeLineActive + 1)
+      }
+    }, 5000)
+    return () => clearInterval(interval)
+  })
+
   const ref = useRef<any>(null)
   return (
     <>
@@ -83,7 +95,7 @@ const TimeLine: FC = () => {
         ))}
       </div>
       <div className='hidden md:flex h-490 flex space-x-6'>
-        <div className='overflow-y-auto md:flex-col px-2 w-420 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full'>
+        <div className='overflow-y-auto md:flex-col px-2 w-420 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full py-1'>
           {timeLines.map((t, i) => (
             <div key={i}>
               <TimeLineItem
@@ -137,15 +149,12 @@ const TimeLineItem: FC<{
           {content}
         </p>
       </div>
-      <div
-        className='hidden md:flex md:h-32 cursor-pointer'
-        onClick={onClickTimeLine}
-      >
+      <div className='hidden md:flex cursor-pointer' onClick={onClickTimeLine}>
         <div className='flex flex-col items-center flex-shrink-0 w-4'>
           <Image src={active ? dotActive : dot} alt='Sphinx Software' />
           <Line />
         </div>
-        <div>
+        <div className='-mt-2.5 pb-20'>
           <p
             className={classNames(
               ['text-16 leading-32 px-3'],

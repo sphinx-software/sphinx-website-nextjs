@@ -14,7 +14,7 @@ const Achievement: FC = () => {
           </p>
         </div>
         <div className='md:grid md:grid-cols-3 md:gap-4 xl:gap-8 place-content-center mt-14 lg:mt-20'>
-          <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 shadow-2xl'>
+          <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 shadow-2xl'>
             <Image src={iconRocket} alt='Sphinx Software' />
             <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-160'>
               <p className='text-16 leading-48'>Expanded the business to</p>
@@ -27,7 +27,7 @@ const Achievement: FC = () => {
               <p className='text-16 leading-48'>each year</p>
             </div>
           </div>
-          <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
+          <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
             <Image src={iconGlobal} alt='Sphinx Software' />
             <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-180'>
               <p className='text-16 leading-48'>
@@ -43,10 +43,10 @@ const Achievement: FC = () => {
               <p className='text-24 leading-48'>2019</p>
             </div>
           </div>
-          <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
+          <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
             <Image src={iconReward} alt='Sphinx Software' />
             <div className=' text-center w-full py-4 rounded-2xl mt-6 md:min-h-180'>
-              <p className='text-16 leading-32'>
+              <p className='text-16 leading-32 px-0 md:px-12'>
                 Sphinx contributed to JavaScript Development by joining Node.JS
                 Foundation
               </p>
