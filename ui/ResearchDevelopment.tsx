@@ -72,7 +72,7 @@ const TimeLine: FC = () => {
         {timeLines.map((t, i) => (
           <div key={i} className='min-w-95'>
             <div className='pr-4 pl-2'>
-              <Image src={t.image} />
+              <Image src={t.image} alt='Sphinx Software' />
             </div>
             <div className='mt-14'>
               <TimeLineItem timeLine={t} />
@@ -93,7 +93,10 @@ const TimeLine: FC = () => {
           ))}
         </div>
         <div>
-          <Image src={timeLines[indexTimeLineActive].image} />
+          <Image
+            src={timeLines[indexTimeLineActive].image}
+            alt='Sphinx Software'
+          />
         </div>
       </div>
     </>
@@ -113,7 +116,7 @@ const TimeLineItem: FC<{
     <>
       <div className='md:hidden'>
         <div className='flex items-center'>
-          <Image src={dotActive} />
+          <Image src={dotActive} alt='Sphinx Software' />
           <Line />
         </div>
         <p className='py-4 text-yellow-450 text-16 leading-32 pl-2 pr-5'>
@@ -125,7 +128,7 @@ const TimeLineItem: FC<{
         onClick={onClickTimeLine}
       >
         <div className='flex flex-col items-center flex-shrink-0 w-4'>
-          <Image src={active ? dotActive : dot} />
+          <Image src={active ? dotActive : dot} alt='Sphinx Software' />
           <Line />
         </div>
         <div>

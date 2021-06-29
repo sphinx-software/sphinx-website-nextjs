@@ -15,7 +15,7 @@ const Achievement: FC = () => {
         </div>
         <div className='md:grid md:grid-cols-3 md:gap-4 xl:gap-8 place-content-center mt-14 lg:mt-20'>
           <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50'>
-            <Image src={iconRocket} />
+            <Image src={iconRocket} alt='Sphinx Software' />
             <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-160'>
               <p className='text-16 leading-48'>Expanded the business to</p>
               <p className='text-24 leading-48'>300%</p>
@@ -28,7 +28,7 @@ const Achievement: FC = () => {
             </div>
           </div>
           <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0'>
-            <Image src={iconGlobal} />
+            <Image src={iconGlobal} alt='Sphinx Software' />
             <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-180'>
               <p className='text-16 leading-48'>
                 The company market mainly was Japan
@@ -44,7 +44,7 @@ const Achievement: FC = () => {
             </div>
           </div>
           <div className='px-3 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0'>
-            <Image src={iconReward} />
+            <Image src={iconReward} alt='Sphinx Software' />
             <div className=' text-center w-full py-4 rounded-2xl mt-6 md:min-h-180'>
               <p className='text-16 leading-32'>
                 Sphinx contributed to JavaScript Development by joining Node.JS
