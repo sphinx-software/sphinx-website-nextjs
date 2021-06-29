@@ -68,9 +68,16 @@ module.exports = {
       full: '100%',
       screen: '100vh'
     }),
+    minHeight: {
+      0: '0px',
+      full: '100%',
+      180: '180px',
+      screen: '100vh'
+    },
     minWidth: {
       0: '0px',
       95: '95%',
+      160: '160px',
       full: '100%',
       min: 'min-content',
       max: 'max-content'

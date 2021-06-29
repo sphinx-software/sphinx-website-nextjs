@@ -1,12 +1,13 @@
 import {
   AboutBanner,
+  Achievement,
   BoardOfDirector,
   CommunicationSection,
   DevelopingHistory,
   InnovationFeature,
+  ResearchDevelopment,
   ServiceSection
 } from '../../ui'
-import ResearchDevelopment from '../../ui/ResearchDevelopment'
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
       <InnovationFeature />
       <BoardOfDirector />
       <ResearchDevelopment />
+      <Achievement />
       <ServiceSection />
       <CommunicationSection />
     </>
