@@ -1,35 +1,33 @@
 import React, { FunctionComponent } from 'react'
 import style from '../styles/JoinUs.module.css'
 import Image from 'next/image'
-
-const tableConfig = {
-  resource: [
-    { position: 'Reception', time: 'Fulltime', salary: '800$' },
-    { position: 'QA/Tester Mobile', time: 'Fulltime', salary: '1200$' },
-    { position: 'UI/UX Designer', time: 'Fulltime', salary: '1500$' },
-    {
-      position: 'Software Engineer (PHP/NodeJS)',
-      time: 'Fulltime',
-      salary: '2000$'
-    }
-  ]
-}
+import { useRouter } from 'next/router'
+import { tableConfig } from '../config'
 
 type column = {
   key: string
   name: string
 }
 
+type detailJob = {
+  title: string
+  contents: string[] | []
+}
+
 type data = {
+  id: string
   position: string
   time: string
   salary: string
+  description: detailJob[]
 }
 
 const JoinUsTable: FunctionComponent = () => {
   return (
     <section className={style.joinUsMain}>
-      <div className={'mx-auto max-w-6xl flex items-center flex-col'}>
+      <div
+        className={'mx-auto max-w-6xl flex items-center flex-col -my-1 md:my-0'}
+      >
         <div className={'pb-12 w-full md:w-2/3 mx:auto flex justify-center'}>
           <button className='border rounded-full px-4 py-2 border-gray-350 text-white text-center'>
             <div className={'flex'}>
@@ -54,6 +52,8 @@ declare type JoinTableProps = {
 }
 
 const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
+  const router = useRouter()
+
   return (
     <div className={'joinTable pb-44 w-full flex justify-center px-6 md:px-0 '}>
       <table
@@ -85,7 +85,12 @@ const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
         </tr>
         {data.map((row, index) => {
           return (
-            <tr key={index}>
+            <tr
+              key={index}
+              onClick={() => {
+                router.push(`/join-us/${row.id}`).then(() => {})
+              }}
+            >
               <td
                 className={
                   'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
