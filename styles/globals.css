@@ -54,3 +54,7 @@ a {
 .contactRadio > label {
   @apply inline-flex items-center
 }
+
+.joinTable > table > tr:hover > td {
+  background-color: #494d52;
+}
