@@ -14,6 +14,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
   const { NAVS } = useConfig()
   const router = useRouter()
 
+  console.log(router)
   return (
     <div
       className={`md:relative w-full ${
@@ -56,8 +57,20 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                   </Link>
                 ))}
                 <div>
-                  <button className='border rounded-3xl px-6 py-2 border-yellow-450 text-yellow-450'>
-                    <p className='text-16 leading-19'>Join us</p>
+                  <button
+                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none ${
+                      router.asPath === '/join-us' ||
+                      router.pathname === '/join-us/[id]'
+                        ? 'bg-yellow-450 text-white'
+                        : 'text-yellow-450'
+                    }`}
+                  >
+                    <p
+                      className='text-16 leading-19'
+                      onClick={() => router.push('/join-us')}
+                    >
+                      Join us
+                    </p>
                   </button>
                 </div>
               </div>

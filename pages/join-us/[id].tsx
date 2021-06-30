@@ -14,7 +14,7 @@ export default function JoinUs() {
   return (
     <div>
       <Head>
-        <title>Sphinx Software | Contact</title>
+        <title>Sphinx Software | Join Us</title>
         <meta name='description' content='Tham gia với Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
