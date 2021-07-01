@@ -52,7 +52,7 @@ const CompanyStrength: FC<CompanyStrengthProps> = ({ icon, text }) => {
         width: 225,
         height: 200
       }}
-      className='flex justify-center flex-col content-center text-center text-white'
+      className='flex justify-center flex-col content-center text-center text-white cursor-pointer hover:-translate-x-1 hover:scale-105 transition duration-700 ease-in-out transform'
     >
       <div className='mb-2'>
         <Image src={icon} alt='Sphinx Software' />

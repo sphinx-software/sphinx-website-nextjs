@@ -1,5 +1,4 @@
 .companyTendency {
-    background-image: url("/public/companyTendencyBg.png");
     height: auto;
 }
 
@@ -35,5 +34,4 @@
 }
 
 .companyOverviewImage {
-    @apply mt-32 md:mt-12
 }
