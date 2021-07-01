@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -9,6 +9,7 @@ import avatarOlivia from './../public/avatarOlivia.png'
 import avatarPhong from './../public/avatarPhong.png'
 import avatarTony from './../public/avatarTony.png'
 import avatarTota from './../public/avatarTota.png'
+import { SECTION, useAboutSection } from './AboutProvider'
 
 type HolderType = {
   name: string
@@ -80,10 +81,18 @@ const settings = {
 }
 
 const BoardOfDirector: FC = () => {
+  const ref = useRef<any>(null)
+  const [{ sectionActive }] = useAboutSection()
+  useEffect(() => {
+    if (sectionActive === SECTION.KEYHOLDER) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [sectionActive])
+
   return (
     <div className='bg-white'>
       <div className='mx-auto max-w-7xl pt-12 md:pt-24 pb-10 px-2 xl:pb-24 md:px-0'>
-        <p className='text-36 leading-48 text-black-50 text-center'>
+        <p className='text-36 leading-48 text-black-50 text-center' ref={ref}>
           Keyholder
         </p>
         <div className='mt-12 mb-12 md:mb-0'>

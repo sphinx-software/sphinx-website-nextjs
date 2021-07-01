@@ -1,15 +1,23 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import iconRocket from './../public/iconRocket.svg'
 import iconGlobal from './../public/iconGlobal.svg'
 import iconReward from './../public/iconReward.svg'
+import { SECTION, useAboutSection } from './AboutProvider'
 
 const Achievement: FC = () => {
+  const ref = useRef<any>(null)
+  const [{ sectionActive }] = useAboutSection()
+  useEffect(() => {
+    if (sectionActive === SECTION.ACHIEVEMENTS) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [sectionActive])
   return (
     <div className='bg-gray-850'>
       <div className='mx-auto max-w-7xl py-16 md:py-24 px-2 md:px-0 xl:py-28 -mt-0.5'>
         <div>
-          <p className='text-36 leading-48 text-white text-center'>
+          <p className='text-36 leading-48 text-white text-center' ref={ref}>
             Achievements
           </p>
         </div>

@@ -1,15 +1,26 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import iconVision from './../public/iconVision.svg'
 import iconMission from './../public/iconMission.svg'
 import pyramid from '../public/pyramid.svg'
 import Image from 'next/image'
 import styles from './../styles/About.module.css'
+import { SECTION, useAboutSection } from './AboutProvider'
 
 const InnovationFeature = () => {
+  const ref = useRef<any>(null)
+  const [{ sectionActive }] = useAboutSection()
+  useEffect(() => {
+    if (sectionActive === SECTION.VISION_MISSION) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [sectionActive])
   return (
     <div className='bg-gray-250'>
       <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
-        <p className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'>
+        <p
+          className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'
+          ref={ref}
+        >
           CREATING THE INNOVATIVE FUTURE
         </p>
         <div className='grid grid-rows-1 md:grid-cols-2 mt-20 md:gap-x-4 md:px-2'>

@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import iconHistory from './../public/iconHistory.svg'
 import Image from 'next/image'
+import { SECTION, useAboutSection } from './AboutProvider'
 
 export declare type HistoryType = {
   year: number
@@ -37,11 +38,18 @@ export const histories: HistoryType[] = [
 ]
 
 const DevelopingHistory: FC = () => {
+  const ref = useRef<any>(null)
+  const [{ sectionActive }] = useAboutSection()
+  useEffect(() => {
+    if (sectionActive === SECTION.DEVELOPING_HISTORY) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [sectionActive])
   return (
     <div className='bg-white py-16 -mt-1'>
       <div className='mx-auto max-w-7xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
         <div className='text-center'>
-          <p className='text-32 md:text-36 leading-48 text-black-50'>
+          <p className='text-32 md:text-36 leading-48 text-black-50' ref={ref}>
             Developing history
           </p>
         </div>

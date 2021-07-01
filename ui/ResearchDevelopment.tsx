@@ -9,6 +9,7 @@ import timeLine4 from './../public/timeLine4.svg'
 import timeLine5 from './../public/timeLine5.svg'
 import classNames from 'classnames'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import { SECTION, useAboutSection } from './AboutProvider'
 
 declare type TimeLineType = {
   content: string
@@ -43,6 +44,14 @@ const timeLines: TimeLineType[] = [
 ]
 
 const ResearchDevelopment: FC = () => {
+  const ref = useRef<any>(null)
+  const [{ sectionActive }] = useAboutSection()
+  useEffect(() => {
+    if (sectionActive === SECTION.RESEARCH_DEVELOPMENT) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [sectionActive])
+
   return (
     <div
       className='bg-cover bg-white bg-top'
@@ -52,7 +61,7 @@ const ResearchDevelopment: FC = () => {
         <div className='md:flex md:flex-col md:items-center'>
           <div className='text-center px-2'>
             <p className='text-36 leading-48 text-white'>R&D</p>
-            <p className='text-16 leading-32 text-gray-350 mt-6'>
+            <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
               Research & Developments
             </p>
           </div>

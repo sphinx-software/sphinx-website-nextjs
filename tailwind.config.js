@@ -104,6 +104,7 @@ module.exports = {
       0: '0px',
       95: '95%',
       160: '160px',
+      200: '200px',
       full: '100%',
       min: 'min-content',
       max: 'max-content'
