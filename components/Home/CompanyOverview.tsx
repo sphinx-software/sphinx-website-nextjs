@@ -22,9 +22,11 @@ const CompanyOverview: FunctionComponent = () => {
           >
             <div className='pl-4 lg:pl-10 lg:pr-4 md:mt-16'>
               <ScrollAnimation animateIn='animate__fadeInUp'>
-                <h2 className='py-4 text-24 text-black-50'>Company Overview</h2>
+                <h2 className='py-4 text-24 leading-48 text-black-50'>
+                  Company Overview
+                </h2>
               </ScrollAnimation>
-              <ScrollAnimation animateIn='animate__fadeInUp'>
+              <ScrollAnimation animateIn='animate__fadeInUp' delay={1000}>
                 <p className='text-16 text-black-50 leading-32'>
                   Founded in 2015 and headquartered in Hanoi, Sphinx is not only
                   a team of guys who young, enthusiastic, and passionate about
@@ -33,7 +35,7 @@ const CompanyOverview: FunctionComponent = () => {
                   become experts.
                 </p>
               </ScrollAnimation>
-              <ScrollAnimation animateIn='animate__fadeInUp'>
+              <ScrollAnimation animateIn='animate__fadeInUp' delay={2000}>
                 <button className={styles.companyOverviewButtonSeeMore}>
                   <span
                     className={classNames([
@@ -54,7 +56,7 @@ const CompanyOverview: FunctionComponent = () => {
                 <Image src={imageCompanyOverviewBG} alt={'Sphinx Software'} />
               </div>
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__fadeInUp'>
+                <ScrollAnimation animateIn='animate__fadeInUp' delay={1000}>
                   <Image
                     src={imageCompanyOverviewRocket}
                     alt={'Sphinx Software'}

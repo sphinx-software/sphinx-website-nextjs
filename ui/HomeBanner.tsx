@@ -25,28 +25,23 @@ const HomeBanner = () => {
                 CREATING THE INNOVATIVE FUTURE
               </h1>
             </ScrollAnimation>
-
-            <ScrollAnimation animateIn='animate__fadeInUp'>
+            <ScrollAnimation animateIn='animate__fadeInUp' delay={1000}>
               <p className='text-16 leading-32 text-gray-350'>
                 Providing the most professional technology services for clients
                 worldwide
               </p>
             </ScrollAnimation>
-
-            <button className={styles.buttonContactUs}>
-              <p>Contact Us</p>
-            </button>
+            <ScrollAnimation animateIn='animate__fadeInUp' delay={2000}>
+              <button className={styles.buttonContactUs}>
+                <p>Contact Us</p>
+              </button>
+            </ScrollAnimation>
           </div>
           <div className='w-full mt-80 md:mt-24 md:w-1/2'>
             <div className='w-full relative -top-60'>
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__lightSpeedInRight'>
+                <ScrollAnimation animateIn='animate__fadeInDown'>
                   <Image src={imageBannerPHP} alt='Sphinx Software' />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute'>
-                <ScrollAnimation animateIn='animate__lightSpeedInRight'>
-                  <Image src={imageBannerSQL} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
               <div className='absolute'>
@@ -54,24 +49,32 @@ const HomeBanner = () => {
                   <Image src={imageBannerCSS} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
+
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__lightSpeedInLeft'>
+                <ScrollAnimation animateIn='animate__fadeIn' duration={3}>
                   <Image src={imageBannerLaptop} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__fadeInDown'>
+                <ScrollAnimation animateIn='animate__fadeIn' duration={6}>
                   <Image src={imageBannerCode} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__fadeInUp'>
+                <ScrollAnimation animateIn='animate__fadeIn' duration={3}>
                   <Image src={imageBannerSoftware} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
+
               <div className='absolute'>
-                <ScrollAnimation animateIn='animate__lightSpeedInRight'>
+                <ScrollAnimation animateIn='animate__fadeInLeft'>
                   <Image src={imageBannerXML} alt='Sphinx Software' />
+                </ScrollAnimation>
+              </div>
+
+              <div className='absolute'>
+                <ScrollAnimation animateIn='animate__fadeInUp'>
+                  <Image src={imageBannerSQL} alt='Sphinx Software' />
                 </ScrollAnimation>
               </div>
             </div>
