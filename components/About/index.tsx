@@ -1,9 +1,11 @@
 import {
   AboutBanner,
+  Achievement,
   BoardOfDirector,
   CommunicationSection,
   DevelopingHistory,
   InnovationFeature,
+  ResearchDevelopment,
   ServiceSection
 } from '../../ui'
 
@@ -14,6 +16,8 @@ const About = () => {
       <DevelopingHistory />
       <InnovationFeature />
       <BoardOfDirector />
+      <ResearchDevelopment />
+      <Achievement />
       <ServiceSection />
       <CommunicationSection />
     </>

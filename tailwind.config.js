@@ -73,6 +73,41 @@ module.exports = {
       full: '100%',
       screen: '100vh'
     }),
+    maxWidth: (theme, { breakpoints }) => ({
+      none: 'none',
+      0: '0rem',
+      xs: '20rem',
+      sm: '24rem',
+      md: '28rem',
+      lg: '32rem',
+      xl: '36rem',
+      536: '536px',
+      '2xl': '42rem',
+      '3xl': '48rem',
+      '4xl': '56rem',
+      '5xl': '64rem',
+      '6xl': '72rem',
+      '7xl': '80rem',
+      full: '100%',
+      min: 'min-content',
+      max: 'max-content',
+      prose: '65ch',
+      ...breakpoints(theme('screens'))
+    }),
+    minHeight: {
+      0: '0px',
+      full: '100%',
+      180: '180px',
+      screen: '100vh'
+    },
+    minWidth: {
+      0: '0px',
+      95: '95%',
+      160: '160px',
+      full: '100%',
+      min: 'min-content',
+      max: 'max-content'
+    },
     extend: {
       fontFamily: {
         ABeeZee: ['"ABeeZee"', 'cursive']
@@ -90,11 +125,13 @@ module.exports = {
         420: '420px',
         430: '430px',
         450: '450px',
+        480: '480px',
         490: '490px',
         800: '800px',
         '5.25rem': '5.25rem'
       },
       width: {
+        240: '240px',
         25: '25px',
         320: '320px',
         350: '350px',
@@ -105,6 +142,7 @@ module.exports = {
         420: '420px',
         450: '450px',
         470: '470px',
+        480: '480px',
         490: '490px',
         500: '500px',
         520: '520px',
@@ -191,7 +229,8 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {},
+    scrollbar: ['rounded']
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar')]
 }

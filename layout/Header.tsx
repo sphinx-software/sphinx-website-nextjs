@@ -14,7 +14,6 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
   const { NAVS } = useConfig()
   const router = useRouter()
 
-  console.log(router)
   return (
     <div
       className={`md:relative w-full ${
@@ -22,7 +21,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
       } z-40`}
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
-        <div className='flex justify-between items-center max-w-6xl mx-auto px-6 lg:px-8'>
+        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8'>
           <div className='flex items-center h-5.25rem'>
             <div className='flex-shrink-0'>
               <Link href={'/'}>
