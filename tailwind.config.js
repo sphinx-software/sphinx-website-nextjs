@@ -1,5 +1,10 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './ui/**/*.{js,ts,jsx,tsx}',
+    './layout/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
@@ -171,7 +176,9 @@ module.exports = {
           150: '#E5E5E5',
           250: '#BDC7CD',
           350: '#8F969E',
+          380: '#71757b',
           450: '#505258',
+          550: '#494d52',
           850: '#0E1C1C'
         },
         violet: {
@@ -197,7 +204,9 @@ module.exports = {
         '45%': '45%',
         '50%': '50%',
         '8px': '8px',
-        '14px': '14px'
+        '14px': '14px',
+        112: '28rem',
+        120: '30rem'
       },
       margin: {
         '25rem': '25rem',

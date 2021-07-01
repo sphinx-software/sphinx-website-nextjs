@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>Sphinx Software</title>
+        <title>Sphinx Software | About</title>
         <meta name='description' content='Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>

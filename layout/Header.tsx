@@ -21,7 +21,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
       } z-40`}
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
-        <div className='flex justify-between items-center max-w-7xl mx-auto px-2 lg:px-0'>
+        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8'>
           <div className='flex items-center h-5.25rem'>
             <div className='flex-shrink-0'>
               <Link href={'/'}>
@@ -30,6 +30,8 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                     src='/symbolSphinx.svg'
                     alt='Sphinx Software Logo'
                     width={37}
+                    loading={'eager'}
+                    priority
                     height={37}
                   />
                 </a>
@@ -54,8 +56,20 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                   </Link>
                 ))}
                 <div>
-                  <button className='border rounded-3xl px-6 py-2 border-yellow-450 text-yellow-450'>
-                    <p className='text-16 leading-19'>Join us</p>
+                  <button
+                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none ${
+                      router.asPath === '/join-us' ||
+                      router.pathname === '/join-us/[id]'
+                        ? 'bg-yellow-450 text-white'
+                        : 'text-yellow-450'
+                    }`}
+                  >
+                    <p
+                      className='text-16 leading-19'
+                      onClick={() => router.push('/join-us')}
+                    >
+                      Join us
+                    </p>
                   </button>
                 </div>
               </div>

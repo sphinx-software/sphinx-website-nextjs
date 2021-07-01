@@ -11,10 +11,7 @@ export default function Home() {
         <meta name='description' content='Liên hệ với Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
-      <main
-        style={{ backgroundImage: "url('/bannerBg.svg')" }}
-        className='bg-top'
-      >
+      <main className='bg-gray-850'>
         <Layout>
           <RequestContact />
           <CommunicationSection />

@@ -71,3 +71,7 @@ a {
 .fade-exit-active{
   transition: opacity 500ms;
 }
+
+.joinTable > table > tr:hover > td {
+  background-color: #494d52;
+}

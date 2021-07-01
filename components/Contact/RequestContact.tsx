@@ -102,7 +102,7 @@ const RequestContact: FunctionComponent = () => {
                       className={style.formContactRadioLabel}
                       htmlFor='reasonA'
                     >
-                      Reason need help
+                      Website Development
                     </label>
                   </div>
                   <div className={'leading-normal py-2 contactRadio'}>
@@ -120,7 +120,7 @@ const RequestContact: FunctionComponent = () => {
                       className={style.formContactRadioLabel}
                       htmlFor='reasonB'
                     >
-                      Reason need help
+                      Mobile App Development
                     </label>
                   </div>
                   <div className={'leading-normal py-2 contactRadio'}>
@@ -138,7 +138,7 @@ const RequestContact: FunctionComponent = () => {
                       className={style.formContactRadioLabel}
                       htmlFor='reasonC'
                     >
-                      Reason need help
+                      IT Managed Services
                     </label>
                   </div>
                   <div className={'leading-normal py-2 contactRadio'}>

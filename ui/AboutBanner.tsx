@@ -42,7 +42,7 @@ const AboutBanner = () => {
         backgroundImage: "url('/bgWConnerUp.svg')"
       }}
     >
-      <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
+      <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10 px-2 xl:pb-28 md:px-0'>
         <div className='w-full lg:w-2/3 mx-auto'>
           <p className='text-center text-16 leading-32 text-gray-250'>
             Founded in 2015 and headquartered in Hanoi, Sphinx is not only a
@@ -51,7 +51,7 @@ const AboutBanner = () => {
             1st year of the university until they become experts.
           </p>
         </div>
-        <div className='py-16 flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='py-16 flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-56 md:pb-24'>
           {aboutInformations.map((information: Information, index: number) => (
             <InformationBox key={index} information={information} />
           ))}
