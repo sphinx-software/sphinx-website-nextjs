@@ -228,13 +228,22 @@ module.exports = {
       screens: {
         ssm: '384px',
         '3xl': '1792px',
-        '4xl': '2048px'
+        fullHd: '1921px',
+        '4xl': '2048px',
+        '4k': '2560px'
       },
       backgroundSize: {
+        'WAutoH55%': 'auto 55%',
+        'WAutoH52%': 'auto 52%',
+        'WAutoH50%': 'auto 50%',
         'WAutoH45%': 'auto 45%',
         'WAutoH40%': 'auto 40%',
         'WAutoH35%': 'auto 35%',
-        'WAutoH30%': 'auto 30%'
+        'WAutoH30%': 'auto 30%',
+        'WAutoH26%': 'auto 26%',
+        'WAutoH25%': 'auto 25%',
+        'WAutoH20%': 'auto 20%',
+        'W100%H40%': '100% 40%'
       }
     }
   },
