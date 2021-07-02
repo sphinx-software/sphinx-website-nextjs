@@ -218,6 +218,12 @@ module.exports = {
         ssm: '384px',
         '3xl': '1792px',
         '4xl': '2048px'
+      },
+      backgroundSize: {
+        'WAutoH45%': 'auto 45%',
+        'WAutoH40%': 'auto 40%',
+        'WAutoH35%': 'auto 35%',
+        'WAutoH30%': 'auto 30%'
       }
     }
   },
