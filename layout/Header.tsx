@@ -57,12 +57,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 ))}
                 <div>
                   <button
-                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none ${
-                      router.asPath === '/join-us' ||
-                      router.pathname === '/join-us/[id]'
-                        ? 'bg-yellow-450 text-white'
-                        : 'text-yellow-450'
-                    }`}
+                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none text-yellow-450 hover:bg-yellow-450 hover:text-white`}
                   >
                     <p
                       className='text-16 leading-19'
