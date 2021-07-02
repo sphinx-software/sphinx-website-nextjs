@@ -32,7 +32,9 @@ export default function WorkingProcess(): JSX.Element {
                 <div className='absolute -right-3 -top-32 lg:-top-20'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
-                <Image src={RequirementLine} alt={'RequirementLine'} />
+                <div style={{ marginRight: -2 }}>
+                  <Image src={RequirementLine} alt={'RequirementLine'} />
+                </div>
               </div>
             </div>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-350 border-opacity-20 pl-3 md:pl-0'>
@@ -78,7 +80,9 @@ export default function WorkingProcess(): JSX.Element {
                 <div className='absolute -left-3 -top-20'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
-                <Image src={DesignLine} alt={'DesignLine'} />
+                <div style={{ marginLeft: -2 }}>
+                  <Image src={DesignLine} alt={'DesignLine'} />
+                </div>
               </div>
             </div>
           </div>
@@ -91,7 +95,9 @@ export default function WorkingProcess(): JSX.Element {
                 <div className='absolute -right-3 -top-24 md:-top-16'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
-                <Image src={DevelopmentLine} alt={'DevelopmentLine'} />
+                <div style={{ marginRight: -2 }}>
+                  <Image src={DevelopmentLine} alt={'DevelopmentLine'} />
+                </div>
               </div>
             </div>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-350 border-opacity-20 pl-3 md:pl-0 pb-10'>
