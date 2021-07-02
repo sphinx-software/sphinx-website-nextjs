@@ -20,7 +20,7 @@ const CommunicationSection: FunctionComponent = () => {
           backgroundImage: 'url(/Land.svg)'
         }}
       >
-        <div className='md:flex max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pb-72 md:pt-36 sm:pt-20 leading-11'>
+        <div className='md:flex max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 pb-72 md:pt-36 sm:pt-20 leading-11'>
           <div className='md:flex-1 text-white items-center md:mb-0 sm:mb-5'>
             <div className='flex'>
               <div className='pr-3 flex-shrink-0'>
