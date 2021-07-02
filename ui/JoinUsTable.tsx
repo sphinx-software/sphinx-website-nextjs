@@ -4,11 +4,6 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { tableConfig } from '../config'
 
-type column = {
-  key: string
-  name: string
-}
-
 type detailJob = {
   title: string
   contents: string[] | []

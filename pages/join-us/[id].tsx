@@ -20,7 +20,7 @@ export default function JoinUs() {
       </Head>
       <main
         style={{ backgroundImage: "url('/bgImage-JoinUs.png')" }}
-        className='w-full bg-top bg-no-repeat'
+        className='w-full bg-top bg-no-repeat bg-WAutoH20% md:bg-WAutoH26% 4xl:bg-WAutoH35%'
       >
         <Layout>
           <JoinUsBanner />
