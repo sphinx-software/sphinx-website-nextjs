@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import RequirementImg from '../../public/lineStep1.svg'
+import RequirementLine from '../../public/lineStep1.svg'
 import DesignLine from '../../public/lineStep2.svg'
 import DevelopmentLine from '../../public/lineStep3.svg'
 import DeploymentLine from '../../public/lineStep4.svg'
@@ -13,7 +13,7 @@ import Deployment from '../../public/deployment.svg'
 export default function WorkingProcess(): JSX.Element {
   return (
     <div className='bg-gray-850'>
-      <div className='max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 md:pt-36 sm:pt-20 leading-11'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:pt-36 pt-20 pb-20 leading-11'>
         <div className='text-white w-full'>
           <div className='text-32 text-center'>Working process</div>
           <div className='max-w-3xl text-center mx-auto pt-8'>
@@ -22,153 +22,123 @@ export default function WorkingProcess(): JSX.Element {
             improvement, and maximization of company synergy.
           </div>
         </div>
-        <div className='text-white pt-24'>
-          <div className='flex'>
-            <div className='md:flex-1 flex flex-col items-end relative border-r-2 border-solid border-gray-350 border-opacity-20 pb-32'>
-              <div
-                className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350 absolute top-3 z-20'
-                style={{
-                  right: -13
-                }}
-              />
-              <div className='hidden md:flex relative pt-10 right-0 w-560 h-800'>
-                <div className='absolute top-0 '>
-                  <div className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36'>
-                    Requirement&apos;s analysis
-                  </div>
+        <div className='pt-24'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex-1 flex flex-col justify-center items-end border-l-2 md:border-l-0 md:border-r-2 border-solid border-gray-350 border-opacity-20'>
+              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'>
+                Requirement&apos;s analysis
+              </div>
+              <div className='relative -scaleX-1 md:transform-none mt-10'>
+                <div className='absolute -right-3 -top-32 lg:-top-20'>
+                  <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
-                <Image src={RequirementImg} alt={'RequirementImg'} />
+                <Image src={RequirementLine} alt={'RequirementLine'} />
               </div>
             </div>
-            <div className='flex-1 flex justify-center items-center flex-col'>
-              <div
-                className='relative flex-shrink-0'
-                style={{ height: 424, width: 424 }}
-              >
+            <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-350 border-opacity-20 pl-3 md:pl-0'>
+              <div className='relative'>
                 <div className='absolute z-20'>
                   <Image src={Circle} alt={'circle'} />
                 </div>
-                <div className='absolute z-20'>
+                <div>
                   <Image src={Analysis} alt={'analysis'} />
                 </div>
               </div>
-              <div className='mt-12 max-w-26.5'>
+              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
                 After receiving inquiries from customer, the Sphinx team will
                 indicate the project scope and create a plan to gain engagement
                 with customers by using tools
               </div>
             </div>
           </div>
-          <div className='flex'>
-            <div className='md:flex-1 border-r-2 border-solid border-gray-350 border-opacity-20 flex justify-center items-center flex-col pt-24 pb-32'>
-              <div
-                className='relative flex-shrink-0'
-                style={{ height: 424, width: 424 }}
-              >
+          <div className='flex flex-col-reverse md:flex-row'>
+            <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-r-0 md:border-r-2 border-solid border-gray-350 border-opacity-20 pl-3 md:pl-0'>
+              <div className='relative'>
                 <div className='absolute z-20'>
                   <Image src={Circle} alt={'circle'} />
                 </div>
-                <div className='absolute z-20'>
-                  <Image src={Design} alt={'analysis'} />
+                <div>
+                  <Image src={Design} alt={'Design'} />
                 </div>
               </div>
-              <div className='mt-12 max-w-26.5'>
+              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
                 The process divides into two-stage: Internal Design and External
                 Design. These stages help determine that the software meets the
-                specifications&apos;s goals and improves the product in the
-                future.
+                specifications goals and improves the product in the future.
               </div>
             </div>
-            <div className='md:flex-1 flex flex-col items-start justify-start relative'>
+            <div className='flex-1 flex flex-col justify-center items-start border-l-2 md:border-l-0 border-solid border-gray-350 border-opacity-20'>
               <div
-                className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350 absolute top-3 z-20'
-                style={{
-                  left: -13
-                }}
-              />
-              <div className='hidden md:flex relative pt-10 left-0 w-560 h-800'>
-                <div className='absolute top-0 left-32'>
-                  <div className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36'>
-                    Design
-                  </div>
+                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8'
+                style={{ width: 'fit-content', blockSize: 'fit-content' }}
+              >
+                Design
+              </div>
+              <div className='relative mt-10'>
+                <div className='absolute -left-3 -top-20'>
+                  <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
                 <Image src={DesignLine} alt={'DesignLine'} />
               </div>
             </div>
           </div>
-          <div className='flex'>
-            <div className='md:flex-1 flex flex-col items-end relative border-r-2 border-solid border-gray-350 border-opacity-20 pb-32'>
-              <div
-                className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350 absolute top-3 z-20'
-                style={{
-                  right: -13
-                }}
-              />
-              <div className='hidden md:flex relative pt-10 right-0 w-560 h-800'>
-                <div className='absolute top-0 '>
-                  <div className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36'>
-                    Development and Testing
-                  </div>
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex-1 flex flex-col justify-center items-end border-l-2 md:border-l-0 border-r-0 md:border-r-2 border-solid border-gray-350 border-opacity-20'>
+              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 pt-10'>
+                Development and Testing
+              </div>
+              <div className='relative -scaleX-1 md:transform-none mt-8'>
+                <div className='absolute -right-3 -top-24 md:-top-16'>
+                  <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
                 <Image src={DevelopmentLine} alt={'DevelopmentLine'} />
               </div>
             </div>
-            <div className='flex-1 flex justify-center items-center flex-col'>
-              <div
-                className='relative flex-shrink-0'
-                style={{ height: 424, width: 424 }}
-              >
+            <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-350 border-opacity-20 pl-3 md:pl-0 pb-10'>
+              <div className='relative'>
                 <div className='absolute z-20'>
                   <Image src={Circle} alt={'circle'} />
                 </div>
-                <div className='absolute z-20'>
+                <div>
                   <Image src={Development} alt={'Development'} />
                 </div>
               </div>
-              <div className='mt-12 max-w-26.5'>
+              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
                 Sphinx engineer team write code and convert the design
                 documentation into the existing software within the software
                 development process.
               </div>
             </div>
           </div>
-          <div className='flex'>
-            <div className='md:flex-1 flex justify-center items-center flex-col pt-24 pb-32'>
-              <div
-                className='relative w-full h-full'
-                style={{ height: 424, width: 424 }}
-              >
+          <div className='flex flex-col-reverse md:flex-row'>
+            <div className='flex-1 flex flex-col justify-center items-center'>
+              <div className='relative'>
                 <div className='absolute z-20'>
                   <Image src={Circle} alt={'circle'} />
                 </div>
-                <div className='absolute z-20'>
+                <div>
                   <Image src={Deployment} alt={'Deployment'} />
                 </div>
               </div>
-              <div className='mt-12 max-w-26.5'>
-                The process divides into two-stage: Internal Design and External
-                Design. These stages help determine that the software meets the
-                specifications&apos;s goals and improves the product in the
-                future.
+              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
+                The final stage to making sure all code is merged in one place
+                and continuously ready to be shipped. Seamlessly taking the
+                product from continuous delivery and deploying to servers
+                through.
               </div>
             </div>
-            <div className='md:flex-1 flex flex-col items-start justify-start relative'>
+            <div className='flex-1 flex flex-col justify-start items-start'>
               <div
-                className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350 absolute top-3 z-20'
-                style={{
-                  top: -3,
-                  left: -13
-                }}
-              />
-              <div className='hidden md:flex relative left-0 w-560 h-800'>
-                <div className='absolute -top-4 left-32'>
-                  <div className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36'>
-                    Deployment
-                  </div>
+                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8 -mt-12'
+                style={{ width: 'fit-content', blockSize: 'fit-content' }}
+              >
+                Development
+              </div>
+              <div className='relative -mt-10'>
+                <div className='absolute -left-3 z-20'>
+                  <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-opacity-20 border-gray-350' />
                 </div>
-                <div className='absolute'>
-                  <Image src={DeploymentLine} alt={'DeploymentLine'} />
-                </div>
+                <Image src={DeploymentLine} alt={'DeploymentLine'} />
               </div>
             </div>
           </div>

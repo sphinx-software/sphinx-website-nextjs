@@ -75,3 +75,7 @@ a {
 .joinTable > table > tr:hover > td {
   background-color: #494d52;
 }
+
+.-scaleX-1 {
+  transform: scaleX(-1)
+}
