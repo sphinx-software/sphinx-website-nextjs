@@ -16,7 +16,7 @@ export default function WorkingProcess(): JSX.Element {
       <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:pt-36 pt-20 pb-20 leading-11'>
         <div className='text-white w-full'>
           <div className='text-32 text-center'>Working process</div>
-          <div className='max-w-3xl text-center mx-auto pt-8'>
+          <div className='max-w-3xl text-center mx-auto pt-8 text-gray-350'>
             Sphinx workflow based on agile scrum methodology has agility and
             adaptability, creativity and innovation with lower costs, quality
             improvement, and maximization of company synergy.
@@ -111,7 +111,7 @@ export default function WorkingProcess(): JSX.Element {
             </div>
           </div>
           <div className='flex flex-col-reverse md:flex-row'>
-            <div className='flex-1 flex flex-col justify-center items-center'>
+            <div className='flex-1 flex flex-col justify-center items-center pt-10'>
               <div className='relative'>
                 <div className='absolute z-20'>
                   <Image src={Circle} alt={'circle'} />
@@ -132,7 +132,7 @@ export default function WorkingProcess(): JSX.Element {
                 className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8 -mt-12'
                 style={{ width: 'fit-content', blockSize: 'fit-content' }}
               >
-                Development
+                Deployment
               </div>
               <div className='relative -mt-10'>
                 <div className='absolute -left-3 z-20'>
