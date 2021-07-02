@@ -11,7 +11,7 @@ const ServiceSection: FunctionComponent = () => {
     <section
       className={'bg-gradient-to-t from-yellow-850 via-gray-850 to-gray-850'}
     >
-      <div className='md:flex max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pt-10 pb-20'>
+      <div className='md:flex max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 pt-10 pb-20'>
         <div className='flex flex-1 flex-row md:mt-10 sm:mt-5 mb-5'>
           <div className={'flex-1 mt-2 leading-11'}>
             <Image
