@@ -37,10 +37,18 @@ export default function WorkingProcess(): JSX.Element {
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
-                  <Image src={RequirementLine} alt={'RequirementLine'} />
+                  <Image
+                    src={RequirementLine}
+                    alt={'RequirementLine'}
+                    priority
+                  />
                 </div>
                 <div className='md:hidden'>
-                  <Image src={RequirementLineM} alt={'RequirementLine'} />
+                  <Image
+                    src={RequirementLineM}
+                    alt={'RequirementLine'}
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -88,10 +96,10 @@ export default function WorkingProcess(): JSX.Element {
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
-                  <Image src={DesignLine} alt={'DesignLine'} />
+                  <Image src={DesignLine} alt={'DesignLine'} priority />
                 </div>
                 <div className='md:hidden'>
-                  <Image src={DesignLineM} alt={'DesignLine'} />
+                  <Image src={DesignLineM} alt={'DesignLine'} priority />
                 </div>
               </div>
             </div>
@@ -106,10 +114,18 @@ export default function WorkingProcess(): JSX.Element {
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
-                  <Image src={DevelopmentLine} alt={'DevelopmentLine'} />
+                  <Image
+                    src={DevelopmentLine}
+                    alt={'DevelopmentLine'}
+                    priority
+                  />
                 </div>
                 <div className='md:hidden'>
-                  <Image src={DevelopmentLineM} alt={'DevelopmentLine'} />
+                  <Image
+                    src={DevelopmentLineM}
+                    alt={'DevelopmentLine'}
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -158,10 +174,14 @@ export default function WorkingProcess(): JSX.Element {
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
-                  <Image src={DeploymentLine} alt={'DeploymentLine'} />
+                  <Image src={DeploymentLine} alt={'DeploymentLine'} priority />
                 </div>
                 <div className='md:hidden'>
-                  <Image src={DeploymentLineM} alt={'DeploymentLine'} />
+                  <Image
+                    src={DeploymentLineM}
+                    alt={'DeploymentLine'}
+                    priority
+                  />
                 </div>
               </div>
             </div>
