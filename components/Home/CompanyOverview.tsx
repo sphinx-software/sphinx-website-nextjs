@@ -15,17 +15,17 @@ const CompanyOverview: FunctionComponent = () => {
           <div className='flex-1 flex justify-end'>
             <div className={styles.overViewContent}>
               <div className='pl-4 lg:pl-10 lg:pr-4 mt-16'>
-                <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <ScrollAnimation animateIn='animate__fadeIn' animateOnce>
                   <h2 className='text-24 leading-48 text-black-50'>
                     Company Overview
                   </h2>
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateIn='animate__fadeInUp'
+                  animateIn='animate__fadeIn'
                   delay={350}
                   animateOnce
                 >
-                  <p className='text-16 text-black-50 leading-32'>
+                  <p className='text-16 text-black-50 leading-32 mt-3'>
                     Founded in 2015 and headquartered in Hanoi, Sphinx is not
                     only a team of guys who young, enthusiastic, and passionate
                     about computer science but also home to many young
@@ -34,7 +34,7 @@ const CompanyOverview: FunctionComponent = () => {
                   </p>
                 </ScrollAnimation>
                 <ScrollAnimation
-                  animateIn='animate__fadeInUp'
+                  animateIn='animate__fadeIn'
                   delay={700}
                   animateOnce
                 >
