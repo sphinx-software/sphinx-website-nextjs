@@ -8,9 +8,12 @@ const HomeBanner = () => {
   const router = useRouter()
   return (
     <section className='relative'>
-      <div className='mx-auto max-w-7xl' style={{ minHeight: 680 }}>
-        <div className='flex flex-col md:flex-row md:justify-around'>
-          <div className='md:w-1/2 mt-14 md:mt-32 px-6 md:px-0'>
+      <div
+        className='mx-auto max-w-7xl px-6 xl:px-0'
+        style={{ minHeight: 680 }}
+      >
+        <div className='flex flex-col md:flex-row md:justify-between'>
+          <div className='flex-1 mt-14 xl:mt-32'>
             <ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
               <h1 className='text-40 leading-64 md:text-64 md:leading-80 text-white'>
                 CREATING THE INNOVATIVE FUTURE
@@ -39,7 +42,7 @@ const HomeBanner = () => {
               </button>
             </ScrollAnimation>
           </div>
-          <div className='mt-14 md:mt-8 mb-24 md:mb-0'>
+          <div className='flex-1 mt-14 xl:mt-8 mb-24 md:mb-0'>
             <ScrollAnimation animateIn={'animate__fadeIn'} duration={2}>
               <Image src={imageBanner} alt='Sphinx Software' />
             </ScrollAnimation>

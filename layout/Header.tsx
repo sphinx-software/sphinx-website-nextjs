@@ -22,7 +22,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
       } z-40`}
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
-        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 md:px-0'>
+        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 xl:px-0'>
           <div className='flex items-center h-5.25rem'>
             <div className='flex-shrink-0'>
               <Link href={'/'}>
