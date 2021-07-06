@@ -55,13 +55,15 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 {NAVS.map((nav: NavConfig) => (
                   <Link key={nav.href} href={nav.href}>
                     <a>
-                      <div
-                        className={`text-gray-250 hover:text-white px-3 py-2 text-16 cursor-pointer ${
-                          router.asPath === nav.href &&
-                          'border-b-2 border-orange-450'
-                        }`}
-                      >
-                        {nav.name}
+                      <div className='text-gray-250 hover:text-white px-3 text-16 cursor-pointer'>
+                        <div
+                          className={`py-2 ${
+                            router.asPath === nav.href &&
+                            'border-b-2 border-orange-450'
+                          }`}
+                        >
+                          {nav.name}
+                        </div>
                       </div>
                     </a>
                   </Link>
