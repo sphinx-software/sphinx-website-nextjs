@@ -159,13 +159,14 @@ const RequestContact: FunctionComponent = () => {
                       Other
                     </label>
                   </div>
-                  <input
-                    className={style.formContactInput}
-                    id='otherReasonTextInput'
-                    name='otherReasonDescription'
-                    type='text'
-                    disabled={disable}
-                  />
+                  {!disable && (
+                    <input
+                      className={style.formContactInput}
+                      id='otherReasonTextInput'
+                      name='otherReasonDescription'
+                      type='text'
+                    />
+                  )}
                 </div>
               </div>
               <div className={'mt-9'}>
