@@ -70,7 +70,8 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 ))}
                 <div>
                   <button
-                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none text-yellow-450 hover:bg-yellow-450 hover:text-white`}
+                    className='border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none text-yellow-450 hover:bg-yellow-450 hover:text-white'
+                    style={{ transition: '0.5s' }}
                   >
                     <p
                       className='text-16 leading-19'
