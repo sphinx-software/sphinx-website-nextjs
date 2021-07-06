@@ -8,8 +8,10 @@ import imageBannerSoftware from './../public/imageBannerSoftware.svg'
 import imageBannerXML from './../public/imageBannerXML.svg'
 import imageBannerSQL from './../public/imageBannerSQL.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { useRouter } from 'next/router'
 
 const HomeBanner = () => {
+  const router = useRouter()
   return (
     <section
       className='bg-cover bg-bottom'
@@ -25,14 +27,17 @@ const HomeBanner = () => {
                 CREATING THE INNOVATIVE FUTURE
               </h1>
             </ScrollAnimation>
-            <ScrollAnimation animateIn='animate__fadeInUp' delay={1000}>
+            <ScrollAnimation animateIn='animate__fadeInUp' delay={350}>
               <p className='text-16 leading-32 text-gray-350'>
                 Providing the most professional technology services for clients
                 worldwide
               </p>
             </ScrollAnimation>
-            <ScrollAnimation animateIn='animate__fadeInUp' delay={2000}>
-              <button className={styles.buttonContactUs}>
+            <ScrollAnimation animateIn='animate__fadeInUp' delay={450}>
+              <button
+                className={styles.buttonContactUs}
+                onClick={() => router.push('/contact')}
+              >
                 <p>Contact Us</p>
               </button>
             </ScrollAnimation>
