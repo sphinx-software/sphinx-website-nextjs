@@ -72,7 +72,7 @@ declare type ServiceProps = {
 
 const Service: FC<ServiceProps> = ({ service }) => {
   return (
-    <div className='flex items-center shadow-lg space-x-6 md:space-x-0 text-xl bg-white rounded-3xl md:flex-col cursor-pointer hover:-translate-x-1 hover:scale-105 transition duration-700 ease-in-out transform'>
+    <div className='flex items-center shadow-lg space-x-6 md:space-x-0 text-xl bg-white rounded-3xl md:flex-col hover:-translate-x-1 hover:scale-105 transition duration-700 ease-in-out transform'>
       <div className='pt-4 pl-10 md:pt-8 md:px-12 xl:pt-12 xl:px-16'>
         <div className='block md:hidden'>
           <Image

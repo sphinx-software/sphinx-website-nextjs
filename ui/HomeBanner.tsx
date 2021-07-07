@@ -1,19 +1,21 @@
 import Image from 'next/image'
 import imageBanner from './../public/imageBanner.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
-import bgWConnerUp from '../public/bgWConnerUp.svg'
 import { useRouter } from 'next/router'
 
 const HomeBanner = () => {
   const router = useRouter()
   return (
-    <section className='relative'>
-      <div
-        className='mx-auto max-w-7xl px-6 xl:px-0'
-        style={{ minHeight: 680 }}
-      >
-        <div className='flex flex-col md:flex-row md:justify-between'>
-          <div className='flex-1 mt-14 xl:mt-32'>
+    <section
+      style={{
+        backgroundImage: "url('/bgWConnerUp.svg')",
+        backgroundSize: '120%'
+      }}
+      className='bg-bottom bg-no-repeat -mb-1'
+    >
+      <div className='mx-auto max-w-7xl' style={{ minHeight: 680 }}>
+        <div className='flex flex-col md:flex-row md:justify-between px-6 xl:px-0'>
+          <div className='flex-1 mt-14 xl:mt-36'>
             <ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
               <h1 className='text-40 leading-64 md:text-64 md:leading-80 text-white'>
                 CREATING THE INNOVATIVE FUTURE
@@ -42,15 +44,12 @@ const HomeBanner = () => {
               </button>
             </ScrollAnimation>
           </div>
-          <div className='flex-1 mt-14 xl:mt-8 mb-24 md:mb-0'>
+          <div className='flex-1 mt-14 xl:mt-12 mb-24 md:mb-0 md:flex md:justify-end'>
             <ScrollAnimation animateIn={'animate__fadeIn'} duration={2}>
               <Image src={imageBanner} alt='Sphinx Software' />
             </ScrollAnimation>
           </div>
         </div>
-      </div>
-      <div className='absolute -bottom-2'>
-        <Image src={bgWConnerUp} alt='bgWConnerUp' priority />
       </div>
     </section>
   )
