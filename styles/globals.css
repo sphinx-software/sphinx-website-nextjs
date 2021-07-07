@@ -75,3 +75,22 @@ a {
 .joinTable > table > tr:hover > td {
   background-color: #494d52;
 }
+
+.-scaleX-1 {
+  transform: scaleX(-1)
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #FFC838 0%, #E05529  51%, #FFC838  100%)
+}
+
+.btn-grad {
+  transition: 0.5s;
+  background-size: 200% auto;
+  @apply block px-6 py-3 rounded-3xl text-white text-16 leading-19 text-center mt-6 focus:outline-none
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}

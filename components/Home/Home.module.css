@@ -29,8 +29,7 @@
    color: #F89721;
 }
 .overViewContent {
-    background-color: rgba(189, 199, 205, 0.3);
-    @apply rounded-full py-6
+    @apply rounded-full py-6 md:bg-gray-50 md:bg-opacity-30 h-320 w-320 lg:h-480 lg:w-480
 }
 
 .companyOverviewImage {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useConfig } from '../ui/ConfigProvider'
 import { NavConfig } from '../config'
 import { useRouter } from 'next/router'
+import Logo from '../public/symbolSphinx.svg'
 
 type HeaderProps = {
   isShow: boolean
@@ -21,19 +22,29 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
       } z-40`}
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
-        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8'>
+        <div className='flex justify-between items-center max-w-7xl mx-auto px-6 xl:px-0'>
           <div className='flex items-center h-5.25rem'>
             <div className='flex-shrink-0'>
               <Link href={'/'}>
-                <a>
-                  <Image
-                    src='/symbolSphinx.svg'
-                    alt='Sphinx Software Logo'
-                    width={37}
-                    loading={'eager'}
-                    priority
-                    height={37}
-                  />
+                <a className='w-37 lg:w-50 h37 lg:h-50'>
+                  <div className='hidden md:block'>
+                    <Image
+                      src={Logo}
+                      width={50}
+                      alt='Sphinx Software Logo'
+                      loading={'eager'}
+                      priority
+                    />
+                  </div>
+                  <div className='md:hidden'>
+                    <Image
+                      src={Logo}
+                      width={37}
+                      alt='Sphinx Software Logo'
+                      loading={'eager'}
+                      priority
+                    />
+                  </div>
                 </a>
               </Link>
             </div>
@@ -44,25 +55,23 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 {NAVS.map((nav: NavConfig) => (
                   <Link key={nav.href} href={nav.href}>
                     <a>
-                      <div
-                        className={`text-gray-250 hover:text-white px-3 py-2 text-16 cursor-pointer ${
-                          router.asPath === nav.href &&
-                          'border-b-2 border-orange-450'
-                        }`}
-                      >
-                        {nav.name}
+                      <div className='text-gray-250 hover:text-white px-3 text-16 cursor-pointer'>
+                        <div
+                          className={`py-2 ${
+                            router.asPath === nav.href &&
+                            'border-b-2 border-orange-450'
+                          }`}
+                        >
+                          {nav.name}
+                        </div>
                       </div>
                     </a>
                   </Link>
                 ))}
                 <div>
                   <button
-                    className={`border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none ${
-                      router.asPath === '/join-us' ||
-                      router.pathname === '/join-us/[id]'
-                        ? 'bg-yellow-450 text-white'
-                        : 'text-yellow-450'
-                    }`}
+                    className='border rounded-3xl px-6 py-2 border-yellow-450 focus:outline-none text-yellow-450 hover:bg-yellow-450 hover:text-white'
+                    style={{ transition: '0.5s' }}
                   >
                     <p
                       className='text-16 leading-19'

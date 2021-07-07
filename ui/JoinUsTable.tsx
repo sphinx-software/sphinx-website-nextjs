@@ -4,11 +4,6 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { tableConfig } from '../config'
 
-type column = {
-  key: string
-  name: string
-}
-
 type detailJob = {
   title: string
   contents: string[] | []
@@ -26,7 +21,7 @@ const JoinUsTable: FunctionComponent = () => {
   return (
     <section className={style.joinUsMain}>
       <div
-        className={'mx-auto max-w-6xl flex items-center flex-col -my-1 md:my-0'}
+        className={'mx-auto max-w-7xl flex items-center flex-col -my-1 md:my-0'}
       >
         <div className={'pb-12 w-full md:w-2/3 mx:auto flex justify-center'}>
           <button className='border rounded-full px-4 py-2 border-gray-350 text-white text-center'>

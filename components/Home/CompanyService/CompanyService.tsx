@@ -26,7 +26,7 @@ const services: ServiceType[] = [
 const CompanyService: FC = () => {
   return (
     <section className='bg-gray-250 py-36'>
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         <div className='px-3 md:px-0 text-center'>
           <p className='text-36 text-gray-450 leading-56'>Services</p>
           <div className='mt-2'>
