@@ -43,8 +43,8 @@ export default function WorkingProcess(): JSX.Element {
               <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'>
                 Requirement&apos;s analysis
               </div>
-              <div className='relative mt-10'>
-                <div className='absolute -left-3 md:left-auto md:-right-3 -top-32 lg:-top-20'>
+              <div className='relative mt-20'>
+                <div className='absolute -left-3 md:left-auto md:-right-3 -top-40 lg:-top-28'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
@@ -65,7 +65,7 @@ export default function WorkingProcess(): JSX.Element {
             </div>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-233031 pl-3 md:pl-0'>
               <ScrollAnimation animateIn={'animate__fadeIn'}>
-                <div className='relative'>
+                <div className='relative mt-20'>
                   <div className='absolute md:-left-24 md:-bottom-20'>
                     <Image src={Circle} alt={'circle'} />
                   </div>
@@ -106,13 +106,13 @@ export default function WorkingProcess(): JSX.Element {
             </div>
             <div className='flex-1 flex flex-col justify-center items-start border-l-2 md:border-l-0 border-solid border-gray-233031'>
               <div
-                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8'
+                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-20'
                 style={{ width: 'fit-content', blockSize: 'fit-content' }}
               >
                 Design
               </div>
-              <div className='relative mt-10'>
-                <div className='absolute -left-3 -top-20'>
+              <div className='relative mt-20'>
+                <div className='absolute -left-3' style={{ marginTop: -118 }}>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
@@ -126,11 +126,14 @@ export default function WorkingProcess(): JSX.Element {
           </div>
           <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-start md:items-end border-l-2 md:border-l-0 border-r-0 md:border-r-2 border-solid border-gray-233031'>
-              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 pt-10'>
+              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 pt-20'>
                 Development and Testing
               </div>
-              <div className='relative mt-8'>
-                <div className='absolute -left-3 md:left-auto md:-right-3 -top-24 md:-top-16'>
+              <div className='relative mt-20'>
+                <div
+                  className='absolute -left-3 md:left-auto md:-right-3'
+                  style={{ marginTop: -118 }}
+                >
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
