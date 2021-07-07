@@ -26,7 +26,7 @@ const services: ServiceType[] = [
 
 const CompanyService: FC = () => {
   return (
-    <section className='bg-gray-250 py-36'>
+    <section className='bg-gray-250 py-24 md:py-36'>
       <div className='max-w-7xl mx-auto'>
         <div className='px-3 md:px-0 text-center'>
           <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
@@ -47,7 +47,7 @@ const CompanyService: FC = () => {
             </ScrollAnimation>
           </div>
         </div>
-        <div className='px-3 mt-16 md:mt-28 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
+        <div className='px-3 mt-14 md:mt-16 mb-4 md:mb-0 flex flex-col md:flex-row md:justify-around'>
           {services.map((s, index) => (
             <ScrollAnimation
               key={index}
@@ -72,8 +72,8 @@ declare type ServiceProps = {
 
 const Service: FC<ServiceProps> = ({ service }) => {
   return (
-    <div className='flex items-center shadow-lg space-x-6 md:space-x-0 text-xl bg-white rounded-3xl md:flex-col hover:-translate-x-1 hover:scale-105 transition duration-700 ease-in-out transform'>
-      <div className='pt-4 pl-10 md:pt-8 md:px-12 xl:pt-12 xl:px-16'>
+    <div className='mt-6 md:mt-0 flex items-center shadow-lg space-x-6 md:space-x-0 text-xl bg-white rounded-3xl md:flex-col hover:-translate-x-1 hover:scale-105 md:transition md:duration-700 md:ease-in-out md:transform'>
+      <div className='pt-4 pl-8 pb-1 md:pt-8 md:px-12 xl:pt-12 xl:px-16'>
         <div className='block md:hidden'>
           <Image
             width={64}
