@@ -3,6 +3,7 @@ import Image from 'next/image'
 import iconWebApplication from '../../../public/icon_WebApplication.svg'
 import iconCloud from '../../../public/iconCloud.svg'
 import iconPlatform from '../../../public/iconPlatform.svg'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 declare type ServiceType = {
   icon: any
@@ -28,17 +29,34 @@ const CompanyService: FC = () => {
     <section className='bg-gray-250 py-36'>
       <div className='max-w-7xl mx-auto'>
         <div className='px-3 md:px-0 text-center'>
-          <p className='text-36 text-gray-450 leading-56'>Services</p>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+            <h2 className='px-1 md:px-0 text-gray-450 font-normal text-36 text-center leading-56'>
+              Services
+            </h2>
+          </ScrollAnimation>
           <div className='mt-2'>
-            <p className='text-gray-450 leading-32 text-16'>
-              Sphinx provides services to companies based on modern technology
-              platforms
-            </p>
+            <ScrollAnimation
+              animateIn='animate__fadeInUp'
+              delay={450}
+              animateOnce
+            >
+              <p className='text-gray-450 leading-32 text-16'>
+                Sphinx provides services to companies based on modern technology
+                platforms
+              </p>
+            </ScrollAnimation>
           </div>
         </div>
         <div className='px-3 mt-16 md:mt-28 grid grid-rows-1 gap-y-11 md:grid-cols-3 md:gap-8 md:place-items-center'>
           {services.map((s, index) => (
-            <Service key={index} service={s} />
+            <ScrollAnimation
+              key={index}
+              animateIn={'animate__fadeInUp'}
+              delay={((index + 1) * 1000) / 4}
+              animateOnce
+            >
+              <Service service={s} />
+            </ScrollAnimation>
           ))}
         </div>
       </div>

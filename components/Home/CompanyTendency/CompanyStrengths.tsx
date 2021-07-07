@@ -56,6 +56,7 @@ const CompanyStrength: FC<CompanyStrengthProps> = ({ icon, text, index }) => {
     <ScrollAnimation
       animateIn={'animate__fadeInUp'}
       delay={((index + 1) * 1000) / 4}
+      animateOnce
     >
       <div
         style={{

@@ -13,18 +13,29 @@ import Analysis from '../../public/analysis.svg'
 import Design from '../../public/design.svg'
 import Development from '../../public/development.svg'
 import Deployment from '../../public/deployment.svg'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function WorkingProcess(): JSX.Element {
   return (
     <div className='bg-gray-850'>
       <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:pt-36 pt-20 pb-20 leading-11'>
         <div className='text-white w-full'>
-          <div className='text-32 text-center'>Working process</div>
-          <div className='max-w-3xl text-center mx-auto pt-8 text-gray-350'>
-            Sphinx workflow based on agile scrum methodology has agility and
-            adaptability, creativity and innovation with lower costs, quality
-            improvement, and maximization of company synergy.
-          </div>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+            <h2 className='text-white font-normal text-36 text-center leading-56'>
+              Working process
+            </h2>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn='animate__fadeInUp'
+            delay={450}
+            animateOnce
+          >
+            <div className='max-w-3xl text-center mx-auto pt-8 text-gray-350'>
+              Sphinx workflow based on agile scrum methodology has agility and
+              adaptability, creativity and innovation with lower costs, quality
+              improvement, and maximization of company synergy.
+            </div>
+          </ScrollAnimation>
         </div>
         <div className='pt-24'>
           <div className='flex flex-col md:flex-row'>
@@ -53,36 +64,45 @@ export default function WorkingProcess(): JSX.Element {
               </div>
             </div>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-233031 pl-3 md:pl-0'>
-              <div className='relative'>
-                <div className='absolute md:-left-24 md:-bottom-20'>
-                  <Image src={Circle} alt={'circle'} />
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='relative'>
+                  <div className='absolute md:-left-24 md:-bottom-20'>
+                    <Image src={Circle} alt={'circle'} />
+                  </div>
+                  <div>
+                    <Image src={Analysis} alt={'analysis'} />
+                  </div>
                 </div>
-                <div>
-                  <Image src={Analysis} alt={'analysis'} />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
+                  After receiving inquiries from customer, the Sphinx team will
+                  indicate the project scope and create a plan to gain
+                  engagement with customers by using tools
                 </div>
-              </div>
-              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
-                After receiving inquiries from customer, the Sphinx team will
-                indicate the project scope and create a plan to gain engagement
-                with customers by using tools
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
           <div className='flex flex-col-reverse md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-r-0 md:border-r-2 border-solid border-gray-233031 pl-3 md:pl-0'>
-              <div className='relative'>
-                <div className='absolute md:-right-24 md:-bottom-20'>
-                  <Image src={Circle} alt={'circle'} />
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='relative'>
+                  <div className='absolute md:-right-24 md:-bottom-20'>
+                    <Image src={Circle} alt={'circle'} />
+                  </div>
+                  <div>
+                    <Image src={Design} alt={'Design'} />
+                  </div>
                 </div>
-                <div>
-                  <Image src={Design} alt={'Design'} />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
+                  The process divides into two-stage: Internal Design and
+                  External Design. These stages help determine that the software
+                  meets the specifications goals and improves the product in the
+                  future.
                 </div>
-              </div>
-              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
-                The process divides into two-stage: Internal Design and External
-                Design. These stages help determine that the software meets the
-                specifications goals and improves the product in the future.
-              </div>
+              </ScrollAnimation>
             </div>
             <div className='flex-1 flex flex-col justify-center items-start border-l-2 md:border-l-0 border-solid border-gray-233031'>
               <div
@@ -130,37 +150,45 @@ export default function WorkingProcess(): JSX.Element {
               </div>
             </div>
             <div className='flex-1 flex flex-col justify-center items-center border-l-2 md:border-l-0 border-solid border-gray-233031 pl-3 md:pl-0 pb-10'>
-              <div className='relative'>
-                <div className='absolute z-20 md:-left-24 md:-bottom-20'>
-                  <Image src={Circle} alt={'circle'} />
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='relative'>
+                  <div className='absolute z-20 md:-left-24 md:-bottom-20'>
+                    <Image src={Circle} alt={'circle'} />
+                  </div>
+                  <div>
+                    <Image src={Development} alt={'Development'} />
+                  </div>
                 </div>
-                <div>
-                  <Image src={Development} alt={'Development'} />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
+                  Sphinx engineer team write code and convert the design
+                  documentation into the existing software within the software
+                  development process.
                 </div>
-              </div>
-              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
-                Sphinx engineer team write code and convert the design
-                documentation into the existing software within the software
-                development process.
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
           <div className='flex flex-col-reverse md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-center pt-10'>
-              <div className='relative'>
-                <div className='absolute z-20 md:-right-24 md:-bottom-20'>
-                  <Image src={Circle} alt={'circle'} />
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='relative'>
+                  <div className='absolute z-20 md:-right-24 md:-bottom-20'>
+                    <Image src={Circle} alt={'circle'} />
+                  </div>
+                  <div>
+                    <Image src={Deployment} alt={'Deployment'} />
+                  </div>
                 </div>
-                <div>
-                  <Image src={Deployment} alt={'Deployment'} />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn={'animate__fadeIn'}>
+                <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
+                  The final stage to making sure all code is merged in one place
+                  and continuously ready to be shipped. Seamlessly taking the
+                  product from continuous delivery and deploying to servers
+                  through.
                 </div>
-              </div>
-              <div className='mt-12 max-w-26.5 leading-8 text-gray-350'>
-                The final stage to making sure all code is merged in one place
-                and continuously ready to be shipped. Seamlessly taking the
-                product from continuous delivery and deploying to servers
-                through.
-              </div>
+              </ScrollAnimation>
             </div>
             <div className='flex-1 flex flex-col justify-start items-start'>
               <div
