@@ -342,3 +342,15 @@ export const tableConfig = {
     }
   ]
 }
+
+export const emailConfig = {
+  user_id: 'user_1QWwEOBnJe1QVt1thEeTO',
+  email_service_ids: {
+    gmail_test: 'service_bwzvvnt'
+  },
+  template_ids: {
+    custom_template: 'template_f6kzd16'
+  },
+  contact_receive_email: 'long97vip@gmail.com',
+  receiver_reply_email: 'longlh@sphinx-software.com'
+}
