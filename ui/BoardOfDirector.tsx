@@ -4,10 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import avatarRikky from './../public/avatarRikky.png'
-import avatarDoanh from './../public/avatarDoanh.png'
-import avatarOlivia from './../public/avatarOlivia.png'
 import avatarPhong from './../public/avatarPhong.png'
-import avatarTony from './../public/avatarTony.png'
 import avatarTota from './../public/avatarTota.png'
 import { SECTION, useAboutSection } from './AboutProvider'
 
@@ -28,30 +25,11 @@ const holders: HolderType[][] = [
       name: 'Mr. Tota',
       position: 'Project Manager',
       avatar: avatarTota
-    }
-  ],
-  [
+    },
     {
       name: 'Mr. Phong',
       position: 'CTO',
       avatar: avatarPhong
-    },
-    {
-      name: 'Ms. Tonny',
-      position: 'System Architect',
-      avatar: avatarTony
-    }
-  ],
-  [
-    {
-      name: 'Ms. Olivia',
-      position: 'Sale Executive',
-      avatar: avatarOlivia
-    },
-    {
-      name: 'Mr. Doanh',
-      position: 'Designer',
-      avatar: avatarDoanh
     }
   ]
 ]
@@ -100,8 +78,9 @@ const BoardOfDirector: FC = () => {
             <Slider {...settings}>
               {holders.map((h, index) => (
                 <div key={index}>
-                  <Holder holder={h[0]} />
-                  <Holder holder={h[1]} />
+                  {h.map((value, index) => (
+                    <Holder key={index} holder={value} />
+                  ))}
                 </div>
               ))}
             </Slider>

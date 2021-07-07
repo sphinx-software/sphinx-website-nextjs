@@ -29,7 +29,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 <div className='hidden md:flex items-center'>
                   <Image
                     src={Logo}
-                    width={50}
+                    height={48}
                     alt='Sphinx Software Logo'
                     loading={'eager'}
                     priority
@@ -38,7 +38,8 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                 <div className='md:hidden'>
                   <Image
                     src={Logo}
-                    width={37}
+                    width={45}
+                    height={40}
                     alt='Sphinx Software Logo'
                     loading={'eager'}
                     priority
@@ -82,9 +83,9 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
               </div>
             </div>
           </div>
-          <div className='flex md:hidden items-center p-2.5'>
+          <div className='flex md:hidden items-center justify-end'>
             <button
-              className='items-center justify-center rounded-full focus:outline-none'
+              className='items-center justify-center focus:outline-none'
               onClick={() => {
                 onClick()
               }}
@@ -92,7 +93,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
               {isShow ? (
                 <div
                   className='bg-gray-150 rounded-full'
-                  style={{ width: 50, height: 50 }}
+                  style={{ width: 40, height: 40 }}
                 >
                   <Image
                     src={'/iconClose.svg'}
@@ -104,7 +105,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
               ) : (
                 <div
                   className='bg-orange-450 rounded-full bg-opacity-10'
-                  style={{ width: 50, height: 50 }}
+                  style={{ width: 40, height: 40 }}
                 >
                   <Image
                     src={'/iconMenu.svg'}

@@ -53,11 +53,11 @@ const ResearchDevelopment: FC = () => {
   }, [sectionActive])
 
   return (
-    <div
+    <section
       className='bg-cover bg-white bg-top'
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
-      <div className='mx-auto max-w-7xl py-16 md:py-24 px-2 md:px-0 xl:py-28'>
+      <div className='max-w-7xl mx-auto py-24 md:py-36 px-3 md:px-0'>
         <div className='md:flex md:flex-col md:items-center'>
           <div className='text-center px-2'>
             <p className='text-36 leading-48 text-white'>R&D</p>
@@ -65,12 +65,12 @@ const ResearchDevelopment: FC = () => {
               Research & Developments
             </p>
           </div>
-          <div className='mt-14 md:mt-24'>
-            <TimeLine />
-          </div>
+        </div>
+        <div className='mt-14 md:mt-24'>
+          <TimeLine />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
@@ -93,7 +93,7 @@ const TimeLine: FC = () => {
     <>
       <div className='overflow-x-auto flex flex-nowrap md:hidden scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full'>
         {timeLines.map((t, i) => (
-          <div key={i} className='min-w-95'>
+          <div key={i} className='min-w-full'>
             <div className='pr-4 pl-2'>
               <Image src={t.image} alt='Sphinx Software' />
             </div>
@@ -103,19 +103,22 @@ const TimeLine: FC = () => {
           </div>
         ))}
       </div>
-      <div className='hidden md:flex h-490 flex space-x-6'>
-        <div className='overflow-y-auto md:flex-col px-2 w-420 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full py-1'>
-          {timeLines.map((t, i) => (
-            <div key={i}>
-              <TimeLineItem
-                timeLine={t}
-                active={i === indexTimeLineActive}
-                onClickTimeLine={() => setIndexTimeLineActive(i)}
-              />
-            </div>
-          ))}
+      <div className='hidden md:flex flex space-x-6'>
+        <div className='flex-1'>
+          <div className='h-536 w-424 overflow-y-auto md:flex-col px-2 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full py-1'>
+            {timeLines.map((t, i) => (
+              <div key={i}>
+                <TimeLineItem
+                  lastItem={timeLines.length - 1 === i}
+                  timeLine={t}
+                  active={i === indexTimeLineActive}
+                  onClickTimeLine={() => setIndexTimeLineActive(i)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div>
+        <div className='flex-1'>
           <SwitchTransition mode='out-in'>
             <CSSTransition
               nodeRef={ref}
@@ -139,13 +142,15 @@ const TimeLine: FC = () => {
 }
 
 const TimeLineItem: FC<{
+  lastItem?: boolean
   timeLine: TimeLineType
   active?: boolean
   onClickTimeLine?: () => void
 }> = ({
   timeLine: { content },
   active = true,
-  onClickTimeLine = () => undefined
+  onClickTimeLine = () => undefined,
+  lastItem
 }) => {
   return (
     <>
@@ -163,7 +168,7 @@ const TimeLineItem: FC<{
           <Image src={active ? dotActive : dot} alt='Sphinx Software' />
           <Line />
         </div>
-        <div className='-mt-2.5 pb-20'>
+        <div className={`-mt-2.5 ${lastItem ? 'pb-0' : 'pb-11'}`}>
           <p
             className={classNames(
               ['text-16 leading-32 px-3'],
