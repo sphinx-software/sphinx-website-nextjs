@@ -23,6 +23,7 @@ const CompanyOverview: FunctionComponent = () => {
                 <ScrollAnimation
                   animateIn='animate__fadeIn'
                   delay={350}
+                  offset={100}
                   animateOnce
                 >
                   <p className='text-16 text-black-50 leading-32 mt-3'>
