@@ -10,6 +10,7 @@ import timeLine5 from './../public/timeLine5.svg'
 import classNames from 'classnames'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import { SECTION, useAboutSection } from './AboutProvider'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 declare type TimeLineType = {
   content: string
@@ -60,10 +61,18 @@ const ResearchDevelopment: FC = () => {
       <div className='max-w-7xl mx-auto py-24 md:py-36 px-3 md:px-0'>
         <div className='md:flex md:flex-col md:items-center'>
           <div className='text-center px-2'>
-            <p className='text-36 leading-48 text-white'>R&D</p>
-            <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
-              Research & Developments
-            </p>
+            <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+              <p className='text-36 leading-48 text-white'>R&D</p>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn='animate__fadeInUp'
+              delay={350}
+              animateOnce
+            >
+              <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
+                Research & Developments
+              </p>
+            </ScrollAnimation>
           </div>
         </div>
         <div className='mt-14 md:mt-24'>

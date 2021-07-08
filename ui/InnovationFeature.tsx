@@ -5,6 +5,7 @@ import pyramid from '../public/pyramid.svg'
 import Image from 'next/image'
 import styles from './../styles/About.module.css'
 import { SECTION, useAboutSection } from './AboutProvider'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const InnovationFeature = () => {
   const ref = useRef<any>(null)
@@ -15,26 +16,36 @@ const InnovationFeature = () => {
     }
   }, [sectionActive])
   return (
-    <div className='bg-gray-250'>
-      <div className='mx-auto max-w-7xl pt-12 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
-        <p
-          className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'
-          ref={ref}
-        >
-          CREATING THE INNOVATIVE FUTURE
-        </p>
-        <div className='grid grid-rows-1 md:grid-cols-2 mt-20 md:gap-x-4 md:px-2'>
-          <div className='hidden xl:block'>
-            <Vision />
+    <div className='bg-gray-250 bg-opacity-30'>
+      <div className='mx-auto max-w-7xl px-3 md:px-0 py-28'>
+        <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+          <p
+            className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'
+            ref={ref}
+          >
+            CREATING THE INNOVATIVE FUTURE
+          </p>
+        </ScrollAnimation>
+        <div className='flex flex-col md:flex-row mt-20'>
+          <div className='flex-1 xl:flex xl:justify-center'>
+            <div className='hidden xl:block'>
+              <ScrollAnimation animateIn='animate__fadeInLeft' animateOnce>
+                <Vision />
+              </ScrollAnimation>
+            </div>
+            <div className='block xl:hidden md:pl-6 md:pr-3'>
+              <VisionMobile />
+            </div>
           </div>
-          <div className='block xl:hidden'>
-            <VisionMobile />
-          </div>
-          <div className='hidden xl:block mt-20 md:mt-0'>
-            <Mission />
-          </div>
-          <div className='block xl:hidden mt-20 md:mt-0'>
-            <MissionMobile />
+          <div className='flex-1 xl:flex xl:justify-center'>
+            <div className='hidden xl:block mt-20 md:mt-0'>
+              <ScrollAnimation animateIn='animate__fadeInRight' animateOnce>
+                <Mission />
+              </ScrollAnimation>
+            </div>
+            <div className='block xl:hidden mt-6 md:mt-0 md:pr-6'>
+              <MissionMobile />
+            </div>
           </div>
         </div>
       </div>
@@ -73,8 +84,8 @@ const VisionMobile: FC = () => {
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
             Leading technology company in Vietnam.
           </p>
-          <div className='-mb-4'>
-            <Image src={pyramid} />
+          <div className='-pb-5'>
+            <Image src={pyramid} alt={'pyramid'} />
           </div>
         </div>
       </div>
