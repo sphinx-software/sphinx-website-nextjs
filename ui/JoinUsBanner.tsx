@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { ApplyJobModal } from './JoinUsDetail'
+import dynamic from 'next/dynamic'
+const ApplyJobModal = dynamic(() => import('./ApplyJobModal'), {
+  ssr: false
+})
 
 const JoinUsBanner = () => {
   const [isShow, setIsShow] = useState(false)

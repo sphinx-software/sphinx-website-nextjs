@@ -4,13 +4,8 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { tableConfig } from '../../config'
 import { CommunicationSection } from '../../ui'
-import dynamic from 'next/dynamic'
-const JoinUsDetail = dynamic(() => import('../../ui/JoinUsDetail'), {
-  ssr: false
-})
-const JoinUsBanner = dynamic(() => import('../../ui/JoinUsBanner'), {
-  ssr: false
-})
+import JoinUsDetail from '../../ui/JoinUsDetail'
+import JoinUsBanner from '../../ui/JoinUsBanner'
 
 export default function JoinUs() {
   const router = useRouter()
