@@ -12,3 +12,11 @@
     background-image: linear-gradient(0deg, #583023 0%, #0E1C1C 25%, #0E1C1C 75%);
     @apply w-full
 }
+
+.joinUsFormInput {
+    height: 48px;
+    border: 1px solid #BDC7CD;
+    border-radius: 8px;
+    padding: 8px 14px;
+    @apply px-14px py-8px focus:outline-none focus:ring-2 w-full
+}
