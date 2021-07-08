@@ -23,30 +23,35 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
     >
       <nav className={`${isShow ? 'bg-white' : ''}`}>
         <div className='flex justify-between items-center max-w-7xl mx-auto px-6 xl:px-0 h-5.25rem'>
-          <div className='flex items-center'>
-            <Link href={'/'}>
-              <a>
-                <div className='hidden md:flex items-center'>
-                  <Image
-                    src={Logo}
-                    height={48}
-                    alt='Sphinx Software Logo'
-                    loading={'eager'}
-                    priority
-                  />
-                </div>
-                <div className='md:hidden'>
-                  <Image
-                    src={Logo}
-                    width={45}
-                    height={40}
-                    alt='Sphinx Software Logo'
-                    loading={'eager'}
-                    priority
-                  />
-                </div>
-              </a>
-            </Link>
+          <div className='flex md:hidden items-center'>
+            <button
+              className=' flex items-center justify-center focus:outline-none'
+              onClick={() => router.push('/')}
+            >
+              <Image
+                src={Logo}
+                height={40}
+                width={45}
+                alt='Sphinx Software Logo'
+                loading={'eager'}
+                priority
+              />
+            </button>
+          </div>
+          <div className='hidden md:flex items-center'>
+            <button
+              className=' flex items-center justify-center focus:outline-none'
+              onClick={() => router.push('/')}
+            >
+              <Image
+                src={Logo}
+                height={48}
+                width={54}
+                alt='Sphinx Software Logo'
+                loading={'eager'}
+                priority
+              />
+            </button>
           </div>
           <div className='flex items-center hidden md:block'>
             <div className='ml-4 flex items-center md:ml-6 h-16'>
