@@ -18,7 +18,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 export default function WorkingProcess(): JSX.Element {
   return (
     <div className='bg-gray-850'>
-      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:pt-36 pt-20 pb-20 leading-11'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:pt-36 pt-20 pb-20'>
         <div className='text-white w-full'>
           <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
             <h2 className='text-white font-normal text-36 text-center leading-56'>
@@ -30,21 +30,24 @@ export default function WorkingProcess(): JSX.Element {
             delay={450}
             animateOnce
           >
-            <div className='max-w-3xl text-center mx-auto pt-8 text-gray-350'>
+            <h3 className='max-w-3xl mx-auto text-center text-gray-350 text-16 py-2 leading-36'>
               Sphinx workflow based on agile scrum methodology has agility and
               adaptability, creativity and innovation with lower costs, quality
               improvement, and maximization of company synergy.
-            </div>
+            </h3>
           </ScrollAnimation>
         </div>
-        <div className='pt-24'>
+        <div className='pt-20'>
           <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-start md:items-end border-l-2 md:border-l-0 md:border-r-2 border-solid border-gray-233031'>
-              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'>
+              <div
+                className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'
+                style={{ width: 'fit-content', blockSize: 'fit-content' }}
+              >
                 Requirement&apos;s analysis
               </div>
               <div className='relative mt-20'>
-                <div className='absolute -left-3 md:left-auto md:-right-3 -top-40 lg:-top-28'>
+                <div className='absolute -left-3 md:left-auto md:-right-3 -top-44 lg:-top-28'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
@@ -130,7 +133,7 @@ export default function WorkingProcess(): JSX.Element {
                 Development and Testing
               </div>
               <div className='relative mt-20 md:mb-20'>
-                <div className='absolute -left-3 md:left-auto md:-right-3 -mt-40 xl:-mt-32'>
+                <div className='absolute -left-3 md:left-auto md:-right-3 -mt-44 md:-mt-40 lg:-mt-32'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
                 </div>
                 <div className='hidden md:block'>
