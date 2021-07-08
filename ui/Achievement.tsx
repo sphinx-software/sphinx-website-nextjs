@@ -25,7 +25,12 @@ const Achievement: FC = () => {
           </ScrollAnimation>
         </div>
         <div className='md:grid md:grid-cols-3 md:gap-4 xl:gap-8 place-content-center mt-14 lg:mt-20'>
-          <ScrollAnimation animateIn='animate__fadeInUp' delay={350}>
+          <ScrollAnimation
+            animateIn='animate__fadeIn'
+            delay={350}
+            offset={50}
+            animateOnce
+          >
             <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 shadow-2xl'>
               <Image src={iconRocket} alt='Sphinx Software' />
               <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-160'>
@@ -42,7 +47,12 @@ const Achievement: FC = () => {
               </div>
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animateIn='animate__fadeInUp' delay={700}>
+          <ScrollAnimation
+            animateIn='animate__fadeIn'
+            delay={700}
+            offset={50}
+            animateOnce
+          >
             <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
               <Image src={iconGlobal} alt='Sphinx Software' />
               <div className='bg-gray-850 text-center w-full py-4 bg-opacity-20 rounded-2xl mt-6 md:min-h-180'>
@@ -60,7 +70,12 @@ const Achievement: FC = () => {
               </div>
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animateIn='animate__fadeInUp' delay={1050}>
+          <ScrollAnimation
+            animateIn='animate__fadeIn'
+            delay={1050}
+            offset={50}
+            animateOnce
+          >
             <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 mt-7 md:mt-0 shadow-2xl'>
               <Image src={iconReward} alt='Sphinx Software' />
               <div className=' text-center w-full py-4 rounded-2xl mt-6 md:min-h-180'>
