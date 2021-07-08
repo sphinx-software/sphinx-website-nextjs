@@ -18,10 +18,7 @@ export default function JoinUs() {
         <meta name='description' content='Tham gia với Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
-      <main
-        style={{ backgroundImage: "url('/bgImage-JoinUs.png')" }}
-        className='w-full bg-top bg-no-repeat bg-WAutoH20% md:bg-WAutoH26% 4xl:bg-WAutoH35%'
-      >
+      <main className='w-full bg-join-us-banner bg-top bg-no-repeat bg-WAutoH800 fullHD:bg-W100%HAuto'>
         <Layout>
           <JoinUsBanner />
           <JoinUsDetail

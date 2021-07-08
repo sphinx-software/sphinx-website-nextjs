@@ -232,9 +232,10 @@ module.exports = {
       screens: {
         ssm: '384px',
         '3xl': '1792px',
-        fullHd: '1921px',
+        fullHD: '1921px',
         '4xl': '2048px',
-        '4k': '2560px'
+        '5xl': '2304px',
+        '6xl': '2560px'
       },
       backgroundSize: {
         'WAutoH55%': 'auto 55%',
@@ -247,7 +248,12 @@ module.exports = {
         'WAutoH26%': 'auto 26%',
         'WAutoH25%': 'auto 25%',
         'WAutoH20%': 'auto 20%',
-        'W100%H40%': '100% 40%'
+        'W100%H40%': '100% 40%',
+        WAutoH800: 'auto 800px',
+        'W100%HAuto': '100% auto'
+      },
+      backgroundImage: {
+        'join-us-banner': "url('/bgImage-JoinUs.png')"
       }
     }
   },
