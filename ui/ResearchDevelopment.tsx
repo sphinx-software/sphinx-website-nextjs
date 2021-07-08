@@ -58,7 +58,7 @@ const ResearchDevelopment: FC = () => {
       className='bg-cover bg-white bg-top'
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
-      <div className='max-w-7xl mx-auto py-24 md:py-36 px-3 md:px-0'>
+      <div className='max-w-7xl mx-auto py-12 md:py-20 px-3 md:px-0'>
         <div className='md:flex md:flex-col md:items-center'>
           <div className='text-center px-2'>
             <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
