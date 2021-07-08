@@ -6,7 +6,7 @@ const CompanyTendency: FunctionComponent = () => {
   return (
     <section
       style={{ backgroundImage: "url('/companyTendencyBg.svg')" }}
-      className='bg-white bg-cover bg-top py-24 md:py-36 -mt-2'
+      className='bg-white bg-cover bg-top py-24 md:py-44 -mt-2'
     >
       <div className='mx-auto max-w-7xl px-6 xl:px-0'>
         <div className='text-center mx-auto w-full md:w-2/3'>

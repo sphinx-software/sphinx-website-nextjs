@@ -63,7 +63,7 @@ const Header: FunctionComponent<HeaderProps> = ({ isShow, onClick }) => {
                         <div
                           className={`py-2 ${
                             router.asPath === nav.href &&
-                            'border-b-2 border-orange-450'
+                            'border-b-2 border-yellow-450'
                           }`}
                         >
                           {nav.name}
