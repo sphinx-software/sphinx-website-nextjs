@@ -2,6 +2,7 @@ import { FC, useEffect, useRef } from 'react'
 import iconHistory from './../public/iconHistory.svg'
 import Image from 'next/image'
 import { SECTION, useAboutSection } from './AboutProvider'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 export declare type HistoryType = {
   year: number
@@ -47,21 +48,37 @@ const DevelopingHistory: FC = () => {
   }, [sectionActive])
 
   return (
-    <div className='bg-white py-16 -mt-1'>
-      <div className='mx-auto max-w-7xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 px-3 md:px-0'>
+    <div className='bg-white -mt-1'>
+      <div className='mx-auto max-w-7xl py-20 px-6 md:px-0'>
         <div className='text-center'>
-          <p className='text-32 md:text-36 leading-48 text-black-50' ref={ref}>
-            Developing history
-          </p>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+            <p
+              className='text-32 md:text-36 leading-48 text-black-50'
+              ref={ref}
+            >
+              Developing history
+            </p>
+          </ScrollAnimation>
         </div>
-        <div className='flex flex-col md:flex-row-reverse md:items-center md:justify-between'>
-          <div className='my-10 w-full md:w-7/12 lg:w-5/12'>
-            {histories.map((history: HistoryType, index: number) => (
-              <History key={index} history={history} />
-            ))}
+        <div className='flex flex-col lg:flex-row-reverse md:items-center md:justify-around mt-20'>
+          <div className='flex-1 flex justify-center'>
+            <div className='w-full md:w-8/12 pb-20 lg:pb-0'>
+              {histories.map((history: HistoryType, index: number) => (
+                <ScrollAnimation
+                  key={index}
+                  animateIn='animate__fadeInUp'
+                  delay={((index + 1) * 1000) / 6}
+                  animateOnce
+                >
+                  <History key={index} history={history} />
+                </ScrollAnimation>
+              ))}
+            </div>
           </div>
-          <div className='-mt-6 md:mr-10'>
-            <Image src={iconHistory} alt='Sphinx Software' />
+          <div className='flex-1 -mt-6 lg:mt-0 md:mr-10 w-full md:w-8/12 lg:w-full flex justify-center items-center'>
+            <ScrollAnimation animateIn='animate__fadeIn'>
+              <Image src={iconHistory} alt='Sphinx Software' />
+            </ScrollAnimation>
           </div>
         </div>
       </div>

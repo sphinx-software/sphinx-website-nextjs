@@ -13,7 +13,7 @@ export default function About() {
       </Head>
       <main
         style={{ backgroundImage: "url('/aboutBg.png')" }}
-        className='bg-top'
+        className='bg-top bg-no-repeat'
       >
         <Layout>
           <AboutProvider>
