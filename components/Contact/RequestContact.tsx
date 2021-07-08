@@ -4,20 +4,56 @@ import Image from 'next/image'
 import CircleBackground from '../../public/circle.svg'
 import IconContact from '../../public/contact.svg'
 import emailJs from 'emailjs-com'
-import {emailConfig} from '../../config'
+import { emailConfig } from '../../config'
 import Loader from 'react-loader-spinner'
 import { sendContactUsEmail } from '../../services/sendEmail'
+import { useFormik } from 'formik'
+import classNames from 'classnames'
 
 emailJs.init(emailConfig.user_id)
 
 const RequestContact: FunctionComponent = () => {
-  const [disable, setDisable] = useState(true);
-  const [submitting, setSubmitting] = useState(false);
+  const [disable, setDisable] = useState(true)
+  const [submitting, setSubmitting] = useState(false)
 
-  const sendContact = (event: any) => {
-    event.preventDefault();
-    sendContactUsEmail(event, setSubmitting);
-  }
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      companyName: '',
+      workEmail: '',
+      phoneNumber: '',
+      reason: ''
+    },
+    onSubmit: (values) => {
+      sendContactUsEmail(values, setSubmitting)
+    },
+    validate: (values) => {
+      let errors: Record<string, string> = {}
+      if (!values.name) {
+        errors.name = 'Name is required'
+      }
+      if (!values.workEmail) {
+        errors.workEmail = 'Work email is required'
+      } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.workEmail)
+      ) {
+        errors.workEmail = 'Invalid email address'
+      }
+      if (!values.companyName) {
+        errors.companyName = 'Company name is required'
+      }
+      if (!values.reason) {
+        errors.reason = 'Reason is required'
+      }
+      if (
+        values.phoneNumber &&
+        !/^[+]*[(]?[0-9]{1,4}[)]?[-\s\./0-9]*$/g.test(values.phoneNumber)
+      ) {
+        errors.phoneNumber = 'Phone number is valid'
+      }
+      return errors
+    }
+  })
 
   return (
     <div className={style.contactMain}>
@@ -25,73 +61,98 @@ const RequestContact: FunctionComponent = () => {
         <label className={style.mainLabel}>Contact Us</label>
         <div className='md:flex'>
           <div className='flex-1 flex flex-col flex-shrink'>
-            <form onSubmit={sendContact}>
-              <div className='flex flex-col focus:outline-none'>
+            <form onSubmit={formik.handleSubmit}>
+              <div className='flex flex-col' style={{ height: 120 }}>
                 <label className={style.formContactLabel}>Name</label>
                 <input
-                  className={style.formContactInput}
+                  className={classNames(
+                    [style.formContactInput],
+                    [formik.errors.name ? 'ring-2 ring-orange-450' : '']
+                  )}
                   id='name'
+                  name='name'
                   type='text'
-                  required
-                  onInvalid={(event: any) => {
-                    event.target.setCustomValidity('Name must be required!')
-                  }}
-                  onInput={(event: any) => {
-                    event.target.setCustomValidity('')
-                  }}
+                  onChange={formik.handleChange}
+                  value={formik.values.name}
                 />
+                {formik.errors.name && (
+                  <span className='-mt-3 text-orange-450'>
+                    {formik.errors.name}
+                  </span>
+                )}
               </div>
-              <div className={'flex flex-col pt-6'}>
+              <div className={'flex flex-col'} style={{ height: 120 }}>
                 <label className={style.formContactLabel}>Company name</label>
                 <input
-                  className={style.formContactInput}
+                  className={classNames(
+                    [style.formContactInput],
+                    [formik.errors.companyName ? 'ring-2 ring-orange-450' : '']
+                  )}
                   id='companyName'
+                  name='companyName'
                   type='text'
-                  required
-                  onInvalid={(event: any) => {
-                    event.target.setCustomValidity(
-                      'Company Name must be required!'
-                    )
-                  }}
-                  onInput={(event: any) => {
-                    event.target.setCustomValidity('')
-                  }}
+                  onChange={formik.handleChange}
+                  value={formik.values.companyName}
                 />
+                {formik.errors.companyName && (
+                  <span className='-mt-3 text-orange-450'>
+                    {formik.errors.companyName}
+                  </span>
+                )}
               </div>
               <div className={'flex flex-col md:flex-row w-full'}>
                 <div
                   className={
-                    'flex flex-col pt-6 w-full md:w-3/5 md:pr-6 flex-shrink'
+                    'flex flex-col w-full md:w-3/5 md:pr-6 flex-shrink'
                   }
+                  style={{ height: 120 }}
                 >
                   <label className={style.formContactLabel}>Work email</label>
                   <input
-                    className={style.formContactInput}
+                    className={classNames(
+                      [style.formContactInput],
+                      [formik.errors.workEmail ? 'ring-2 ring-orange-450' : '']
+                    )}
                     id='workEmail'
+                    name='workEmail'
                     type='text'
-                    required
-                    onInvalid={(event: any) => {
-                      event.target.setCustomValidity(
-                        'WorkEmail must be required!'
-                      )
-                    }}
-                    onInput={(event: any) => {
-                      event.target.setCustomValidity('')
-                    }}
+                    onChange={formik.handleChange}
+                    value={formik.values.workEmail}
                   />
+                  {formik.errors.workEmail && (
+                    <span className='-mt-3 text-orange-450'>
+                      {formik.errors.workEmail}
+                    </span>
+                  )}
                 </div>
                 <div
-                  className={'flex flex-col pt-6 w-auto md:w-2/5 flex-shrink'}
+                  className={'flex flex-col w-auto md:w-2/5 flex-shrink'}
+                  style={{ height: 120 }}
                 >
                   <label className={'text-gray-50'}>Phone number</label>
                   <input
-                    className={style.formContactInput}
+                    className={classNames(
+                      [style.formContactInput],
+                      [
+                        formik.errors.phoneNumber
+                          ? 'ring-2 ring-orange-450'
+                          : ''
+                      ]
+                    )}
                     id='phoneNumber'
+                    name='phoneNumber'
                     type='text'
+                    onChange={formik.handleChange}
+                    value={formik.values.phoneNumber}
                   />
+                  {formik.errors.phoneNumber && (
+                    <span className='-mt-3 text-orange-450'>
+                      {formik.errors.phoneNumber}
+                    </span>
+                  )}
                 </div>
               </div>
-              <div className={'flex flex-col pt-6'}>
+              <div className={'flex flex-col'}>
                 <label className={style.formContactLabel}>
                   I need help with ...
                 </label>
@@ -101,10 +162,9 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonA'
                       name='reason'
-                      value='Website Development'
-                      required
                       onClick={() => {
                         setDisable(true)
+                        formik.setFieldValue('reason', 'Website Development')
                       }}
                     />
                     <label
@@ -119,10 +179,9 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonB'
                       name='reason'
-                      value='Mobile App Development'
-                      required
                       onClick={() => {
                         setDisable(true)
+                        formik.setFieldValue('reason', 'Mobile App Development')
                       }}
                     />
                     <label
@@ -137,10 +196,9 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonC'
                       name='reason'
-                      value='IT Managed Services'
-                      required
                       onClick={() => {
                         setDisable(true)
+                        formik.setFieldValue('reason', 'IT Managed Services')
                       }}
                     />
                     <label
@@ -155,10 +213,9 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='otherReason'
                       name='reason'
-                      value='otherReason'
-                      required
                       onClick={() => {
                         setDisable(false)
+                        formik.setFieldValue('reason', '')
                       }}
                     />
                     <label
@@ -170,24 +227,36 @@ const RequestContact: FunctionComponent = () => {
                   </div>
                   {!disable && (
                     <input
-                      className={style.formContactInput}
+                      className={classNames(
+                        [style.formContactInput],
+                        [formik.errors.reason ? 'ring-2 ring-orange-450' : '']
+                      )}
                       id='otherReasonTextInput'
-                      name='otherReasonDescription'
+                      name='reason'
                       type='text'
+                      onChange={formik.handleChange}
+                      value={formik.values.reason}
                     />
                   )}
                 </div>
+                {formik.errors.reason && (
+                  <span className='-mt-3 text-orange-450'>
+                    {formik.errors.reason}
+                  </span>
+                )}
               </div>
               <div className={'mt-9'}>
-                <button
-                  className='btn-grad flex'
-                  type='submit'
-                  id='submit'
-                >
+                <button className='btn-grad flex' type='submit' id='submit'>
                   <div className={'flex items-center'}>
                     <p>Submit</p>
                     <div className={'pl-1'}>
-                      <Loader visible={submitting} type="Oval" color="#FFFFFF" height={16} width={16}/>
+                      <Loader
+                        visible={submitting}
+                        type='Oval'
+                        color='#FFFFFF'
+                        height={16}
+                        width={16}
+                      />
                     </div>
                   </div>
                 </button>

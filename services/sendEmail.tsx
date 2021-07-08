@@ -4,42 +4,29 @@ import { ApplyJobTemplate, ContactUsTemplate } from '../ui/EmailContentTemplate'
 
 emailJs.init(emailConfig.user_id)
 
+export type Contact = {
+  name: string
+  companyName: string
+  workEmail: string
+  phoneNumber: string
+  reason: string
+}
 export const sendContactUsEmail = (
-  event: any,
+  contact: Contact,
   setSubmitting: (value: boolean) => void
 ) => {
   setSubmitting(true)
-  let reason
-  const name: string = event.target.name.value
-  const company_name: string = event.target.companyName.value
-  const work_email: string = event.target.workEmail.value
-  const phone_number: string | undefined = event.target.phoneNumber.value
-
-  if (
-    event.target.reason.value &&
-    event.target.reason.value !== 'otherReason'
-  ) {
-    reason = event.target.reason.value
-  } else {
-    reason = event.target.otherReasonDescription.value
-  }
 
   emailJs
     .send(
       emailConfig.email_service_ids.gmail_test,
       emailConfig.template_ids.custom_template,
       {
-        subtitle: `Contact form ${event.target.name.value}`,
-        email_content: ContactUsTemplate(
-          name,
-          company_name,
-          work_email,
-          reason,
-          phone_number
-        ),
+        subtitle: `Contact form ${contact.name}`,
+        email_content: ContactUsTemplate(contact),
         to_email: emailConfig.contact_receive_email,
         from_name: 'Sphinx Software',
-        reply_to: work_email || emailConfig.receiver_reply_email
+        reply_to: contact.workEmail
       }
     )
     .then(
@@ -82,7 +69,7 @@ export const sendRequestJobEmail = (
         ),
         to_email: emailConfig.apply_job_receive_email,
         from_name: 'Sphinx Software',
-        reply_to: email || emailConfig.receiver_reply_email
+        reply_to: email
       }
     )
     .then(
