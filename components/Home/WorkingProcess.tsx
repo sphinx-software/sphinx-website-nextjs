@@ -40,12 +40,14 @@ export default function WorkingProcess(): JSX.Element {
         <div className='pt-20'>
           <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-start md:items-end border-l-2 md:border-l-0 md:border-r-2 border-solid border-gray-233031'>
-              <div
-                className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'
-                style={{ width: 'fit-content', blockSize: 'fit-content' }}
-              >
-                Requirement&apos;s analysis
-              </div>
+              <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <div
+                  className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 -mt-6'
+                  style={{ width: 'fit-content', blockSize: 'fit-content' }}
+                >
+                  Requirement&apos;s analysis
+                </div>
+              </ScrollAnimation>
               <div className='relative mt-20'>
                 <div className='absolute -left-3 md:left-auto md:-right-3 -top-44 lg:-top-28'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
@@ -108,12 +110,14 @@ export default function WorkingProcess(): JSX.Element {
               </ScrollAnimation>
             </div>
             <div className='flex-1 flex flex-col justify-center items-start border-l-2 md:border-l-0 border-solid border-gray-233031'>
-              <div
-                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-20'
-                style={{ width: 'fit-content', blockSize: 'fit-content' }}
-              >
-                Design
-              </div>
+              <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <div
+                  className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-20'
+                  style={{ width: 'fit-content', blockSize: 'fit-content' }}
+                >
+                  Design
+                </div>
+              </ScrollAnimation>
               <div className='relative mt-20'>
                 <div className='absolute -left-3' style={{ marginTop: -118 }}>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
@@ -129,9 +133,11 @@ export default function WorkingProcess(): JSX.Element {
           </div>
           <div className='flex flex-col md:flex-row'>
             <div className='flex-1 flex flex-col justify-center items-start md:items-end border-l-2 md:border-l-0 border-r-0 md:border-r-2 border-solid border-gray-233031'>
-              <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 pt-20'>
-                Development and Testing
-              </div>
+              <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <div className='pl-4 md:pl-0 pr-0 md:pr-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 bg-cover text-36 pt-20'>
+                  Development and Testing
+                </div>
+              </ScrollAnimation>
               <div className='relative mt-20 md:mb-20'>
                 <div className='absolute -left-3 md:left-auto md:-right-3 -mt-44 md:-mt-40 lg:-mt-32'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
@@ -194,12 +200,14 @@ export default function WorkingProcess(): JSX.Element {
               </ScrollAnimation>
             </div>
             <div className='flex-1 flex flex-col justify-start items-start'>
-              <div
-                className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8 -mt-12'
-                style={{ width: 'fit-content', blockSize: 'fit-content' }}
-              >
-                Deployment
-              </div>
+              <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <div
+                  className='pl-4 md:pl-10 bg-clip-text text-transparent bg-gradient-to-r from-yellow-FFC838 to-orange-E05529 bg-yellow-FFC838 text-36 pt-8 -mt-12'
+                  style={{ width: 'fit-content', blockSize: 'fit-content' }}
+                >
+                  Deployment
+                </div>
+              </ScrollAnimation>
               <div className='relative -mt-9 md:-mt-10'>
                 <div className='absolute -left-3 z-20'>
                   <div className='w-25 h-25 rounded-full bg-gray-850 border-2 border-solid border-gray-233031' />
