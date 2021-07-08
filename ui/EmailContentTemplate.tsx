@@ -22,7 +22,8 @@ export const ContactUsTemplate = (
 }
 
 export const ApplyJobTemplate = (
-  position: string,
+  positionID: string,
+  positionName: string,
   name: string,
   email: string,
   cv_link: string,
@@ -30,16 +31,15 @@ export const ApplyJobTemplate = (
 ) => {
   return (
     `<div>` +
-    `<div style="display: flex"><p><b>Position: </b></p><p>${JSON.stringify(
-      position
-    )}</p></div>` +
-    `<div style="display: flex"><p><b>Full Name: </b></p><p>${name}</p></div>` +
-    `<div style="display: flex"><p><b>Email: </b></p><p>${email}</p></div>` +
+    `<div style="display: flex"><p><b style="padding-right: 7px">Position ID: </b></p><p>${positionID}</p></div>` +
+    `<div style="display: flex"><p><b style="padding-right: 7px">Position Name: </b></p><p>${positionName}</p></div>` +
+    `<div style="display: flex"><p><b style="padding-right: 7px">Full Name: </b></p><p>${name}</p></div>` +
+    `<div style="display: flex"><p><b style="padding-right: 7px">Email: </b></p><p>${email}</p></div>` +
     `${
       phone_number &&
-      `<div style="display: flex"><p><b>Phone number: </b></p><p>${phone_number}</p></div>`
+      `<div style="display: flex"><p><b style="padding-right: 7px">Phone number: </b></p><p>${phone_number}</p></div>`
     }` +
-    `<div style="display: flex"><p><b>CV Link: </b></p><p>${cv_link}</p></div>` +
+    `<div style="display: flex"><p><b style="padding-right: 7px">CV Link: </b></p><p>${cv_link}</p></div>` +
     `</div>`
   )
 }

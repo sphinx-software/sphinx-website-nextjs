@@ -1,5 +1,5 @@
 import emailJs from 'emailjs-com'
-import { emailConfig } from '../config'
+import { emailConfig, tableConfig } from '../config'
 import { ApplyJobTemplate, ContactUsTemplate } from '../ui/EmailContentTemplate'
 
 emailJs.init(emailConfig.user_id)
@@ -57,13 +57,14 @@ export const sendRequestJobEmail = (
   setSubmitting: (value: boolean) => void
 ) => {
   setSubmitting(true)
-  const position: string = event.target.position.value
+  const positionID: string = event.target.position.value
   const name: string = event.target.name.value
   const email: string = event.target.email.value
   const phone_number: string | undefined = event.target.phoneNumber.value
   const cv_link: string = event.target.cvLink.value
-
-  console.log('position', position)
+  const positionData = tableConfig.resource.find(
+    (item) => item.id === positionID
+  )
 
   emailJs
     .send(
@@ -72,7 +73,8 @@ export const sendRequestJobEmail = (
       {
         subtitle: `Apply Job ${event.target.name.value}`,
         email_content: ApplyJobTemplate(
-          position,
+          positionID,
+          positionData?.position || positionID,
           name,
           email,
           cv_link,

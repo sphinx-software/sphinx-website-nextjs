@@ -47,7 +47,7 @@ const JoinUsDetail: FunctionComponent<{
 
   return (
     <div className={style.joinUsDetailMain}>
-      <div className={'mx-3 md:mx-16 max-w-full flex flex-col -my-1 md:my-0'}>
+      <div className={'mx-3 max-w-7xl flex flex-col -my-1 md:my-0'}>
         <div className={'pb-12 w-full mx:auto flex justify-center'}>
           <button className='border rounded-full px-4 py-2 border-gray-350 text-white text-center'>
             <div className={'flex'}>
@@ -96,7 +96,7 @@ const JoinTableDescription: FunctionComponent<{
   }, [currentJob, data])
 
   return (
-    <div className={'joinTable pb-44 w-full flex flex-col justify-center'}>
+    <div className={'pb-44 w-full flex flex-col justify-center'}>
       <table
         className={
           'overflow-hidden rounded-3xl w-full bg-gray-850 bg-opacity-10'
@@ -137,10 +137,7 @@ const JoinTableDescription: FunctionComponent<{
                 </div>
               )
             })}
-            <button
-              onClick={() => setIsShow(true)}
-              className={style.buttonJoinUs}
-            >
+            <button onClick={() => setIsShow(true)} className={'btn-grad'}>
               Apply Now
             </button>
           </td>
@@ -212,17 +209,17 @@ const JoinTableMenu: FunctionComponent<{
   )
 }
 
-const ApplyJobModal: FunctionComponent<{
+export const ApplyJobModal: FunctionComponent<{
   isShow: boolean
   setIsShow: (value: boolean) => void
-  jobId: string
+  jobId?: string
 }> = ({ isShow, setIsShow, jobId }) => {
   const [submitting, setSubmitting] = useState(false)
   const [currentWidth, setWidth] = useState('40%')
 
   const selectOption = tableConfig.resource.map((item) => {
     return {
-      value: { position: item.position, id: item.id },
+      value: item.id,
       label: item.position
     }
   })
@@ -253,6 +250,9 @@ const ApplyJobModal: FunctionComponent<{
   }, [window.innerWidth])
 
   const customStyles = {
+    overlay: {
+      zIndex: 100
+    },
     content: {
       top: '50%',
       left: '50%',
@@ -303,7 +303,9 @@ const ApplyJobModal: FunctionComponent<{
                   options={selectOption}
                   isSearchable={true}
                   name={'position'}
-                  value={selectOption.find((item) => item.value.id === jobId)}
+                  defaultValue={selectOption.find(
+                    (item) => item.value === jobId
+                  )}
                 />
               </div>
             </div>

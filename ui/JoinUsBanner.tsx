@@ -1,7 +1,9 @@
-import React from 'react'
-import style from '../styles/JoinUs.module.css'
+import React, { useState } from 'react'
+import { ApplyJobModal } from './JoinUsDetail'
 
 const JoinUsBanner = () => {
+  const [isShow, setIsShow] = useState(false)
+
   return (
     <div
       className={'bg-bottom bg-cover'}
@@ -20,9 +22,12 @@ const JoinUsBanner = () => {
           </p>
         </div>
         <div className={'pb-80'}>
-          <button className={style.buttonJoinUs}>Apply Now</button>
+          <button onClick={() => setIsShow(!isShow)} className={'btn-grad'}>
+            Apply Now
+          </button>
         </div>
       </div>
+      <ApplyJobModal isShow={isShow} setIsShow={setIsShow} />
     </div>
   )
 }
