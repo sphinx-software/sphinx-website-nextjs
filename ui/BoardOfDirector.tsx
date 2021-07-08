@@ -7,6 +7,7 @@ import avatarRikky from './../public/avatarRikky.png'
 import avatarPhong from './../public/avatarPhong.png'
 import avatarTota from './../public/avatarTota.png'
 import { SECTION, useAboutSection } from './AboutProvider'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 type HolderType = {
   name: string
@@ -69,10 +70,12 @@ const BoardOfDirector: FC = () => {
 
   return (
     <div className='bg-white'>
-      <div className='mx-auto max-w-7xl pt-12 md:pt-24 pb-10 px-2 xl:pb-24 md:px-0'>
-        <p className='text-36 leading-48 text-black-50 text-center' ref={ref}>
-          Keyholder
-        </p>
+      <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 md:px-0'>
+        <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+          <p className='text-36 leading-48 text-black-50 text-center' ref={ref}>
+            Keyholder
+          </p>
+        </ScrollAnimation>
         <div className='mt-12 mb-12 md:mb-0'>
           <div className='block md:hidden'>
             <Slider {...settings}>
@@ -86,8 +89,15 @@ const BoardOfDirector: FC = () => {
             </Slider>
           </div>
           <div className='hidden md:grid md:grid-cols-3 gap-y-6'>
-            {holders.flat().map((h, i) => (
-              <Holder holder={h} key={i} />
+            {holders.flat().map((h, index) => (
+              <ScrollAnimation
+                key={index}
+                animateIn='animate__fadeInUp'
+                delay={((index + 1) * 1000) / 6}
+                animateOnce
+              >
+                <Holder holder={h} />
+              </ScrollAnimation>
             ))}
           </div>
         </div>
@@ -101,7 +111,7 @@ const Holder: FC<{ holder: HolderType }> = ({
 }) => {
   return (
     <div className='flex flex-col items-center py-6'>
-      <Image width={144} height={144} src={avatar} />
+      <Image width={144} height={144} src={avatar} alt={name} />
       <p className='text-16 leading-32 mt-4'>{name}</p>
       <p className='text-16 leading-32 text-gray-350'>{position}</p>
     </div>
