@@ -352,5 +352,6 @@ export const emailConfig = {
     custom_template: 'template_f6kzd16'
   },
   contact_receive_email: 'long97vip@gmail.com',
-  receiver_reply_email: 'longlh@sphinx-software.com'
+  receiver_reply_email: 'longlh@sphinx-software.com',
+  apply_job_receive_email: 'long97vip@gmail.com'
 }
