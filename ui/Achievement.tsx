@@ -15,11 +15,11 @@ const Achievement: FC = () => {
     }
   }, [sectionActive])
   return (
-    <div className='bg-gray-850'>
+    <div className='bg-gray-850' ref={ref}>
       <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 lg:px-0 xl:py-28 -mt-0.5'>
         <div>
           <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-            <p className='text-36 leading-48 text-white text-center' ref={ref}>
+            <p className='text-36 leading-48 text-white text-center'>
               Achievements
             </p>
           </ScrollAnimation>
