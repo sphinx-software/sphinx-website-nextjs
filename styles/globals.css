@@ -42,7 +42,16 @@ a {
 }
 
 .slick-active > .sphinx-slick {
-  @apply bg-orange-450 w-6
+  @apply bg-yellow-450
+}
+
+.slick-dots > li {
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+  width: 16px !important;
+  height: 16px !important;
+  padding: 4px !important;
 }
 
 .mapboxgl-map {

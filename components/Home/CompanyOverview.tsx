@@ -14,7 +14,7 @@ const CompanyOverview: FunctionComponent = () => {
         <div className='flex items-center flex-col md:flex-row-reverse md:justify-between items-center'>
           <div className='flex-1 flex justify-end'>
             <div className={styles.overViewContent}>
-              <div className='md:pl-4 lg:pl-10 lg:pr-4 mt-16'>
+              <div className='md:pl-4 lg:pl-10 lg:pr-4 mt-20 md:mt-0 lg:mt-20'>
                 <ScrollAnimation animateIn='animate__fadeIn' animateOnce>
                   <h2 className='text-24 leading-48 text-black-50'>
                     Company Overview
@@ -52,7 +52,7 @@ const CompanyOverview: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className='flex-1 my-40 flex justify-start'>
+          <div className='flex-1 my-20 md:my-40 flex justify-start'>
             <div className='flex items-center'>
               <ScrollAnimation animateIn={'animate__fadeIn'} duration={2}>
                 <Image

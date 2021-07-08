@@ -85,7 +85,7 @@ const settings = {
   prevArrow: <></>,
   customPaging: function f() {
     return (
-      <div className='mt-8 w-4 mx-1.5 h-1 rounded bg-gray-250 sphinx-slick' />
+      <div className='mt-8 h-2 w-2 rounded-full bg-gray-450 sphinx-slick' />
     )
   },
   responsive: [
