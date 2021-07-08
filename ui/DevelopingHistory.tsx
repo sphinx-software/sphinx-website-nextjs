@@ -45,9 +45,10 @@ const DevelopingHistory: FC = () => {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [sectionActive])
+
   return (
     <div className='bg-white py-16 -mt-1'>
-      <div className='mx-auto max-w-7xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 md:px-0'>
+      <div className='mx-auto max-w-7xl pt-4 md:pt-20 pb-10 px-2 xl:pb-20 px-3 md:px-0'>
         <div className='text-center'>
           <p className='text-32 md:text-36 leading-48 text-black-50' ref={ref}>
             Developing history

@@ -8,7 +8,7 @@ export enum SECTION {
   ACHIEVEMENTS = 'ACHIEVEMENTS'
 }
 declare type AboutProviderState = [
-  { sectionActive: SECTION },
+  { sectionActive: SECTION | undefined },
   { changeSection: (value: SECTION) => void }
 ]
 
@@ -18,9 +18,7 @@ export const useAboutSection = () =>
   useContext(AboutContext) as AboutProviderState
 
 const AboutProvider: FC = ({ children }) => {
-  const [sectionActive, changeSection] = useState<SECTION>(
-    SECTION.DEVELOPING_HISTORY
-  )
+  const [sectionActive, changeSection] = useState<SECTION>()
   return (
     <AboutContext.Provider value={[{ sectionActive }, { changeSection }]}>
       {children}
