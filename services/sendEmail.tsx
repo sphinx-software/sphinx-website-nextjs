@@ -40,15 +40,15 @@ export const sendContactUsEmail = (
 }
 
 export const sendRequestJobEmail = (
-  event: any,
+  value: Record<string, any>,
   setSubmitting: (value: boolean) => void
 ) => {
   setSubmitting(true)
-  const positionID: string = event.target.position.value
-  const name: string = event.target.name.value
-  const email: string = event.target.email.value
-  const phone_number: string | undefined = event.target.phoneNumber.value
-  const cv_link: string = event.target.cvLink.value
+  const positionID: string = value.position
+  const name: string = value.name
+  const email: string = value.email
+  const phone_number: string | undefined = value.phoneNumber
+  const cv_link: string = value.cvLink
   const positionData = tableConfig.resource.find(
     (item) => item.id === positionID
   )
@@ -58,7 +58,7 @@ export const sendRequestJobEmail = (
       emailConfig.email_service_ids.gmail_test,
       emailConfig.template_ids.custom_template,
       {
-        subtitle: `Apply Job ${event.target.name.value}`,
+        subtitle: `Apply Job Form ${name}`,
         email_content: ApplyJobTemplate(
           positionID,
           positionData?.position || positionID,

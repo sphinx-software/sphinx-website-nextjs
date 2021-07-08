@@ -203,6 +203,9 @@ module.exports = {
           '0E1C1C': '#0E1C1C',
           50: '#393C41',
           300: '#323439'
+        },
+        red: {
+          origin: 'red'
         }
       },
       padding: {
