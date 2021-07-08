@@ -4,6 +4,7 @@ import iconRocket from './../public/iconRocket.svg'
 import iconGlobal from './../public/iconGlobal.svg'
 import iconReward from './../public/iconReward.svg'
 import { SECTION, useAboutSection } from './AboutProvider'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const Achievement: FC = () => {
   const ref = useRef<any>(null)
@@ -15,11 +16,13 @@ const Achievement: FC = () => {
   }, [sectionActive])
   return (
     <div className='bg-gray-850'>
-      <div className='mx-auto max-w-7xl py-16 md:py-24 px-2 md:px-0 xl:py-28 -mt-0.5'>
+      <div className='mx-auto max-w-7xl py-16 md:py-24 px-6 md:px-0 xl:py-28 -mt-0.5'>
         <div>
-          <p className='text-36 leading-48 text-white text-center' ref={ref}>
-            Achievements
-          </p>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+            <p className='text-36 leading-48 text-white text-center' ref={ref}>
+              Achievements
+            </p>
+          </ScrollAnimation>
         </div>
         <div className='md:grid md:grid-cols-3 md:gap-4 xl:gap-8 place-content-center mt-14 lg:mt-20'>
           <div className='px-3 md:px-7 flex flex-col items-center bg-gray-450 rounded-2xl py-6 text-gray-50 shadow-2xl'>

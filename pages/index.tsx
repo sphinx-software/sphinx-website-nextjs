@@ -11,6 +11,16 @@ export default function Home() {
       <Head>
         <title>Sphinx Software</title>
         <meta name='description' content='Sphinx Software' />
+        <meta property='og:description' content='Sphinx Software' />
+        <meta property='og:site_name' content='Sphinx Software' />
+        <meta property='og:url' content='https://sphinx.vn' />
+        <meta
+          property='og:image'
+          content='https://sphinx.vn/img/bg/hang-out.png'
+        />
+        <meta property='og:locale' content='vi-VN' />
+        <meta property='og:type' content='article' />
+        <meta property='og:title' content='Sphinx Software' />
         <link rel='icon' href='/symbolSphinx.svg' />
       </Head>
       <main

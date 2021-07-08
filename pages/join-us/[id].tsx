@@ -3,9 +3,12 @@ import { Layout } from '../../layout'
 import { useRouter } from 'next/router'
 import React from 'react'
 import JoinUsBanner from '../../ui/JoinUsBanner'
-import JoinUsDetail from '../../ui/JoinUsDetail'
 import { tableConfig } from '../../config'
 import { CommunicationSection } from '../../ui'
+import dynamic from 'next/dynamic'
+const JoinUsDetail = dynamic(() => import('../../ui/JoinUsDetail'), {
+  ssr: false
+})
 
 export default function JoinUs() {
   const router = useRouter()

@@ -3,11 +3,20 @@ import style from './Contact.module.css'
 import Image from 'next/image'
 import CircleBackground from '../../public/circle.svg'
 import IconContact from '../../public/contact.svg'
+import emailJs from 'emailjs-com'
+import {emailConfig} from '../../config'
+import Loader from 'react-loader-spinner'
+import { sendContactUsEmail } from '../../services/sendEmail'
+
+emailJs.init(emailConfig.user_id)
 
 const RequestContact: FunctionComponent = () => {
-  const [disable, setDisable] = useState(true)
+  const [disable, setDisable] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+
   const sendContact = (event: any) => {
-    event.preventDefault()
+    event.preventDefault();
+    sendContactUsEmail(event, setSubmitting);
   }
 
   return (
@@ -92,7 +101,7 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonA'
                       name='reason'
-                      value='reasonA'
+                      value='Website Development'
                       required
                       onClick={() => {
                         setDisable(true)
@@ -110,7 +119,7 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonB'
                       name='reason'
-                      value='reasonB'
+                      value='Mobile App Development'
                       required
                       onClick={() => {
                         setDisable(true)
@@ -128,7 +137,7 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonC'
                       name='reason'
-                      value='reasonC'
+                      value='IT Managed Services'
                       required
                       onClick={() => {
                         setDisable(true)
@@ -170,12 +179,18 @@ const RequestContact: FunctionComponent = () => {
                 </div>
               </div>
               <div className={'mt-9'}>
-                <input
-                  className={style.formContactButton}
+                <button
+                  className='btn-grad flex'
                   type='submit'
                   id='submit'
-                  value='Send'
-                />
+                >
+                  <div className={'flex items-center'}>
+                    <p>Submit</p>
+                    <div className={'pl-1'}>
+                      <Loader visible={submitting} type="Oval" color="#FFFFFF" height={16} width={16}/>
+                    </div>
+                  </div>
+                </button>
               </div>
             </form>
           </div>
