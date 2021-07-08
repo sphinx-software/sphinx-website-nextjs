@@ -23,16 +23,10 @@ export const sendContactUsEmail = (
       emailConfig.template_ids.custom_template,
       {
         subtitle: `Contact form ${contact.name}`,
-        email_content: ContactUsTemplate(
-          contact.name,
-          contact.companyName,
-          contact.workEmail,
-          contact.reason,
-          contact.phoneNumber
-        ),
+        email_content: ContactUsTemplate(contact),
         to_email: emailConfig.contact_receive_email,
         from_name: 'Sphinx Software',
-        reply_to: contact.workEmail || emailConfig.receiver_reply_email
+        reply_to: contact.workEmail
       }
     )
     .then(
@@ -75,7 +69,7 @@ export const sendRequestJobEmail = (
         ),
         to_email: emailConfig.apply_job_receive_email,
         from_name: 'Sphinx Software',
-        reply_to: email || emailConfig.receiver_reply_email
+        reply_to: email
       }
     )
     .then(
