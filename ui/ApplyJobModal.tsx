@@ -6,7 +6,7 @@ import Image from 'next/image'
 import style from '../styles/JoinUs.module.css'
 import Loader from 'react-loader-spinner'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
+import { toast } from 'react-toastify'
 
 const ApplyJobModal: FunctionComponent<{
   isShow: boolean
@@ -30,19 +30,6 @@ const ApplyJobModal: FunctionComponent<{
       width: currentWidth
     }
   }
-  const ApplyJobSchema = Yup.object().shape({
-    position: Yup.string().required('Position must be required!'),
-    name: Yup.string().required('Your name must be required!'),
-    email: Yup.string()
-      .email('Invalid email')
-      .required('Email must be required!'),
-    cvLink: Yup.string()
-      .url('Invalid Attach link')
-      .required('Attach link must be required!'),
-    phoneNumber: Yup.number()
-      .min(10, 'Phone number must have at least 10 numbers')
-      .integer('Phone number is invalid')
-  })
 
   useEffect(() => {
     function handleResize() {
@@ -103,7 +90,34 @@ const ApplyJobModal: FunctionComponent<{
               cvLink: '',
               phoneNumber: ''
             }}
-            onSubmit={(values) => sendRequestJobEmail(values, setSubmitting)}
+            onSubmit={(values) => {
+              sendRequestJobEmail(values, setSubmitting).then(
+                function () {
+                  setSubmitting(false)
+                  toast.success('Send Apply Job Email Success', {
+                    position: 'top-right',
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined
+                  })
+                },
+                function () {
+                  setSubmitting(false)
+                  toast.error("Can't Send Apply Job Email!", {
+                    position: 'top-right',
+                    autoClose: 3000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined
+                  })
+                }
+              )
+            }}
             validate={(values) => {
               let errors: Record<string, string> = {}
               if (!values.position) {

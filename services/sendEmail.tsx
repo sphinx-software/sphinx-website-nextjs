@@ -17,26 +17,17 @@ export const sendContactUsEmail = (
 ) => {
   setSubmitting(true)
 
-  emailJs
-    .send(
-      emailConfig.email_service_ids.gmail_test,
-      emailConfig.template_ids.custom_template,
-      {
-        subtitle: `Contact form ${contact.name}`,
-        email_content: ContactUsTemplate(contact),
-        to_email: emailConfig.contact_receive_email,
-        from_name: 'Sphinx Software',
-        reply_to: contact.workEmail
-      }
-    )
-    .then(
-      function () {
-        setSubmitting(false)
-      },
-      function () {
-        setSubmitting(false)
-      }
-    )
+  return emailJs.send(
+    emailConfig.email_service_ids.gmail_test,
+    emailConfig.template_ids.custom_template,
+    {
+      subtitle: `Contact form ${contact.name}`,
+      email_content: ContactUsTemplate(contact),
+      to_email: emailConfig.contact_receive_email,
+      from_name: 'Sphinx Software',
+      reply_to: contact.workEmail
+    }
+  )
 }
 
 export const sendRequestJobEmail = (
@@ -53,31 +44,22 @@ export const sendRequestJobEmail = (
     (item) => item.id === positionID
   )
 
-  emailJs
-    .send(
-      emailConfig.email_service_ids.gmail_test,
-      emailConfig.template_ids.custom_template,
-      {
-        subtitle: `Apply Job Form ${name}`,
-        email_content: ApplyJobTemplate(
-          positionID,
-          positionData?.position || positionID,
-          name,
-          email,
-          cv_link,
-          phone_number
-        ),
-        to_email: emailConfig.apply_job_receive_email,
-        from_name: 'Sphinx Software',
-        reply_to: email
-      }
-    )
-    .then(
-      function () {
-        setSubmitting(false)
-      },
-      function () {
-        setSubmitting(false)
-      }
-    )
+  return emailJs.send(
+    emailConfig.email_service_ids.gmail_test,
+    emailConfig.template_ids.custom_template,
+    {
+      subtitle: `Apply Job Form ${name}`,
+      email_content: ApplyJobTemplate(
+        positionID,
+        positionData?.position || positionID,
+        name,
+        email,
+        cv_link,
+        phone_number
+      ),
+      to_email: emailConfig.apply_job_receive_email,
+      from_name: 'Sphinx Software',
+      reply_to: email
+    }
+  )
 }

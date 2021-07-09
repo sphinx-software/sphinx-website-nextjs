@@ -9,6 +9,7 @@ import Loader from 'react-loader-spinner'
 import { sendContactUsEmail } from '../../services/sendEmail'
 import { useFormik } from 'formik'
 import classNames from 'classnames'
+import { toast } from 'react-toastify'
 
 emailJs.init(emailConfig.user_id)
 
@@ -25,7 +26,32 @@ const RequestContact: FunctionComponent = () => {
       reason: ''
     },
     onSubmit: (values) => {
-      sendContactUsEmail(values, setSubmitting)
+      sendContactUsEmail(values, setSubmitting).then(
+        function () {
+          setSubmitting(false)
+          toast.success('Send Contact Email Success', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+          })
+        },
+        function () {
+          setSubmitting(false)
+          toast.error("Can't Send Contact Email!", {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+          })
+        }
+      )
     },
     validate: (values) => {
       let errors: Record<string, string> = {}
