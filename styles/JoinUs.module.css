@@ -10,7 +10,7 @@
 
 .joinUsDetailMain {
     background-image: linear-gradient(0deg, #583023 0%, #0E1C1C 25%, #0E1C1C 75%);
-    @apply w-full flex justify-center
+    @apply w-full flex justify-center -my-0.5 md:my-0
 }
 
 .joinUsFormInput {

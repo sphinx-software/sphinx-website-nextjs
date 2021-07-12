@@ -17,7 +17,8 @@ const ApplyJobModal: FunctionComponent<{
   const [currentWidth, setWidth] = useState('40%')
   const customStyles = {
     overlay: {
-      zIndex: 100
+      zIndex: 100,
+      backgroundColor: 'rgba(14, 28, 28, 0.75)'
     },
     content: {
       top: '50%',

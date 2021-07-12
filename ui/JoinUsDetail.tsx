@@ -67,7 +67,7 @@ const JoinUsDetail: FunctionComponent<{
               currentJob={currentSelection}
             />
           </div>
-          <div className={'w-0 md:w-1/4 hidden md:table sticky top-0.5'}>
+          <div className={'container w-0 md:w-1/4 hidden md:table'}>
             <JoinTableMenu
               data={resource}
               currentJob={currentSelection}
@@ -102,45 +102,52 @@ const JoinTableDescription: FunctionComponent<{
         }
         style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
       >
-        <tr className={'bg-gray-380'}>
-          <th
-            className={
-              'p-6 text-left border-b border-gray-250 border-opacity-10'
-            }
-          >
-            <p className={'text-white leading-19 text-16 font-normal'}>
-              {content.position}
-            </p>
-          </th>
-        </tr>
-        <tr className={'border-b border-gray-250 border-opacity-10'}>
-          <td className={`text-white bg-gray-450 p-6`}>
-            {content.description.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`flex flex-col ${index === 0 && 'pt-12'}`}
-                >
-                  <span className={'text-gray-250 leading-19 text-16'}>
-                    {item.title}
-                  </span>
-                  <div className={'jobContentDetail'}>
-                    <ul className={'pb-16 list-disc pl-6'}>
-                      {item.contents.map((itemContent, itemContentIndex) => (
-                        <li key={`jobContent-${index}-${itemContentIndex}`}>
-                          {itemContent}
-                        </li>
-                      ))}
-                    </ul>
+        <thead>
+          <tr className={'bg-gray-380'}>
+            <th
+              className={
+                'p-6 text-left border-b border-gray-250 border-opacity-10'
+              }
+            >
+              <p className={'text-white leading-19 text-16 font-normal'}>
+                {content.position}
+              </p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className={'border-b border-gray-250 border-opacity-10'}>
+            <td
+              style={{ width: '900px' }}
+              className={`text-white bg-gray-450 p-6`}
+            >
+              {content.description.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`flex flex-col ${index === 0 && 'pt-12'}`}
+                  >
+                    <span className={'text-gray-250 leading-19 text-16'}>
+                      {item.title}
+                    </span>
+                    <div className={'jobContentDetail'}>
+                      <ul className={'pb-16 list-disc pl-6'}>
+                        {item.contents.map((itemContent, itemContentIndex) => (
+                          <li key={`jobContent-${index}-${itemContentIndex}`}>
+                            {itemContent}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              )
-            })}
-            <button onClick={() => setIsShow(true)} className={'btn-grad'}>
-              Apply Now
-            </button>
-          </td>
-        </tr>
+                )
+              })}
+              <button onClick={() => setIsShow(true)} className={'btn-grad'}>
+                Apply Now
+              </button>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <ApplyJobModal isShow={isShow} setIsShow={setIsShow} jobId={currentJob} />
     </div>
@@ -153,7 +160,7 @@ const JoinTableMenu: FunctionComponent<{
   setCurrentJob: (value: string) => void
 }> = ({ data, currentJob, setCurrentJob }) => {
   return (
-    <div className={'joinTable pb-44 w-full flex justify-center'}>
+    <div className={'joinTable pb-44 w-full flex justify-center sticky top-6'}>
       <table
         className={
           'overflow-hidden rounded-3xl w-full bg-gray-850 bg-opacity-10'
