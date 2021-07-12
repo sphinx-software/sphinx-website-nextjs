@@ -11,12 +11,8 @@ export type Contact = {
   phoneNumber: string
   reason: string
 }
-export const sendContactUsEmail = (
-  contact: Contact,
-  setSubmitting: (value: boolean) => void
-) => {
-  setSubmitting(true)
 
+export const sendContactUsEmail = (contact: Contact) => {
   return emailJs.send(
     emailConfig.email_service_ids.gmail_test,
     emailConfig.template_ids.custom_template,
@@ -30,11 +26,7 @@ export const sendContactUsEmail = (
   )
 }
 
-export const sendRequestJobEmail = (
-  value: Record<string, any>,
-  setSubmitting: (value: boolean) => void
-) => {
-  setSubmitting(true)
+export const sendRequestJobEmail = (value: Record<string, any>) => {
   const positionID: string = value.position
   const name: string = value.name
   const email: string = value.email

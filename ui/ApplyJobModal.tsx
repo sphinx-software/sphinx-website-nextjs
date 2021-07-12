@@ -91,8 +91,9 @@ const ApplyJobModal: FunctionComponent<{
               phoneNumber: ''
             }}
             onSubmit={(values) => {
-              sendRequestJobEmail(values, setSubmitting).then(
-                function () {
+              setSubmitting(true)
+              sendRequestJobEmail(values)
+                .then(() => {
                   setSubmitting(false)
                   toast.success('Send Apply Job Email Success', {
                     position: 'top-right',
@@ -103,8 +104,8 @@ const ApplyJobModal: FunctionComponent<{
                     draggable: true,
                     progress: undefined
                   })
-                },
-                function () {
+                })
+                .catch(() => {
                   setSubmitting(false)
                   toast.error("Can't Send Apply Job Email!", {
                     position: 'top-right',
@@ -115,8 +116,7 @@ const ApplyJobModal: FunctionComponent<{
                     draggable: true,
                     progress: undefined
                   })
-                }
-              )
+                })
             }}
             validate={(values) => {
               let errors: Record<string, string> = {}
