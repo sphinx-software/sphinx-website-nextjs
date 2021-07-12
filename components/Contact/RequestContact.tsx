@@ -39,6 +39,7 @@ const RequestContact: FunctionComponent = () => {
             draggable: true,
             progress: undefined
           })
+          formik.resetForm()
         })
         .catch(() => {
           setSubmitting(false)
@@ -51,9 +52,6 @@ const RequestContact: FunctionComponent = () => {
             draggable: true,
             progress: undefined
           })
-        })
-        .finally(() => {
-          formik.resetForm()
         })
     },
     validate: (values) => {
