@@ -25,9 +25,10 @@ const RequestContact: FunctionComponent = () => {
       phoneNumber: '',
       reason: ''
     },
-    onSubmit: (values) => {
-      sendContactUsEmail(values, setSubmitting).then(
-        function () {
+    onSubmit: (contactForm) => {
+      setSubmitting(true)
+      sendContactUsEmail(contactForm)
+        .then(() => {
           setSubmitting(false)
           toast.success('Send Contact Email Success', {
             position: 'top-right',
@@ -38,8 +39,8 @@ const RequestContact: FunctionComponent = () => {
             draggable: true,
             progress: undefined
           })
-        },
-        function () {
+        })
+        .catch(() => {
           setSubmitting(false)
           toast.error("Can't Send Contact Email!", {
             position: 'top-right',
@@ -50,8 +51,10 @@ const RequestContact: FunctionComponent = () => {
             draggable: true,
             progress: undefined
           })
-        }
-      )
+        })
+        .finally(() => {
+          formik.resetForm()
+        })
     },
     validate: (values) => {
       let errors: Record<string, string> = {}
@@ -73,7 +76,7 @@ const RequestContact: FunctionComponent = () => {
       }
       if (
         values.phoneNumber &&
-        !/^[+]*[(]?[0-9]{1,4}[)]?[-\s\./0-9]*$/g.test(values.phoneNumber)
+        !/^[+]*[(]?[0-9]{1,4}[)]?[-\s\\./0-9]*$/g.test(values.phoneNumber)
       ) {
         errors.phoneNumber = 'Phone number is valid'
       }
@@ -188,6 +191,7 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonA'
                       name='reason'
+                      checked={formik.values.reason === 'Website Development'}
                       onClick={() => {
                         setDisable(true)
                         formik.setFieldValue('reason', 'Website Development')
@@ -205,6 +209,9 @@ const RequestContact: FunctionComponent = () => {
                       type='radio'
                       id='reasonB'
                       name='reason'
+                      checked={
+                        formik.values.reason === 'Mobile App Development'
+                      }
                       onClick={() => {
                         setDisable(true)
                         formik.setFieldValue('reason', 'Mobile App Development')
@@ -220,6 +227,7 @@ const RequestContact: FunctionComponent = () => {
                   <div className={'leading-normal py-2 contactRadio'}>
                     <input
                       type='radio'
+                      checked={formik.values.reason === 'IT Managed Services'}
                       id='reasonC'
                       name='reason'
                       onClick={() => {
