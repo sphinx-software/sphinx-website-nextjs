@@ -302,10 +302,10 @@ const RequestContact: FunctionComponent = () => {
                 style={{ height: 360 }}
               >
                 <div className='absolute z-10 rounded-full mr-4'>
-                  <Image src={CircleBackground} alt={'circle'} />
+                  <Image src={CircleBackground} alt={'iconCircle'} />
                 </div>
                 <div className='absolute z-0 mt-10 pr-0 md:pr-8'>
-                  <Image src={IconContact} alt={'contact'} />
+                  <Image src={IconContact} alt={'iconContact'} />
                 </div>
               </div>
             </div>

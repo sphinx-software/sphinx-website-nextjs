@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import IconGithub from '../public/iconGithub.svg'
 import IconPlanet from '../public/Planet.svg'
 import IconFacebook from '../public/iconFacebook.svg'

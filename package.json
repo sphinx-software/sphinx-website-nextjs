@@ -27,6 +27,7 @@
     "react-slick": "^0.28.1",
     "react-toastify": "^7.0.4",
     "react-transition-group": "^4.4.2",
+    "sitemap": "^7.0.0",
     "slick-carousel": "^1.8.1",
     "yup": "^0.32.9"
   },
