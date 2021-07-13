@@ -354,3 +354,17 @@ export const emailConfig = {
   contact_receive_email: 'long97vip@gmail.com',
   apply_job_receive_email: 'long97vip@gmail.com'
 }
+
+export const screen = {
+  ssm: 384,
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536,
+  '3xl': 1792,
+  fullHD: 1920,
+  '4xl': 2048,
+  '5xl': 2304,
+  '6xl': 2560
+}

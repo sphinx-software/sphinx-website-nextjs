@@ -1,4 +1,4 @@
-import { FC, useState, useRef, useEffect } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import dotActive from './../public/dotActive.svg'
 import dot from './../public/dot.svg'
@@ -11,6 +11,8 @@ import classNames from 'classnames'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import { SECTION, useAboutSection } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
+import useWindowDimensions from '../services/useWindowDimensions'
+import { screen } from '../config'
 
 declare type TimeLineType = {
   content: string
@@ -85,6 +87,7 @@ const ResearchDevelopment: FC = () => {
 
 const TimeLine: FC = () => {
   const [indexTimeLineActive, setIndexTimeLineActive] = useState(0)
+  const { width } = useWindowDimensions()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -100,52 +103,55 @@ const TimeLine: FC = () => {
   const ref = useRef<any>(null)
   return (
     <>
-      <div className='overflow-x-auto flex flex-nowrap md:hidden scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full'>
-        {timeLines.map((t, i) => (
-          <div key={i} className='min-w-full'>
-            <div className='pr-4 pl-2'>
-              <Image src={t.image} alt='Sphinx Software' />
+      {width < screen.md ? (
+        <div className='overflow-x-auto flex flex-nowrap scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full'>
+          {timeLines.map((t, i) => (
+            <div key={i} className='min-w-full'>
+              <div className='pr-4 pl-2'>
+                <Image src={t.image} alt='Sphinx Software' />
+              </div>
+              <div className='mt-14'>
+                <TimeLineItem timeLine={t} />
+              </div>
             </div>
-            <div className='mt-14'>
-              <TimeLineItem timeLine={t} />
+          ))}
+        </div>
+      ) : (
+        <div className='flex flex space-x-6'>
+          <div className='flex-1'>
+            <div className='h-536 w-424 overflow-y-auto md:flex-col px-2 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full py-1'>
+              {timeLines.map((t, i) => (
+                <div key={i}>
+                  <TimeLineItem
+                    lastItem={timeLines.length - 1 === i}
+                    timeLine={t}
+                    active={i === indexTimeLineActive}
+                    onClickTimeLine={() => setIndexTimeLineActive(i)}
+                  />
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-      <div className='hidden md:flex flex space-x-6'>
-        <div className='flex-1'>
-          <div className='h-536 w-424 overflow-y-auto md:flex-col px-2 scrollbar scrollbar-thin scrollbar-thumb-black-300 scrollbar-thumb-rounded-full py-1'>
-            {timeLines.map((t, i) => (
-              <div key={i}>
-                <TimeLineItem
-                  lastItem={timeLines.length - 1 === i}
-                  timeLine={t}
-                  active={i === indexTimeLineActive}
-                  onClickTimeLine={() => setIndexTimeLineActive(i)}
-                />
-              </div>
-            ))}
+          <div className='flex-1'>
+            <SwitchTransition mode='out-in'>
+              <CSSTransition
+                nodeRef={ref}
+                timeout={300}
+                in
+                key={indexTimeLineActive}
+                classNames='fade'
+              >
+                <div ref={ref}>
+                  <Image
+                    src={timeLines[indexTimeLineActive].image}
+                    alt='Sphinx Software'
+                  />
+                </div>
+              </CSSTransition>
+            </SwitchTransition>
           </div>
         </div>
-        <div className='flex-1'>
-          <SwitchTransition mode='out-in'>
-            <CSSTransition
-              nodeRef={ref}
-              timeout={300}
-              in
-              key={indexTimeLineActive}
-              classNames='fade'
-            >
-              <div ref={ref}>
-                <Image
-                  src={timeLines[indexTimeLineActive].image}
-                  alt='Sphinx Software'
-                />
-              </div>
-            </CSSTransition>
-          </SwitchTransition>
-        </div>
-      </div>
+      )}
     </>
   )
 }
@@ -163,31 +169,34 @@ const TimeLineItem: FC<{
 }) => {
   return (
     <>
-      <div className='md:hidden'>
-        <div className='flex items-center'>
-          <Image src={dotActive} alt='Sphinx Software' />
-          <Line />
-        </div>
-        <p className='py-4 text-yellow-450 text-16 leading-32 pl-2 pr-5'>
-          {content}
-        </p>
-      </div>
-      <div className='hidden md:flex cursor-pointer' onClick={onClickTimeLine}>
-        <div className='flex flex-col items-center flex-shrink-0 w-4'>
-          <Image src={active ? dotActive : dot} alt='Sphinx Software' />
-          <Line />
-        </div>
-        <div className={`-mt-2.5 ${lastItem ? 'pb-0' : 'pb-11'}`}>
-          <p
-            className={classNames(
-              ['text-16 leading-32 px-3'],
-              [active ? 'text-yellow-450' : 'text-gray-350']
-            )}
-          >
+      {window < screen.md ? (
+        <div>
+          <div className='flex items-center'>
+            <Image src={dotActive} alt='Sphinx Software' />
+            <Line />
+          </div>
+          <p className='py-4 text-yellow-450 text-16 leading-32 pl-2 pr-5'>
             {content}
           </p>
         </div>
-      </div>
+      ) : (
+        <div className='flex cursor-pointer' onClick={onClickTimeLine}>
+          <div className='flex flex-col items-center flex-shrink-0 w-4'>
+            <Image src={active ? dotActive : dot} alt='Sphinx Software' />
+            <Line />
+          </div>
+          <div className={`-mt-2.5 ${lastItem ? 'pb-0' : 'pb-11'}`}>
+            <p
+              className={classNames(
+                ['text-16 leading-32 px-3'],
+                [active ? 'text-yellow-450' : 'text-gray-350']
+              )}
+            >
+              {content}
+            </p>
+          </div>
+        </div>
+      )}
     </>
   )
 }

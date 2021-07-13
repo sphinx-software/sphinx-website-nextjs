@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -8,6 +8,8 @@ import avatarPhong from './../public/avatarPhong.png'
 import avatarTota from './../public/avatarTota.png'
 import { SECTION, useAboutSection } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
+import useWindowDimensions from '../services/useWindowDimensions'
+import { screen } from '../config'
 
 type HolderType = {
   name: string
@@ -62,6 +64,7 @@ const settings = {
 const BoardOfDirector: FC = () => {
   const ref = useRef<any>(null)
   const [{ sectionActive }] = useAboutSection()
+  const { width } = useWindowDimensions()
   useEffect(() => {
     if (sectionActive === SECTION.KEYHOLDER) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -77,29 +80,32 @@ const BoardOfDirector: FC = () => {
           </p>
         </ScrollAnimation>
         <div className='mt-12 mb-12 md:mb-0'>
-          <div className='block md:hidden'>
-            <Slider {...settings}>
-              {holders.map((h, index) => (
-                <div key={index}>
-                  {h.map((value, index) => (
-                    <Holder key={index} holder={value} />
-                  ))}
-                </div>
+          {width < screen.md ? (
+            <div className='block'>
+              <Slider {...settings}>
+                {holders.map((h, index) => (
+                  <div key={index}>
+                    {h.map((value, index) => (
+                      <Holder key={index} holder={value} />
+                    ))}
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          ) : (
+            <div className='grid md:grid-cols-3 gap-y-6'>
+              {holders.flat().map((h, index) => (
+                <ScrollAnimation
+                  key={index}
+                  animateIn='animate__fadeInUp'
+                  delay={((index + 1) * 1000) / 6}
+                  animateOnce
+                >
+                  <Holder holder={h} />
+                </ScrollAnimation>
               ))}
-            </Slider>
-          </div>
-          <div className='hidden md:grid md:grid-cols-3 gap-y-6'>
-            {holders.flat().map((h, index) => (
-              <ScrollAnimation
-                key={index}
-                animateIn='animate__fadeInUp'
-                delay={((index + 1) * 1000) / 6}
-                animateOnce
-              >
-                <Holder holder={h} />
-              </ScrollAnimation>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

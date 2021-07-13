@@ -134,7 +134,9 @@ const JoinTableDescription: FunctionComponent<{
                       <ul className={'pb-16 list-disc pl-6'}>
                         {item.contents.map((itemContent, itemContentIndex) => (
                           <li key={`jobContent-${index}-${itemContentIndex}`}>
-                            {itemContent}
+                            <p
+                              dangerouslySetInnerHTML={{ __html: itemContent }}
+                            />
                           </li>
                         ))}
                       </ul>

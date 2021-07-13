@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import iconVision from './../public/iconVision.svg'
 import iconMission from './../public/iconMission.svg'
 import pyramid from '../public/pyramid.svg'
@@ -6,10 +6,14 @@ import Image from 'next/image'
 import styles from './../styles/About.module.css'
 import { SECTION, useAboutSection } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
+import useWindowDimensions from '../services/useWindowDimensions'
+import { screen } from '../config'
 
 const InnovationFeature = () => {
   const ref = useRef<any>(null)
   const [{ sectionActive }] = useAboutSection()
+  const { width } = useWindowDimensions()
+
   useEffect(() => {
     if (sectionActive === SECTION.VISION_MISSION) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -28,24 +32,30 @@ const InnovationFeature = () => {
         </ScrollAnimation>
         <div className='flex flex-col md:flex-row mt-20'>
           <div className='flex-1 xl:flex xl:justify-center'>
-            <div className='hidden xl:block'>
-              <ScrollAnimation animateIn='animate__fadeInLeft' animateOnce>
-                <Vision />
-              </ScrollAnimation>
-            </div>
-            <div className='block xl:hidden md:pl-6 md:pr-3'>
-              <VisionMobile />
-            </div>
+            {width >= screen.xl ? (
+              <div className={'block'}>
+                <ScrollAnimation animateIn='animate__fadeInLeft' animateOnce>
+                  <Vision />
+                </ScrollAnimation>
+              </div>
+            ) : (
+              <div className='block md:pl-6 md:pr-3'>
+                <VisionMobile />
+              </div>
+            )}
           </div>
           <div className='flex-1 xl:flex xl:justify-center'>
-            <div className='hidden xl:block mt-20 md:mt-0'>
-              <ScrollAnimation animateIn='animate__fadeInRight' animateOnce>
-                <Mission />
-              </ScrollAnimation>
-            </div>
-            <div className='block xl:hidden mt-6 md:mt-0 md:pr-6'>
-              <MissionMobile />
-            </div>
+            {width >= screen.xl ? (
+              <div className='block mt-20 md:mt-0'>
+                <ScrollAnimation animateIn='animate__fadeInRight' animateOnce>
+                  <Mission />
+                </ScrollAnimation>
+              </div>
+            ) : (
+              <div className='block mt-6 md:mt-0 md:pr-6'>
+                <MissionMobile />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -63,7 +73,7 @@ const Vision: FC = () => {
     >
       <div className='pt-12'>
         <div className='flex items-center flex-col justify-center space-y-4'>
-          <Image src={iconVision} />
+          <Image src={iconVision} alt={'iconVision'}/>
           <p className={styles.visionText}>VISION</p>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
             Leading technology company in Vietnam.
@@ -79,7 +89,7 @@ const VisionMobile: FC = () => {
     <div className='bg-white rounded-2xl h-450 max-w-536 shadow-xl'>
       <div className='pt-12 h-full'>
         <div className='flex items-center flex-col justify-between space-y-4 h-full'>
-          <Image src={iconVision} />
+          <Image src={iconVision} alt={'iconVision'}/>
           <p className={styles.visionText}>VISION</p>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
             Leading technology company in Vietnam.
@@ -104,7 +114,7 @@ const Mission: FC = () => {
       <div className='pt-12 px-2'>
         <div className='flex flex-col justify-center space-y-4'>
           <div className='flex flex-col items-center space-y-4'>
-            <Image src={iconMission} />
+            <Image src={iconMission} alt={'iconMission'}/>
             <p className={styles.visionText}>MISSION</p>
           </div>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
@@ -136,7 +146,7 @@ const MissionMobile: FC = () => {
       <div className='pt-12 px-2'>
         <div className='flex flex-col justify-center space-y-4'>
           <div className='flex flex-col items-center space-y-4'>
-            <Image src={iconMission} />
+            <Image src={iconMission} alt={'iconMission'}/>
             <p className={styles.visionText}>MISSION</p>
           </div>
           <div className='xl:px-16'>
