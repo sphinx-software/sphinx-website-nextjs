@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document'
+import React from 'react'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -13,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang={'en-US'}>
         <Head>
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
