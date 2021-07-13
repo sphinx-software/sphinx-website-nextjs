@@ -167,9 +167,10 @@ const TimeLineItem: FC<{
   onClickTimeLine = () => undefined,
   lastItem
 }) => {
+  const { width } = useWindowDimensions()
   return (
     <>
-      {window < screen.md ? (
+      {width < screen.md ? (
         <div>
           <div className='flex items-center'>
             <Image src={dotActive} alt='Sphinx Software' />

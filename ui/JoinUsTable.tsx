@@ -57,59 +57,63 @@ const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
         }
         style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
       >
-        <tr className={'bg-gray-380'}>
-          <th
-            className={
-              'p-6 text-left border-b border-gray-250 border-opacity-10'
-            }
-          >
-            <span className={'text-gray-50'}>Position</span>
-          </th>
-          <th
-            className={
-              'p-6 text-left border-b border-gray-250 border-opacity-10'
-            }
-          >
-            <span className={'text-gray-50'}>Time</span>
-          </th>
-          <th
-            className={`p-6 text-left hidden border-b border-gray-250 border-opacity-10 md:table-cell`}
-          >
-            <span className={'text-gray-50'}>Salary</span>
-          </th>
-        </tr>
-        {data.map((row, index) => {
-          return (
-            <tr
-              key={index}
-              onClick={() => {
-                router.push(`/join-us/${row.id}`).then(() => {})
-              }}
+        <thead>
+          <tr className={'bg-gray-380'}>
+            <th
+              className={
+                'p-6 text-left border-b border-gray-250 border-opacity-10'
+              }
             >
-              <td
-                className={
-                  'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
-                }
+              <span className={'text-gray-50'}>Position</span>
+            </th>
+            <th
+              className={
+                'p-6 text-left border-b border-gray-250 border-opacity-10'
+              }
+            >
+              <span className={'text-gray-50'}>Time</span>
+            </th>
+            <th
+              className={`p-6 text-left hidden border-b border-gray-250 border-opacity-10 md:table-cell`}
+            >
+              <span className={'text-gray-50'}>Salary</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row, index) => {
+            return (
+              <tr
+                key={index}
+                onClick={() => {
+                  router.push(`/join-us/${row.id}`).then(() => {})
+                }}
               >
-                {row.position}
-              </td>
-              <td
-                className={
-                  'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
-                }
-              >
-                {row.time}
-              </td>
-              <td
-                className={
-                  'text-white bg-gray-450 p-6 hidden border-b border-gray-250 border-opacity-10 md:table-cell'
-                }
-              >
-                {row.salary}
-              </td>
-            </tr>
-          )
-        })}
+                <td
+                  className={
+                    'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                  }
+                >
+                  {row.position}
+                </td>
+                <td
+                  className={
+                    'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                  }
+                >
+                  {row.time}
+                </td>
+                <td
+                  className={
+                    'text-white bg-gray-450 p-6 hidden border-b border-gray-250 border-opacity-10 md:table-cell'
+                  }
+                >
+                  {row.salary}
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
       </table>
     </div>
   )

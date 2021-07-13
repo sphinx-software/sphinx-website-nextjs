@@ -61,13 +61,13 @@ const JoinUsDetail: FunctionComponent<{
           </button>
         </div>
         <div className={'w-full flex'}>
-          <div className={'w-full md:w-3/4 mr-0 md:mr-6'}>
+          <div className={'w-full md:w-2/3 mr-0 md:mr-6'}>
             <JoinTableDescription
               data={resource}
               currentJob={currentSelection}
             />
           </div>
-          <div className={'container w-0 md:w-1/4 hidden md:table'}>
+          <div className={'container w-0 md:w-1/3 hidden md:table'}>
             <JoinTableMenu
               data={resource}
               currentJob={currentSelection}
