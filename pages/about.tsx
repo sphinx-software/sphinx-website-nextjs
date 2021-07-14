@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Layout } from '../layout'
 import AboutComponent from '../components/About'
 import AboutProvider from '../ui/AboutProvider'
+import React from 'react'
 
 export default function About() {
   return (

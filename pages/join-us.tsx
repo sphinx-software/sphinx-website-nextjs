@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Layout } from '../layout'
 import JoinUsComponent from '../components/JoinUs'
+import React from 'react'
 
 export default function JoinUs() {
   return (

@@ -2,9 +2,13 @@ import Head from 'next/head'
 import { Layout } from '../layout'
 import { CommunicationSection } from '../ui'
 import dynamic from 'next/dynamic'
-const RequestContact = dynamic(() => import('../components/Contact/RequestContact'), {
-  ssr: false
-})
+import React from 'react'
+const RequestContact = dynamic(
+  () => import('../components/Contact/RequestContact'),
+  {
+    ssr: false
+  }
+)
 
 export default function Home() {
   return (

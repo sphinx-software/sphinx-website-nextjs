@@ -127,7 +127,7 @@ const JoinTableDescription: FunctionComponent<{
                     key={index}
                     className={`flex flex-col ${index === 0 && 'pt-12'}`}
                   >
-                    <span className={'text-gray-250 leading-19 text-16'}>
+                    <span className={'text-gray-250 leading-19 text-16 pb-3'}>
                       {item.title}
                     </span>
                     <div className={'jobContentDetail'}>

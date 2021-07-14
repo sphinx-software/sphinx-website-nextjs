@@ -4,6 +4,7 @@ import { Layout } from '../layout'
 import { CommunicationSection, ServiceSection } from '../ui'
 import WorkingProcess from '../components/Home/WorkingProcess'
 import HomeBanner from '../ui/HomeBanner'
+import React from 'react'
 
 export default function Home() {
   return (
