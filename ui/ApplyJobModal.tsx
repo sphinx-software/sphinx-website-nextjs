@@ -7,6 +7,8 @@ import style from '../styles/JoinUs.module.css'
 import Loader from 'react-loader-spinner'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { toast } from 'react-toastify'
+import useWindowDimensions from '../services/useWindowDimensions'
+import { screen } from '../config'
 
 const ApplyJobModal: FunctionComponent<{
   isShow: boolean
@@ -14,7 +16,7 @@ const ApplyJobModal: FunctionComponent<{
   jobId?: string
 }> = ({ isShow, setIsShow, jobId = tableConfig.resource[0].id }) => {
   const [submitting, setSubmitting] = useState(false)
-  const [currentWidth, setWidth] = useState('40%')
+  const { width } = useWindowDimensions()
   const customStyles = {
     overlay: {
       zIndex: 100,
@@ -28,30 +30,9 @@ const ApplyJobModal: FunctionComponent<{
       marginRight: '-30%',
       transform: 'translate(-50%, -50%)',
       height: 'auto',
-      width: currentWidth
+      width: width < screen.md ? '90%' : width < screen.lg ? '60%' : '40%'
     }
   }
-
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth > 1024) {
-        setWidth('40%')
-      } else {
-        if (window.innerWidth > 768) {
-          setWidth('50%')
-        } else {
-          if (window.innerWidth > 640) {
-            setWidth('80%')
-          } else {
-            setWidth('90%')
-          }
-        }
-      }
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [window.innerWidth])
 
   return (
     <div className={'w-full'}>

@@ -61,7 +61,7 @@ const ServiceSection: FunctionComponent = () => {
                 <a
                   className='absolute z-20 cursor-pointer'
                   target='_blank'
-                  href='https://www.facebook.com/SphinxSoftware'
+                  href='https://www.facebook.com/SphinxSoftwareJSC/'
                   rel='noopener noreferrer'
                   style={{ width: 50, height: 50 }}
                 />
