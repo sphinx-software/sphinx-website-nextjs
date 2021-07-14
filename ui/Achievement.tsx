@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import iconRocket from './../public/iconRocket.svg'
 import iconGlobal from './../public/iconGlobal.svg'

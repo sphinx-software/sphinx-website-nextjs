@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import MenuMobile from './MenuMobile'
 import Link from 'next/link'

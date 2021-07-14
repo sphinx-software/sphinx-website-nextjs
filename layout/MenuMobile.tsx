@@ -1,14 +1,16 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import styles from '../components/Home/Home.module.css'
 import Link from 'next/link'
 import { useConfig } from '../ui/ConfigProvider'
 import { NavConfig } from '../config'
+import { useRouter } from 'next/router'
 
 type MenuMobileProps = {
   isShow: boolean
 }
 const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
   const { NAVS } = useConfig()
+  const router = useRouter()
 
   const navBarStyles = isShow ? 'h-screen' : 'h-0'
   return (
@@ -27,7 +29,10 @@ const MenuMobile: FunctionComponent<MenuMobileProps> = ({ isShow }) => {
         ))}
 
         <div className='flex items-center justify-center'>
-          <button className={styles.ButtonJoinUs}>
+          <button
+            className={styles.ButtonJoinUs}
+            onClick={() => router.push('/join-us')}
+          >
             <p className={styles.ButtonJoinUsText}>Join Us</p>
           </button>
         </div>

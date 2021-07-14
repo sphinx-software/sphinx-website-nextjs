@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import MenuMobile from './MenuMobile'
