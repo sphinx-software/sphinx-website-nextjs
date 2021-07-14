@@ -135,6 +135,7 @@ const JoinTableDescription: FunctionComponent<{
                         {item.contents.map((itemContent, itemContentIndex) => (
                           <li key={`jobContent-${index}-${itemContentIndex}`}>
                             <p
+                              className={style.jobDescriptionText}
                               dangerouslySetInnerHTML={{ __html: itemContent }}
                             />
                           </li>

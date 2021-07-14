@@ -30,3 +30,7 @@
     color: red;
     content: " *";
 }
+
+.jobDescriptionText {
+    word-break: break-word;
+}
