@@ -1,6 +1,6 @@
 FROM node:lts-buster
 
-ENV NEXT_PUBLIC_CONTACT_RECEIVE_EMAIL=long97vip@gmail.com
+ENV NEXT_PUBLIC_CONTACT_RECEIVE_EMAIL=contact@sphinx-software.com
 
 ENV NEXT_PUBLIC_APPLY_JOB_RECEIVE_EMAIL=recruit.sphinx@gmail.com
 
