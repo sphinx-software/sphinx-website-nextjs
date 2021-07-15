@@ -52,11 +52,11 @@ const ResearchDevelopment: FC = () => {
 
   return (
     <div
-      className='bg-cover bg-white bg-top'
+      className='bg-cover bg-white bg-top py-12 md:py-20'
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
-      <div className='max-w-7xl mx-auto py-12 md:py-20 px-3 md:px-0'>
-        <Element name={SECTION.RESEARCH_DEVELOPMENT}>
+      <Element name={SECTION.RESEARCH_DEVELOPMENT}>
+        <div className='max-w-7xl mx-auto px-3 md:px-0'>
           <div className='md:flex md:flex-col md:items-center'>
             <div className='text-center px-2'>
               <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
@@ -76,8 +76,8 @@ const ResearchDevelopment: FC = () => {
           <div className='mt-14 md:mt-24'>
             <TimeLine />
           </div>
-        </Element>
-      </div>
+        </div>
+      </Element>
     </div>
   )
 }
