@@ -9,10 +9,11 @@ import timeLine4 from './../public/timeLine4.svg'
 import timeLine5 from './../public/timeLine5.svg'
 import classNames from 'classnames'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
-import { SECTION, useAboutSection } from './AboutProvider'
+import { SECTION } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
 import useWindowDimensions from '../services/useWindowDimensions'
 import { screen } from '../config'
+import { Element } from 'react-scroll'
 
 declare type TimeLineType = {
   content: string
@@ -48,15 +49,9 @@ const timeLines: TimeLineType[] = [
 
 const ResearchDevelopment: FC = () => {
   const ref = useRef<any>(null)
-  const [{ sectionActive }] = useAboutSection()
-  useEffect(() => {
-    if (sectionActive === SECTION.RESEARCH_DEVELOPMENT) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [sectionActive])
 
   return (
-    <section
+    <div
       className='bg-cover bg-white bg-top'
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
@@ -71,9 +66,11 @@ const ResearchDevelopment: FC = () => {
               delay={350}
               animateOnce
             >
-              <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
-                Research & Developments
-              </p>
+              <Element name={SECTION.RESEARCH_DEVELOPMENT}>
+                <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
+                  Research & Developments
+                </p>
+              </Element>
             </ScrollAnimation>
           </div>
         </div>
@@ -81,7 +78,7 @@ const ResearchDevelopment: FC = () => {
           <TimeLine />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

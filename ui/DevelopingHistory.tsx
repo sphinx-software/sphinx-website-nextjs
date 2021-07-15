@@ -1,8 +1,9 @@
-import { FC, useEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import iconHistory from './../public/iconHistory.svg'
 import Image from 'next/image'
-import { SECTION, useAboutSection } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { Element } from 'react-scroll'
+import { SECTION } from './AboutProvider'
 
 export declare type HistoryType = {
   year: number
@@ -40,24 +41,17 @@ export const histories: HistoryType[] = [
 
 const DevelopingHistory: FC = () => {
   const ref = useRef<any>(null)
-  const [{ sectionActive }] = useAboutSection()
-  useEffect(() => {
-    if (sectionActive === SECTION.DEVELOPING_HISTORY) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [sectionActive])
 
   return (
     <div className='bg-white -mt-1'>
       <div className='mx-auto max-w-7xl py-20 px-6 md:px-0'>
         <div className='text-center'>
           <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-            <p
-              className='text-32 md:text-36 leading-48 text-black-50'
-              ref={ref}
-            >
-              Developing history
-            </p>
+            <Element name={SECTION.DEVELOPING_HISTORY}>
+              <p className='text-32 md:text-36 leading-48 text-black-50'>
+                Developing history
+              </p>
+            </Element>
           </ScrollAnimation>
         </div>
         <div className='flex flex-col lg:flex-row-reverse md:items-center md:justify-around mt-20'>

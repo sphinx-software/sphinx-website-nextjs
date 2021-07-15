@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -6,10 +6,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import avatarRikky from './../public/avatarRikky.png'
 import avatarPhong from './../public/avatarPhong.png'
 import avatarTota from './../public/avatarTota.png'
-import { SECTION, useAboutSection } from './AboutProvider'
+import { SECTION } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
 import useWindowDimensions from '../services/useWindowDimensions'
 import { screen } from '../config'
+import { Element } from 'react-scroll'
 
 type HolderType = {
   name: string
@@ -63,21 +64,17 @@ const settings = {
 
 const BoardOfDirector: FC = () => {
   const ref = useRef<any>(null)
-  const [{ sectionActive }] = useAboutSection()
   const { width } = useWindowDimensions()
-  useEffect(() => {
-    if (sectionActive === SECTION.KEYHOLDER) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [sectionActive])
 
   return (
     <div className='bg-white'>
       <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 md:px-0'>
         <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-          <p className='text-36 leading-48 text-black-50 text-center' ref={ref}>
-            Keyholder
-          </p>
+          <Element name={SECTION.KEYHOLDER}>
+            <p className='text-36 leading-48 text-black-50 text-center'>
+              Keyholder
+            </p>
+          </Element>
         </ScrollAnimation>
         <div className='mt-12 mb-12 md:mb-0'>
           {width < screen.md ? (

@@ -5,3 +5,18 @@
 
     @apply text-36 leading-48
 }
+
+.active {
+    color: #FFFFFF !important;
+    @apply bg-yellow-450 border-yellow-450 bg-opacity-100
+}
+
+.active:hover {
+    background-color: #F89721 !important;
+    --tw-bg-opacity: 1 !important;
+}
+
+.aboutMenu {
+    color: #8F969E;
+    @apply text-16 leading-32 py-1 px-4 cursor-pointer hover:bg-gray-350 hover:bg-opacity-10 border rounded-3xl border-opacity-10
+}

@@ -1,27 +1,23 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import Image from 'next/image'
 import iconRocket from './../public/iconRocket.svg'
 import iconGlobal from './../public/iconGlobal.svg'
 import iconReward from './../public/iconReward.svg'
-import { SECTION, useAboutSection } from './AboutProvider'
+import { SECTION } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { Element } from 'react-scroll'
 
 const Achievement: FC = () => {
-  const ref = useRef<any>(null)
-  const [{ sectionActive }] = useAboutSection()
-  useEffect(() => {
-    if (sectionActive === SECTION.ACHIEVEMENTS) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [sectionActive])
   return (
-    <div className='bg-gray-850' ref={ref}>
+    <div className='bg-gray-850'>
       <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 lg:px-0 xl:py-28 -mt-0.5'>
         <div>
           <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-            <p className='text-36 leading-48 text-white text-center'>
-              Achievements
-            </p>
+            <Element name={SECTION.ACHIEVEMENTS}>
+              <p className='text-36 leading-48 text-white text-center'>
+                Achievements
+              </p>
+            </Element>
           </ScrollAnimation>
         </div>
         <div className='md:grid md:grid-cols-3 md:gap-4 xl:gap-8 place-content-center mt-14 lg:mt-20'>

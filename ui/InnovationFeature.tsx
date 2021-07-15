@@ -1,34 +1,27 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useRef } from 'react'
 import iconVision from './../public/iconVision.svg'
 import iconMission from './../public/iconMission.svg'
 import pyramid from '../public/pyramid.svg'
 import Image from 'next/image'
 import styles from './../styles/About.module.css'
-import { SECTION, useAboutSection } from './AboutProvider'
+import { SECTION } from './AboutProvider'
 import ScrollAnimation from 'react-animate-on-scroll'
 import useWindowDimensions from '../services/useWindowDimensions'
 import { screen } from '../config'
+import { Element } from 'react-scroll'
 
 const InnovationFeature = () => {
   const ref = useRef<any>(null)
-  const [{ sectionActive }] = useAboutSection()
   const { width } = useWindowDimensions()
-
-  useEffect(() => {
-    if (sectionActive === SECTION.VISION_MISSION) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }, [sectionActive])
   return (
     <div className='bg-gray-250 bg-opacity-30'>
       <div className='mx-auto max-w-7xl px-3 md:px-0 py-28'>
         <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-          <p
-            className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'
-            ref={ref}
-          >
-            CREATING THE INNOVATIVE FUTURE
-          </p>
+          <Element name={SECTION.VISION_MISSION}>
+            <p className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'>
+              CREATING THE INNOVATIVE FUTURE
+            </p>
+          </Element>
         </ScrollAnimation>
         <div className='flex flex-col md:flex-row mt-20'>
           <div className='flex-1 xl:flex xl:justify-center'>
@@ -73,7 +66,7 @@ const Vision: FC = () => {
     >
       <div className='pt-12'>
         <div className='flex items-center flex-col justify-center space-y-4'>
-          <Image src={iconVision} alt={'iconVision'}/>
+          <Image src={iconVision} alt={'iconVision'} />
           <p className={styles.visionText}>VISION</p>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
             Leading technology company in Vietnam.
@@ -89,7 +82,7 @@ const VisionMobile: FC = () => {
     <div className='bg-white rounded-2xl h-450 max-w-536 shadow-xl'>
       <div className='pt-12 h-full'>
         <div className='flex items-center flex-col justify-between space-y-4 h-full'>
-          <Image src={iconVision} alt={'iconVision'}/>
+          <Image src={iconVision} alt={'iconVision'} />
           <p className={styles.visionText}>VISION</p>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
             Leading technology company in Vietnam.
@@ -114,7 +107,7 @@ const Mission: FC = () => {
       <div className='pt-12 px-2'>
         <div className='flex flex-col justify-center space-y-4'>
           <div className='flex flex-col items-center space-y-4'>
-            <Image src={iconMission} alt={'iconMission'}/>
+            <Image src={iconMission} alt={'iconMission'} />
             <p className={styles.visionText}>MISSION</p>
           </div>
           <p className='text-14 md:text-16 leading-32 text-black-300 text-center'>
@@ -146,7 +139,7 @@ const MissionMobile: FC = () => {
       <div className='pt-12 px-2'>
         <div className='flex flex-col justify-center space-y-4'>
           <div className='flex flex-col items-center space-y-4'>
-            <Image src={iconMission} alt={'iconMission'}/>
+            <Image src={iconMission} alt={'iconMission'} />
             <p className={styles.visionText}>MISSION</p>
           </div>
           <div className='xl:px-16'>
