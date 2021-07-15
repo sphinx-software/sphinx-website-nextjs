@@ -11,47 +11,46 @@ import { screen } from '../config'
 import { Element } from 'react-scroll'
 
 const InnovationFeature = () => {
-  const ref = useRef<any>(null)
   const { width } = useWindowDimensions()
   return (
     <div className='bg-gray-250 bg-opacity-30'>
-      <div className='mx-auto max-w-7xl px-3 md:px-0 py-28'>
-        <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-          <Element name={SECTION.VISION_MISSION}>
+      <Element name={SECTION.VISION_MISSION}>
+        <div className='mx-auto max-w-7xl px-3 md:px-0 py-28'>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
             <p className='text-center bg-cover text-32 md:text-36 leading-48 text-gray-350'>
               CREATING THE INNOVATIVE FUTURE
             </p>
-          </Element>
-        </ScrollAnimation>
-        <div className='flex flex-col md:flex-row mt-20'>
-          <div className='flex-1 xl:flex xl:justify-center'>
-            {width >= screen.xl ? (
-              <div className={'block'}>
-                <ScrollAnimation animateIn='animate__fadeInLeft' animateOnce>
-                  <Vision />
-                </ScrollAnimation>
-              </div>
-            ) : (
-              <div className='block md:pl-6 md:pr-3'>
-                <VisionMobile />
-              </div>
-            )}
-          </div>
-          <div className='flex-1 xl:flex xl:justify-center'>
-            {width >= screen.xl ? (
-              <div className='block mt-20 md:mt-0'>
-                <ScrollAnimation animateIn='animate__fadeInRight' animateOnce>
-                  <Mission />
-                </ScrollAnimation>
-              </div>
-            ) : (
-              <div className='block mt-6 md:mt-0 md:pr-6'>
-                <MissionMobile />
-              </div>
-            )}
+          </ScrollAnimation>
+          <div className='flex flex-col md:flex-row mt-20'>
+            <div className='flex-1 xl:flex xl:justify-center'>
+              {width >= screen.xl ? (
+                <div className={'block'}>
+                  <ScrollAnimation animateIn='animate__fadeInLeft' animateOnce>
+                    <Vision />
+                  </ScrollAnimation>
+                </div>
+              ) : (
+                <div className='block md:pl-6 md:pr-3'>
+                  <VisionMobile />
+                </div>
+              )}
+            </div>
+            <div className='flex-1 xl:flex xl:justify-center'>
+              {width >= screen.xl ? (
+                <div className='block mt-20 md:mt-0'>
+                  <ScrollAnimation animateIn='animate__fadeInRight' animateOnce>
+                    <Mission />
+                  </ScrollAnimation>
+                </div>
+              ) : (
+                <div className='block mt-6 md:mt-0 md:pr-6'>
+                  <MissionMobile />
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </Element>
     </div>
   )
 }

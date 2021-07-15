@@ -44,38 +44,38 @@ const DevelopingHistory: FC = () => {
 
   return (
     <div className='bg-white -mt-1'>
-      <div className='mx-auto max-w-7xl py-20 px-6 md:px-0'>
-        <div className='text-center'>
-          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-            <Element name={SECTION.DEVELOPING_HISTORY}>
+      <Element name={SECTION.DEVELOPING_HISTORY}>
+        <div className='mx-auto max-w-7xl py-20 px-6 md:px-0'>
+          <div className='text-center'>
+            <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
               <p className='text-32 md:text-36 leading-48 text-black-50'>
                 Developing history
               </p>
-            </Element>
-          </ScrollAnimation>
-        </div>
-        <div className='flex flex-col lg:flex-row-reverse md:items-center md:justify-around mt-20'>
-          <div className='flex-1 flex justify-center'>
-            <div className='w-full md:w-8/12 pb-20 lg:pb-0'>
-              {histories.map((history: HistoryType, index: number) => (
-                <ScrollAnimation
-                  key={index}
-                  animateIn='animate__fadeInUp'
-                  delay={((index + 1) * 1000) / 6}
-                  animateOnce
-                >
-                  <History key={index} history={history} />
-                </ScrollAnimation>
-              ))}
-            </div>
-          </div>
-          <div className='flex-1 -mt-6 lg:mt-0 md:mr-10 w-full md:w-8/12 lg:w-full flex justify-center items-center'>
-            <ScrollAnimation animateIn='animate__fadeIn'>
-              <Image src={iconHistory} alt='Sphinx Software' />
             </ScrollAnimation>
           </div>
+          <div className='flex flex-col lg:flex-row-reverse md:items-center md:justify-around mt-20'>
+            <div className='flex-1 flex justify-center'>
+              <div className='w-full md:w-8/12 pb-20 lg:pb-0'>
+                {histories.map((history: HistoryType, index: number) => (
+                  <ScrollAnimation
+                    key={index}
+                    animateIn='animate__fadeInUp'
+                    delay={((index + 1) * 1000) / 6}
+                    animateOnce
+                  >
+                    <History key={index} history={history} />
+                  </ScrollAnimation>
+                ))}
+              </div>
+            </div>
+            <div className='flex-1 -mt-6 lg:mt-0 md:mr-10 w-full md:w-8/12 lg:w-full flex justify-center items-center'>
+              <ScrollAnimation animateIn='animate__fadeIn'>
+                <Image src={iconHistory} alt='Sphinx Software' />
+              </ScrollAnimation>
+            </div>
+          </div>
         </div>
-      </div>
+      </Element>
     </div>
   )
 }

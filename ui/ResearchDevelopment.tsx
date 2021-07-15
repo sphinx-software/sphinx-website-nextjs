@@ -56,27 +56,27 @@ const ResearchDevelopment: FC = () => {
       style={{ backgroundImage: "url('/researchAndDevelopmentBg.svg')" }}
     >
       <div className='max-w-7xl mx-auto py-12 md:py-20 px-3 md:px-0'>
-        <div className='md:flex md:flex-col md:items-center'>
-          <div className='text-center px-2'>
-            <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-              <p className='text-36 leading-48 text-white'>R&D</p>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateIn='animate__fadeInUp'
-              delay={350}
-              animateOnce
-            >
-              <Element name={SECTION.RESEARCH_DEVELOPMENT}>
+        <Element name={SECTION.RESEARCH_DEVELOPMENT}>
+          <div className='md:flex md:flex-col md:items-center'>
+            <div className='text-center px-2'>
+              <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+                <p className='text-36 leading-48 text-white'>R&D</p>
+              </ScrollAnimation>
+              <ScrollAnimation
+                animateIn='animate__fadeInUp'
+                delay={350}
+                animateOnce
+              >
                 <p className='text-16 leading-32 text-gray-350 mt-6' ref={ref}>
                   Research & Developments
                 </p>
-              </Element>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
           </div>
-        </div>
-        <div className='mt-14 md:mt-24'>
-          <TimeLine />
-        </div>
+          <div className='mt-14 md:mt-24'>
+            <TimeLine />
+          </div>
+        </Element>
       </div>
     </div>
   )

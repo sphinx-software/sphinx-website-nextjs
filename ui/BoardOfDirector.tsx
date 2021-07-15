@@ -68,43 +68,43 @@ const BoardOfDirector: FC = () => {
 
   return (
     <div className='bg-white'>
-      <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 md:px-0'>
-        <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-          <Element name={SECTION.KEYHOLDER}>
+      <Element name={SECTION.KEYHOLDER}>
+        <div className='mx-auto max-w-7xl py-12 md:py-20 px-6 md:px-0'>
+          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
             <p className='text-36 leading-48 text-black-50 text-center'>
               Keyholder
             </p>
-          </Element>
-        </ScrollAnimation>
-        <div className='mt-12 mb-12 md:mb-0'>
-          {width < screen.md ? (
-            <div className='block'>
-              <Slider {...settings}>
-                {holders.map((h, index) => (
-                  <div key={index}>
-                    {h.map((value, index) => (
-                      <Holder key={index} holder={value} />
-                    ))}
-                  </div>
+          </ScrollAnimation>
+          <div className='mt-12 mb-12 md:mb-0'>
+            {width < screen.md ? (
+              <div className='block'>
+                <Slider {...settings}>
+                  {holders.map((h, index) => (
+                    <div key={index}>
+                      {h.map((value, index) => (
+                        <Holder key={index} holder={value} />
+                      ))}
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            ) : (
+              <div className='grid md:grid-cols-3 gap-y-6'>
+                {holders.flat().map((h, index) => (
+                  <ScrollAnimation
+                    key={index}
+                    animateIn='animate__fadeInUp'
+                    delay={((index + 1) * 1000) / 6}
+                    animateOnce
+                  >
+                    <Holder holder={h} />
+                  </ScrollAnimation>
                 ))}
-              </Slider>
-            </div>
-          ) : (
-            <div className='grid md:grid-cols-3 gap-y-6'>
-              {holders.flat().map((h, index) => (
-                <ScrollAnimation
-                  key={index}
-                  animateIn='animate__fadeInUp'
-                  delay={((index + 1) * 1000) / 6}
-                  animateOnce
-                >
-                  <Holder holder={h} />
-                </ScrollAnimation>
-              ))}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </Element>
     </div>
   )
 }
