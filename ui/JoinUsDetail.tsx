@@ -201,10 +201,10 @@ const JoinTableMenu: FunctionComponent<{
                   'border-l-4 border-yellow-450 bg-gray-550'
                 }`}
               >
-                {row.position}
+                <span className={style.joinUsDetailMenu}>{row.position}</span>
               </td>
               <td
-                className={`text-white bg-gray-450 p-6 ${
+                className={`whitespace-nowrap text-white bg-gray-450 p-6 ${
                   row.id === currentJob && 'bg-gray-550'
                 }`}
               >

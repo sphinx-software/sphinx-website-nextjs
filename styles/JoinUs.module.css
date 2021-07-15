@@ -34,3 +34,8 @@
 .jobDescriptionText {
     word-break: break-word;
 }
+
+.joinUsDetailMenu {
+    max-width: 250px;
+    @apply overflow-ellipsis whitespace-nowrap overflow-hidden inline-block
+}

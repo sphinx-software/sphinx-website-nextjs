@@ -1,4 +1,5 @@
 import { SECTION, useAboutSection } from './AboutProvider'
+import React from 'react'
 
 const menu = [
   {
@@ -24,6 +25,8 @@ const menu = [
 ]
 const AboutMenu = () => {
   const [{ sectionActive }, { changeSection }] = useAboutSection()
+
+  console.log('sectionActive', sectionActive)
 
   return (
     <div className='bg-white sticky -mt-20 md:-mt-1 top-0 z-50 py-2 flex flex-col lg:items-center px-3 md:px-0'>
