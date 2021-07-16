@@ -4,6 +4,8 @@ import iconWebApplication from '../../../public/icon_WebApplication.svg'
 import iconCloud from '../../../public/iconCloud.svg'
 import iconPlatform from '../../../public/iconPlatform.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { homeMenu } from '../../../config'
+import { Element } from 'react-scroll'
 
 declare type ServiceType = {
   icon: any
@@ -26,41 +28,43 @@ const services: ServiceType[] = [
 
 const CompanyService: FC = () => {
   return (
-    <section className='bg-gray-250 py-24 md:py-36'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='px-6 md:px-0 text-center'>
-          <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
-            <h2 className='px-1 md:px-0 text-gray-450 font-normal text-36 text-center leading-56'>
-              Services
-            </h2>
-          </ScrollAnimation>
-          <div className='mt-2'>
-            <ScrollAnimation
-              animateIn='animate__fadeInUp'
-              delay={450}
-              animateOnce
-            >
-              <p className='text-gray-450 leading-32 text-16'>
-                Sphinx provides services to companies based on modern technology
-                platforms
-              </p>
+    <Element name={homeMenu.SERVICES}>
+      <section className='bg-gray-250 py-24 md:py-36'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='px-6 md:px-0 text-center'>
+            <ScrollAnimation animateIn='animate__fadeInUp' animateOnce>
+              <h2 className='px-1 md:px-0 text-gray-450 font-normal text-36 text-center leading-56'>
+                Services
+              </h2>
             </ScrollAnimation>
+            <div className='mt-2'>
+              <ScrollAnimation
+                animateIn='animate__fadeInUp'
+                delay={450}
+                animateOnce
+              >
+                <p className='text-gray-450 leading-32 text-16'>
+                  Sphinx provides services to companies based on modern
+                  technology platforms
+                </p>
+              </ScrollAnimation>
+            </div>
+          </div>
+          <div className='px-6 md:px-0 mt-14 md:mt-16 mb-4 md:mb-0 flex flex-col md:flex-row md:justify-around'>
+            {services.map((s, index) => (
+              <ScrollAnimation
+                key={index}
+                animateIn={'animate__fadeInUp'}
+                delay={((index + 1) * 1000) / 4}
+                animateOnce
+              >
+                <Service service={s} />
+              </ScrollAnimation>
+            ))}
           </div>
         </div>
-        <div className='px-6 md:px-0 mt-14 md:mt-16 mb-4 md:mb-0 flex flex-col md:flex-row md:justify-around'>
-          {services.map((s, index) => (
-            <ScrollAnimation
-              key={index}
-              animateIn={'animate__fadeInUp'}
-              delay={((index + 1) * 1000) / 4}
-              animateOnce
-            >
-              <Service service={s} />
-            </ScrollAnimation>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </Element>
   )
 }
 

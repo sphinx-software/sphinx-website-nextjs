@@ -4,9 +4,22 @@ import { Layout } from '../layout'
 import { CommunicationSection, ServiceSection } from '../ui'
 import WorkingProcess from '../components/Home/WorkingProcess'
 import HomeBanner from '../ui/HomeBanner'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Events } from 'react-scroll'
+import HomeMenu from '../ui/HomeMenu'
+import { bgWhite } from 'colorette'
 
 export default function Home() {
+  useEffect(() => {
+    Events.scrollEvent.register('begin', () => {})
+    Events.scrollEvent.register('end', () => {})
+
+    return function cleanup() {
+      Events.scrollEvent.remove('begin')
+      Events.scrollEvent.remove('end')
+    }
+  })
+
   return (
     <div>
       <Head>
@@ -30,6 +43,8 @@ export default function Home() {
       >
         <Layout>
           <HomeBanner />
+          <div className={'bg-white'} style={{ height: 120 }} />
+          <HomeMenu />
           <CompanyOverview />
           <CompanyTendency />
           <CompanyService />

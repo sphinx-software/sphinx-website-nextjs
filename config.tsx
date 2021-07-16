@@ -321,3 +321,10 @@ export const screen = {
   '5xl': 2304,
   '6xl': 2560
 }
+
+export const homeMenu = {
+  COMPANY_OVERVIEW: 'COMPANY_OVERVIEW',
+  OUR_FEATURES: 'OUR_FEATURES',
+  SERVICES: 'SERVICES',
+  WORKING_PROGRESS: 'WORKING_PROGRESS'
+}
