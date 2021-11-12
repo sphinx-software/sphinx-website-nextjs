@@ -289,6 +289,93 @@ export const tableConfig = {
           ]
         }
       ]
+    },
+    {
+      id: 'junior-nodejs-reactjs',
+      position: 'Junior - NodeJs/ReactJs',
+      time: 'Full Time',
+      salary: 'Up To 1000$',
+      description: [
+        {
+          title: 'SỐ LƯỢNG',
+          contents: ['02 Người.']
+        },
+        {
+          title: 'MÔ TẢ CÔNG VIỆC',
+          contents: [
+            'Tham gia phát triển dự án Web/Mobile với đối tác Mỹ, Nhật…',
+            'Phối hợp với khách hàng/đội nhóm để triển khai và kiểm thử hệ thống phần mềm. '
+          ]
+        },
+        {
+          title: 'YÊU CẦU CÔNG VIỆC',
+          contents: [
+            'Tối thiểu 2 năm kinh nghiệm ở vị trí tương đương.',
+            'Có hiểu biết về ES6, ReactJS, Redux và API BackEnd.',
+            'Có khả năng làm việc độc lập/teamwork.'
+          ]
+        },
+        {
+          title: 'ƯU TIÊN',
+          contents: [
+            'Có kinh nghiệm sử dụng Docker.',
+            'Có kinh nghiệm làm việc với thị trường quốc tế.'
+          ]
+        },
+        {
+          title: 'YÊU CẦU KHÁC',
+          contents: [
+            'Tiếng anh giao tiếp/đọc hiểu cơ bản.',
+            'Có khả năng chịu áp lực cao trong công việc.'
+          ]
+        },
+        {
+          title: 'LƯƠNG & THƯỞNG',
+          contents: [
+            'Mức lương NET: <b>up to 1000$</b> (thỏa thuận thêm tùy theo năng lực).',
+            'Thưởng lương tháng 13/năm + Thưởng dự án, thưởng Tết và các dịp Lễ…',
+            'Lộ trình thăng tiến rõ ràng.',
+            'Checkpoint 2 lần/năm.'
+          ]
+        },
+        {
+          title: 'CHẾ ĐỘ ĐÃI NGỘ & PHÚC LỢI',
+          contents: [
+            'Nghỉ T7& CN + nghỉ phép theo quy định của pháp luật hiện hành.',
+            'Được tham gia BHXH, BHYT, BHTN theo quy định pháp luật hiện hành và quy định của công ty.',
+            'Khám sức khỏe định kì 1 lần/năm.',
+            'Du lịch định kỳ 1 lần/năm.',
+            'Phụ cấp ăn trưa; Gửi xe miễn phí; Hỗ trợ bữa chiều…',
+            'Được nhận quà tặng/các khoản hỗ trợ vào các dịp: Sinh nhật, Nghỉ Lễ, sự kiện cá nhân khác…',
+            'Tham gia các hoạt động tập thể: Ăn nhậu, Kick Off, Đấu giải Game, Sinh nhật…'
+          ]
+        },
+        {
+          title: 'CƠ HỘI HỌC HỎI VÀ PHÁT TRIỂN',
+          contents: [
+            'Trợ cấp khóa học ngoại ngữ và các chứng chỉ IT liên quan với nhiều hình thức hấp dẫn;',
+            'Thường xuyên tổ chức các buổi đào nội nội bộ Team, Seminar để nâng cao kỹ năng và kiến thức.',
+            'Máy PS4, Đàn Piano, Đàn Guitar, tủ sách, BoardGame…'
+          ]
+        },
+        {
+          title: 'CÁCH THỨC ỨNG TUYỂN',
+          contents: [
+            'Gửi CV đính kèm link GitHub hoặc các dự án đã từng thực hiện (nếu có)',
+            'Tiêu đề mail: <b>[NodeJS/ReactJS] - Họ tên</b>',
+            'Địa chỉ nhận CV: <b>recruit.sphinx@gmail.com</b>'
+          ]
+        },
+        {
+          title: 'LIÊN HỆ HỖ TRỢ',
+          contents: [
+            'Tel: 024.2266.3888 ',
+            'Địa chỉ: Tầng 8, tòa Trường Thịnh, Tràng An Complex, số 1 Phùng Chí Kiên, Nghĩa Đô, Cầu Giấy, Hà Nội.',
+            'Website: https://sphinx.vn/',
+            'FB: https://www.facebook.com/SphinxSoftware'
+          ]
+        }
+      ]
     }
   ]
 }
