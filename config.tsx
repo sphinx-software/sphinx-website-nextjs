@@ -217,7 +217,7 @@ export const tableConfig = {
       id: 'se-reactjs-nodejs',
       position: 'Software Engineer (ReactJS/NodeJS)',
       time: 'Full Time',
-      salary: 'Negotiation',
+      salary: 'Up TO 1000$',
       description: [
         {
           title: 'MÔ TẢ CÔNG VIỆC',
