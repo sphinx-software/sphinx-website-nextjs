@@ -215,9 +215,9 @@ export const tableConfig = {
     },
     {
       id: 'se-reactjs-nodejs',
-      position: 'Software Engineer (ReactJS/NodeJS)',
+      position: 'NodeJS/ReactJS Developer (All Level)',
       time: 'Full Time',
-      salary: 'Up To 1000$',
+      salary: 'Negotiation',
       description: [
         {
           title: 'MÔ TẢ CÔNG VIỆC',
@@ -229,7 +229,6 @@ export const tableConfig = {
         {
           title: 'YÊU CẦU CÔNG VIỆC',
           contents: [
-            'Tối thiểu 2 năm kinh nghiệm.',
             'Có hiểu biết về ES6, ReactJS, Redux và API BackEnd.',
             'Có khả năng làm việc độc lập/teamwork.'
           ]
@@ -251,7 +250,7 @@ export const tableConfig = {
         {
           title: 'LƯƠNG & THƯỞNG',
           contents: [
-            'Mức lương NET: <b>~1000$</b> (thỏa thuận thêm tùy theo năng lực).',
+            'Mức lương NET: <b>Thỏa thuận</b>',
             'Thưởng lương tháng 13/năm + Thưởng dự án, thưởng Tết và các dịp Lễ...',
             'Có lộ trình đào tạo và thăng tiến rõ ràng.',
             'Checkpoint 2 lần/năm.'
