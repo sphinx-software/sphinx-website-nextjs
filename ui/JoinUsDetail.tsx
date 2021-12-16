@@ -25,13 +25,18 @@ const JoinUsDetail: FunctionComponent<{
   activeJob?: string
   router: NextRouter
 }> = ({ resource, activeJob, router }) => {
-  const [currentSelection, setCurrentSelection] = useState(
-    activeJob || resource[0].id
-  )
+  const [currentSelection, setCurrentSelection] = useState<string>(activeJob as string)
 
   useEffect(() => {
     const { id } = router.query
-    if (id !== currentSelection) {
+    if(!currentSelection && id) {
+      setCurrentSelection(id as string)
+    }
+  }, [router.query.id])
+
+  useEffect(() => {
+    const { id } = router.query
+    if (currentSelection && id !== currentSelection) {
       router
         .push(
           {

@@ -215,7 +215,7 @@ export const tableConfig = {
     },
     {
       id: 'se-reactjs-nodejs',
-      position: 'NodeJS/ReactJS Developer (All Level)',
+      position: 'NodeJS/ReactJS Developer (Fresher - Junior)',
       time: 'Full Time',
       salary: 'Negotiation',
       description: [
@@ -229,7 +229,7 @@ export const tableConfig = {
         {
           title: 'YÊU CẦU CÔNG VIỆC',
           contents: [
-            'Có hiểu biết về ES6, ReactJS, Redux và API BackEnd.',
+            'Có hiểu biết về ES6, ReactJS và API BackEnd.',
             'Có khả năng làm việc độc lập/teamwork.'
           ]
         },
