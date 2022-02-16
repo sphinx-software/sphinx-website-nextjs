@@ -88,24 +88,25 @@ const JoinTable: FunctionComponent<JoinTableProps> = ({ data }) => {
                 onClick={() => {
                   router.push(`/join-us/${row.id}`).then(() => {})
                 }}
+                className={'cursor-pointer bg-gray-450 hover:bg-gray-550'}
               >
                 <td
                   className={
-                    'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                    'text-white p-6 border-b border-gray-250 border-opacity-10'
                   }
                 >
                   {row.position}
                 </td>
                 <td
                   className={
-                    'text-white bg-gray-450 p-6 border-b border-gray-250 border-opacity-10'
+                    'text-white p-6 border-b border-gray-250 border-opacity-10'
                   }
                 >
                   {row.time}
                 </td>
                 <td
                   className={
-                    'text-white bg-gray-450 p-6 hidden border-b border-gray-250 border-opacity-10 md:table-cell'
+                    'text-white p-6 hidden border-b border-gray-250 border-opacity-10 md:table-cell'
                   }
                 >
                   {row.salary}

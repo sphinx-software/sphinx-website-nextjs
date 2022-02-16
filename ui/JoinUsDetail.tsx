@@ -3,6 +3,7 @@ import style from '../styles/JoinUs.module.css'
 import { NextRouter } from 'next/router'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
+
 const ApplyJobModal = dynamic(() => import('./ApplyJobModal'), {
   ssr: false
 })
@@ -29,7 +30,7 @@ const JoinUsDetail: FunctionComponent<{
 
   useEffect(() => {
     const { id } = router.query
-    if(!currentSelection && id) {
+    if (!currentSelection && id) {
       setCurrentSelection(id as string)
     }
   }, [router.query.id])
@@ -45,7 +46,8 @@ const JoinUsDetail: FunctionComponent<{
           undefined,
           { shallow: true }
         )
-        .then(() => {})
+        .then(() => {
+        })
     }
   }, [currentSelection, router])
 
@@ -108,53 +110,49 @@ const JoinTableDescription: FunctionComponent<{
         style={{ boxShadow: '0px 0px 50px rgba(14, 28, 28, 0.05)' }}
       >
         <thead>
-          <tr className={'bg-gray-380'}>
-            <th
-              className={
-                'p-6 text-left border-b border-gray-250 border-opacity-10'
-              }
-            >
-              <p className={'text-white leading-19 text-16 font-normal'}>
-                {content.position}
-              </p>
-            </th>
-          </tr>
+        <tr className={'bg-gray-380'}>
+          <th
+            className={
+              'p-6 text-left border-b border-gray-250 border-opacity-10'
+            }
+          >
+            <p className={'text-white leading-19 text-16 font-normal'}>
+              {content.position}
+            </p>
+          </th>
+        </tr>
         </thead>
         <tbody>
-          <tr className={'border-b border-gray-250 border-opacity-10'}>
-            <td
-              style={{ width: '900px' }}
-              className={`text-white bg-gray-450 p-6`}
-            >
-              {content.description.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`flex flex-col ${index === 0 && 'pt-3'}`}
-                  >
+        <tr className={'border-b border-gray-250 border-opacity-10'}>
+          <td
+            style={{ width: '900px' }}
+            className={`text-white bg-gray-450 p-6`}
+          >
+            {content.description.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`flex flex-col ${index === 0 && 'pt-3'}`}
+                >
                     <span className={'text-gray-250 leading-19 text-16 pb-3'}>
                       {item.title}
                     </span>
-                    <div className={'jobContentDetail'}>
-                      <ul className={'pb-16 list-disc pl-6'}>
-                        {item.contents.map((itemContent, itemContentIndex) => (
-                          <li key={`jobContent-${index}-${itemContentIndex}`}>
-                            <p
-                              className={style.jobDescriptionText}
-                              dangerouslySetInnerHTML={{ __html: itemContent }}
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className={'jobContentDetail'}>
+                    <ul className={'pb-16 list-disc pl-6'}>
+                      {item.contents.map((itemContent, itemContentIndex) => (
+                        <li key={`jobContent-${index}-${itemContentIndex}`}
+                            dangerouslySetInnerHTML={{ __html: itemContent }} />
+                      ))}
+                    </ul>
                   </div>
-                )
-              })}
-              <button onClick={() => setIsShow(true)} className={'btn-grad'}>
-                Apply Now
-              </button>
-            </td>
-          </tr>
+                </div>
+              )
+            })}
+            <button onClick={() => setIsShow(true)} className={'btn-grad'}>
+              Apply Now
+            </button>
+          </td>
+        </tr>
         </tbody>
       </table>
       <ApplyJobModal isShow={isShow} setIsShow={setIsShow} jobId={currentJob} />
@@ -198,7 +196,7 @@ const JoinTableMenu: FunctionComponent<{
               onClick={() => {
                 setCurrentJob(row.id)
               }}
-              className={'border-b border-gray-250 border-opacity-10'}
+              className={'border-b border-gray-250 border-opacity-10 cursor-pointer'}
             >
               <td
                 className={`text-white bg-gray-450 p-6 ${

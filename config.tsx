@@ -294,7 +294,180 @@ export const tableConfig = {
           ]
         }
       ]
-    }
+    },
+    {
+      id: 'intern-developer',
+      position: 'Intern Developer',
+      time: 'Full Time',
+      salary: 'Negotiation',
+      description: [
+        {
+          title: 'THÔNG TIN CHUNG',
+          contents: [
+            'Vị trí: Lập trình viên NodeJS/ReactJS',
+            'Trình độ: Thực tập',
+            'Phòng ban: Phát triển'
+          ]
+        },
+        {
+          title: 'VAI TRÒ & MỤC TIÊU (Vai trò của vị trí này trong công ty là gì?)',
+          contents: [
+            'NHIỆM VỤ CHÍNH' +
+            '<ul style="list-style-type: circle;padding-inline-start: 24px">' +
+            '  <li>Tham gia vào khóa đào tạo nội bộ dành cho Thực tập sinh lập trình của công ty</li>' +
+            '  <li>Học hỏi và phát triển các kỹ năng mềm tại môi trường công sở</li>' +
+            '</ul>',
+
+            '<b>OUTPUTS</b>' +
+            '<ul style="list-style-type: circle;padding-inline-start: 24px">' +
+            '  <li>Thuần thục trong việc lập trình các dự án sử dụng NodeJs/ReactJs</li>' +
+            '  <li>Vận dụng tốt các kỹ năng làm việc tại môi trường công sở</li>' +
+            '</ul>'
+          ]
+        },
+        {
+          title: 'YÊU CẦU CƠ BẢN',
+          contents: [
+            '<b>KIẾN THỨC (60%)</b>' +
+            '<ul style="list-style-type: circle;padding-inline-start: 24px">' +
+            '  <li><p style="font-weight: 500">Trình độ: (20%)</p>' +
+            '    <ul style="list-style-type: square;padding-inline-start: 24px">' +
+            '      <li>Chuyên ngành: Công nghệ thông tin hoặc các chuyên ngành khác có liên quan đến CNTT (đã tốt nghiệp hoặc là sinh viên năm cuối)</li>' +
+            '      <li>Ngoại ngữ: Tiếng anh cơ bản (ưu tiên)</li>' +
+            '      <li>Chứng chỉ MOS (ưu tiên)</li>' +
+            '    </ul>' +
+            '  </li>' +
+            '  <li><p style="font-weight: 500">Kiến thức: (40%)</p>' +
+            '    <ul style="list-style-type: square;padding-inline-start: 24px">' +
+            '      <li>Có hiểu biết về quy trình xây dựng và phát triển phần mềm: 10%</li>' +
+            '      <li>Có kiến thức cơ bản về NodeJs, ReactJs, ES6, API BackEnd: 30%</li>' +
+            '    </ul>' +
+            '  </li>' +
+            '</ul>',
+
+            '<b>KỸ NĂNG CHÍNH (40%)</b>' +
+            '<ul style="list-style-type: circle;padding-inline-start: 24px">' +
+            '  <li><p style="font-weight: 500">Kỹ năng</p>' +
+            '    <ul style="list-style-type: square;padding-inline-start: 24px">' +
+            '      <li>Gõ bàn phím 10 ngón</li>' +
+            '      <li>Tự học và tìm kiếm thông tin</li>' +
+            '    </ul>' +
+            '  </li>' +
+            '  <li><p style="font-weight: 500">Yêu cầu khác</p>' +
+            '    <ul style="list-style-type: square;padding-inline-start: 24px">' +
+            '      <li>Thực tập toàn thời gian (5 ngày/tuần)</li>' +
+            '    </ul>' +
+            '  </li>' +
+            '</ul>'
+          ]
+        },
+        {
+          title: 'QUYỀN LỢI',
+          contents: [
+            'Nghỉ Thứ 7 và Chủ Nhật',
+            'Phụ cấp: Gửi xe, ăn trưa, snack chiều...',
+            'Được tham gia vào các hoạt động nội bộ của công ty: Open-Talk; Sharing; Kick-off, Du lịch...',
+            'Cơ hội nhận thu nhập khủng khi tham gia vào các dự án chính thức của công ty',
+            'Cơ hội trở thành nhân viên chính thức'
+          ]
+        },
+        {
+          title: 'ỨNG TUYỂN',
+          contents: [
+            'Tiêu đề: [Họ tên] - Intern NodeJS/ReactJS',
+            'Email: recruit.sphinx@gmail.com',
+            'Hotline: 024-2266-3888',
+            'Địa chỉ: Tầng 8, tòa Trường Thịnh, Tràng An Complex, số 1 Phùng Chí Kiên, Nghĩa Đô, Cầu Giấy, Hà Nội.'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'se-php-developer',
+      position: 'PHP Developer',
+      time: 'Full Time',
+      salary: 'Upto 1500$',
+      description: [
+        {
+          title: 'MÔ TẢ CÔNG VIỆC',
+          contents: [
+            'Tham gia xây dựng và phát triển dự án cho thị trường Mỹ, Úc, Nhật',
+            'Hỗ trợ thực hiện các yêu cầu thiết kế của các bộ phận liên quan và các công việc khác theo sự phân công của quản lý trực tiếp (chi tiết công việc sẽ trao đổi khi phỏng vấn)'
+          ]
+        },
+        {
+          title: 'YÊU CẦU CÔNG VIỆC',
+          contents: [
+            'Tối thiểu 01 năm kinh nghiệm ở vị trí PHP Developer',
+            'Có hiểu biết về HTML, CSS; JavaScript',
+            'Có kinh nghiệm về Laravel; Wordpress',
+
+          ]
+        },
+        {
+          title: 'ƯU TIÊN',
+          contents: [
+            'Có kinh nghiệm làm việc với Docker là một lợi thế.',
+            'Có kiến thức.',
+            'Có thể làm việc trong môi trường áp lực.'
+          ]
+        },
+        {
+          title: 'YÊU CẦU KHÁC',
+          contents: [
+            'Có khả năng làm việc độc lập & team-work;',
+            'Có tinh thần trách nhiệm cao trong công việc.'
+          ]
+        },
+        {
+          title: 'LƯƠNG & THƯỞNG',
+          contents: [
+            'Mức lương NET: 500$ - 1500$',
+            'Thưởng lương tháng 13/năm + Thưởng dự án, thưởng Tết và các dịp Lễ...',
+            'Có lộ trình đào tạo và thăng tiến rõ ràng.',
+            'Checkpoint 2 lần/năm.'
+          ]
+        },
+        {
+          title: 'CHẾ ĐỘ ĐÃI NGỘ & PHÚC LỢI',
+          contents: [
+            'Nghỉ T7 & CN + nghỉ phép theo quy định của pháp luật hiện hành.',
+            'Được tham gia BHXH, BHYT, BHTN theo quy định pháp luật hiện hành và quy định của công ty.',
+            'Khám sức khỏe định kì 1 lần/năm.',
+            'Du lịch định kỳ 1 lần/năm.',
+            'Phụ cấp ăn trưa; Gửi xe miễn phí; Hỗ trợ bữa chiều…',
+            'Được nhận quà tặng/các khoản hỗ trợ vào các dịp: Sinh nhật, NghỉLễ, sự kiện cá nhân khác…',
+            'Tham gia các hoạt động tập thể: Ăn nhậu, Kick Oﬀ, Đấu giải Game, Sinh nhật…',
+            'Cơ hội làm việc on-site quốc tế'
+          ]
+        },
+        {
+          title: 'CƠ HỘI HỌC HỎI VÀ PHÁT TRIỂN',
+          contents: [
+            'Trợ cấp khóa học ngoại ngữ và các chứng chỉ IT liên quan với nhiều hình thức hấp dẫn;',
+            'Thường xuyên tổ chức các buổi đào nội nội bộ Team, Seminar để nâng cao kỹ năng và kiến thức.',
+            'Máy PS4, Đàn Piano, Đàn Guitar, tủ sách, Board Game…'
+          ]
+        },
+        {
+          title: 'CÁCH THỨC ỨNG TUYỂN',
+          contents: [
+            'Gửi CV đính kèm link GitHub hoặc các dự án đã từng thực hiện.(nếu có)',
+            'Tiêu đề mail: <b>[ReactJS/NodeJS] - Họ tên</b>',
+            'Địa chỉ nhận CV: <b>recruit.sphinx@gmail.com</b>'
+          ]
+        },
+        {
+          title: 'LIÊN HỆ HỖ TRỢ',
+          contents: [
+            'Tel: 024.2266.3888',
+            'Địa chỉ: Tầng 8, tòa Trường Thịnh, Tràng An Complex, số1 Phùng Chí Kiên, Nghĩa Đô, Cầu Giấy, Hà Nội.',
+            'Website: https://sphinx.vn/',
+            'FB: https://www.facebook.com/LifeatSphinxSoftware'
+          ]
+        }
+      ]
+    },
   ]
 }
 
