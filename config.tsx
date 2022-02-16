@@ -312,7 +312,7 @@ export const tableConfig = {
         {
           title: 'VAI TRÒ & MỤC TIÊU (Vai trò của vị trí này trong công ty là gì?)',
           contents: [
-            'NHIỆM VỤ CHÍNH' +
+            '<b>NHIỆM VỤ CHÍNH</b>' +
             '<ul style="list-style-type: circle;padding-inline-start: 24px">' +
             '  <li>Tham gia vào khóa đào tạo nội bộ dành cho Thực tập sinh lập trình của công ty</li>' +
             '  <li>Học hỏi và phát triển các kỹ năng mềm tại môi trường công sở</li>' +
@@ -405,14 +405,6 @@ export const tableConfig = {
           ]
         },
         {
-          title: 'ƯU TIÊN',
-          contents: [
-            'Có kinh nghiệm làm việc với Docker là một lợi thế.',
-            'Có kiến thức.',
-            'Có thể làm việc trong môi trường áp lực.'
-          ]
-        },
-        {
           title: 'YÊU CẦU KHÁC',
           contents: [
             'Có khả năng làm việc độc lập & team-work;',
@@ -453,7 +445,7 @@ export const tableConfig = {
           title: 'CÁCH THỨC ỨNG TUYỂN',
           contents: [
             'Gửi CV đính kèm link GitHub hoặc các dự án đã từng thực hiện.(nếu có)',
-            'Tiêu đề mail: <b>[ReactJS/NodeJS] - Họ tên</b>',
+            'Tiêu đề mail: <b>[PHP] - Họ tên</b>',
             'Địa chỉ nhận CV: <b>recruit.sphinx@gmail.com</b>'
           ]
         },
